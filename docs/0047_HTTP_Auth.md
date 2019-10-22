@@ -16,7 +16,11 @@
 
 ## apache 
 
+* `sudo a2enmod proxy`
+* `sudo a2enmod proxy_http`
 * `sudo service apache2 restart`
+* logs dir: 如果处理的时候有错误，可以看一下这里面的错误提示信息；
+  * `/var/log/apache2/`
 
 ## apache config
 

@@ -38,7 +38,7 @@ while True:
 # Account Information
 to            = 'zengjf42@163.com'           # Email to send to.
 mail_user     = 'zengjf42@163.com'           # Email to send from.
-mail_password = 'zjf199042zjf'               # Email password.
+mail_password = '<your smtp passwd>'          # Email password.
 smtpserver    = smtplib.SMTP('smtp.163.com') # Server to use.
 
 smtpserver.ehlo()                            # Says 'hello' to the server
