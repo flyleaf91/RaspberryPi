@@ -20,6 +20,8 @@
 
 ## 笔记文档
 
+* [0049_DTS_GPIO_Kernel_Driver_Interrupt.md](docs/0049_DTS_GPIO_Kernel_Driver_Interrupt.md)
+* [0048_Gitweb.md](docs/0048_Gitweb.md)
 * [0048_Gitweb.md](docs/0048_Gitweb.md)
 * [0047_HTTP_Auth.md](docs/0047_HTTP_Auth.md)
 * [0046_UVC.md](docs/0046_UVC.md)
