@@ -1,6 +1,6 @@
 # DTS GPIO Interrupt
 
-##  Hacking code
+##  Check GPIO
 
 * `/sys/kernel/debug/gpio`
   ```
@@ -40,6 +40,9 @@
    gpio-510 (                    )
    gpio-511 (                    )
   ```
+
+## Sense HAT GPIO Interrupt
+
 * 如上可知`gpio-23`被配置为中断信号，是因为树莓派上挂在了`Sense_HAT`的原因：`arch/arm/boot/dts/overlays/rpi-sense-overlay.dts`
   ```dts
   // rpi-sense HAT
@@ -68,6 +71,9 @@
           };
   };
   ```
+
+## Sense HAT GPIO Driver
+
 * `drivers/mfd/rpisense-core.c`
   ```C
   static int rpisense_probe(struct i2c_client *i2c,

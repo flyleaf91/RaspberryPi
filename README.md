@@ -22,9 +22,8 @@
 
 * [0049_DTS_GPIO_Kernel_Driver_Interrupt.md](docs/0049_DTS_GPIO_Kernel_Driver_Interrupt.md)
 * [0048_Gitweb.md](docs/0048_Gitweb.md)
-* [0048_Gitweb.md](docs/0048_Gitweb.md)
 * [0047_HTTP_Auth.md](docs/0047_HTTP_Auth.md)
-* [0046_UVC.md](docs/0046_UVC.md)
+* [0046_USB_Camera_udev.md](docs/0046_USB_Camera_udev.md)
 * [0045_SoC_Device_Tree.md](docs/0045_SoC_Device_Tree.md)
 * [0044_Create_Raspbian_Image.md](docs/0044_Create_Raspbian_Image.md)
 * [0043_Docker.md](docs/0043_Docker.md)
@@ -51,7 +50,6 @@
 * [0022_GPIO_Interrupt.md](docs/0022_GPIO_Interrupt.md)
 * [0021_Auto_Send_Mail.md](docs/0021_Auto_Send_Mail.md)
 * [0020_PWM](https://github.com/ZengjfOS/RPiPWM)
-* [0019_Kernel_Build.md](docs/0019_Kernel_Build.md)
 * [0018_Samba.md](docs/0018_Samba.md)
 * [0017_Internationalisation_Options.md](docs/0017_Internationalisation_Options.md)
 * [0016_Setup_Multiple_WiFi_Networks.md](docs/0016_Setup_Multiple_WiFi_Networks.md)
