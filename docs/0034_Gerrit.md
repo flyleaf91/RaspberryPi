@@ -552,3 +552,9 @@ Gerrit是Google为Android系统研发量身定制的一套免费开源的代码�
   ```
 * ``sudo ln -snf `pwd`/review_site/bin/gerrit.sh /etc/init.d/gerrit``
 * `sudo ln -snf /etc/init.d/gerrit /etc/rcS.d/S90gerrit`
+
+
+## Android AOSP本地服务器搭建
+
+* [架設Gerrit Server : 架設本地AOSP Gerrit Server完整指引 PART1](https://c55jeremy-tech.blogspot.com/2019/04/gerrit-serveraosp-codebase-part-13.html)
+* [HOW TO SET LOCAL AOSP GERRIT SERVER – PART 1](https://nativeguru.wordpress.com/2015/05/22/how-to-set-local-aosp-gerrit-server-part-1/)
