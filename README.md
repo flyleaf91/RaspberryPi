@@ -20,6 +20,8 @@
 
 ## 笔记文档
 
+* [0052_shadowsocks.md](docs/0052_shadowsocks.md)
+* [0051_tig.md](docs/0051_tig.md)
 * [0050_Cscope.md](docs/0050_Cscope.md)
 * [0049_DTS_GPIO_Kernel_Driver_Interrupt.md](docs/0049_DTS_GPIO_Kernel_Driver_Interrupt.md)
 * [0048_Gitweb.md](docs/0048_Gitweb.md)
