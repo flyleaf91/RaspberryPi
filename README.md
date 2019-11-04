@@ -20,6 +20,9 @@
 
 ## 笔记文档
 
+* [0054_NFS.md](docs/0054_NFS.md)
+* [0053_auto_sd_resize.md](docs/0053_auto_sd_resize.md)
+* [0053_auto_sd_resize.md](docs/0053_auto_sd_resize.md)
 * [0052_shadowsocks.md](docs/0052_shadowsocks.md)
 * [0051_tig.md](docs/0051_tig.md)
 * [0050_Cscope.md](docs/0050_Cscope.md)
