@@ -20,6 +20,7 @@
 
 ## 笔记文档
 
+* [0055_Kernel_Message_To_UART_Port.md](docs/0055_Kernel_Message_To_UART_Port.md)
 * [0054_NFS.md](docs/0054_NFS.md)
 * [0053_auto_sd_resize.md](docs/0053_auto_sd_resize.md)
 * [0053_auto_sd_resize.md](docs/0053_auto_sd_resize.md)
