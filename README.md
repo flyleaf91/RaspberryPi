@@ -20,6 +20,8 @@
 
 ## 笔记文档
 
+* [0057_DebugHAT_AT24C02.md](docs/0057_DebugHAT_AT24C02.md)
+* [0056_DebugHAT.md](https://github.com/ZengjfOS/DebugHAT)
 * [0055_Kernel_Message_To_UART_Port.md](docs/0055_Kernel_Message_To_UART_Port.md)
 * [0054_NFS.md](docs/0054_NFS.md)
 * [0053_auto_sd_resize.md](docs/0053_auto_sd_resize.md)

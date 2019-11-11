@@ -3,6 +3,7 @@
 ## 参考文档
 
 * [How to enable boot messages over UART](https://www.raspberrypi.org/forums/viewtopic.php?t=184718)
+* [The Raspberry Pi UARTs](https://www.raspberrypi.org/documentation/configuration/uart.md)
 
 
 ## cmdline.txt
