@@ -20,6 +20,8 @@
 
 ## 笔记文档
 
+* [0059_DebugHAT_Shutdown.md](docs/0059_DebugHAT_Shutdown.md)
+* [0058_DebugHAT_Poweroff.md](docs/0058_DebugHAT_Poweroff.md)
 * [0057_DebugHAT_AT24C02.md](docs/0057_DebugHAT_AT24C02.md)
 * [0056_DebugHAT.md](https://github.com/ZengjfOS/DebugHAT)
 * [0055_Kernel_Message_To_UART_Port.md](docs/0055_Kernel_Message_To_UART_Port.md)
