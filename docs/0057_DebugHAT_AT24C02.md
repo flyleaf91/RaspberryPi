@@ -7,9 +7,9 @@
 * [0045_SoC_Device_Tree.md](0045_SoC_Device_Tree.md)
 
 
-## steps
+## Kernel Compile Steps
 
-* `arch/arm/boot/dts/rpi-at24c02-overlay.dts`
+* `arch/arm/boot/dts/overlays/rpi-at24c02-overlay.dts`
   ```dts
   // rpi-sense HAT
   /dts-v1/;
@@ -95,3 +95,39 @@ root@raspberrypi:/sys/devices/platform/soc/fe804000.i2c/i2c-1/1-0050# xxd eeprom
 000000e0: ffff ffff ffff ffff ffff ffff ffff ffff  ................
 000000f0: ffff ffff ffff ffff ffff ffff ffff ffff  ................
 ```
+
+## Overlay Compile Directly
+
+* `rpi-at24c64-overlay.dts`
+  ```
+  // rpi-sense HAT
+  /dts-v1/;
+  /plugin/;
+  
+  / {
+          compatible = "brcm,bcm2835";
+  
+          fragment@0 {
+                  target = <&i2c1>;
+                  __overlay__ {
+                          #address-cells = <1>;
+                          #size-cells = <0>;
+                          status = "okay";
+  
+                          DebugHAT@51 {
+                                  compatible = "atmel,24c64";
+                                  reg = <0x51>;
+                                  status = "okay";
+                          };
+                  };
+          };
+  };
+  ```
+* `dtc -O dtb -o rpi-at24c64.dtbo rpi-at24c64-overlay.dts`
+* `sudo cp rpi-at24c64.dtbo /boot/overlays/`
+* `/boot/config.txt`
+  ```
+  [...省略]
+  dtoverlay=rpi-at24c64
+  ```
+* `reboot`

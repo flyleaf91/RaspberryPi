@@ -20,13 +20,13 @@
 
 ## 笔记文档
 
+* [0060_DebugHAT_led.md](docs/0060_DebugHAT_led.md)
 * [0059_DebugHAT_Shutdown.md](docs/0059_DebugHAT_Shutdown.md)
 * [0058_DebugHAT_Poweroff.md](docs/0058_DebugHAT_Poweroff.md)
 * [0057_DebugHAT_AT24C02.md](docs/0057_DebugHAT_AT24C02.md)
 * [0056_DebugHAT.md](https://github.com/ZengjfOS/DebugHAT)
 * [0055_Kernel_Message_To_UART_Port.md](docs/0055_Kernel_Message_To_UART_Port.md)
 * [0054_NFS.md](docs/0054_NFS.md)
-* [0053_auto_sd_resize.md](docs/0053_auto_sd_resize.md)
 * [0053_auto_sd_resize.md](docs/0053_auto_sd_resize.md)
 * [0052_shadowsocks.md](docs/0052_shadowsocks.md)
 * [0051_tig.md](docs/0051_tig.md)
