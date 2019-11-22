@@ -20,6 +20,7 @@
 
 ## 笔记文档
 
+* [0061_Sense_HAT_ATtiny88.md](docs/0061_Sense_HAT_ATtiny88.md)
 * [0060_DebugHAT_led.md](docs/0060_DebugHAT_led.md)
 * [0059_DebugHAT_Shutdown.md](docs/0059_DebugHAT_Shutdown.md)
 * [0058_DebugHAT_Poweroff.md](docs/0058_DebugHAT_Poweroff.md)
