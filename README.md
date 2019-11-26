@@ -20,6 +20,9 @@
 
 ## 笔记文档
 
+* [0064_OpenVPN_Multiple_Users.md](docs/0064_OpenVPN_Multiple_Users.md)
+* [0063_OpenVPN.md](docs/0063_OpenVPN.md)
+* [0062_U-Boot_Compile.md](docs/0062_U-Boot_Compile.md)
 * [0061_Sense_HAT_ATtiny88.md](docs/0061_Sense_HAT_ATtiny88.md)
 * [0060_DebugHAT_led.md](docs/0060_DebugHAT_led.md)
 * [0059_DebugHAT_Shutdown.md](docs/0059_DebugHAT_Shutdown.md)
