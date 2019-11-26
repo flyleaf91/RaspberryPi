@@ -20,6 +20,7 @@
 
 ## 笔记文档
 
+* [0065_Continue_Show_dmesg.md](docs/0065_Continue_Show_dmesg.md)
 * [0064_OpenVPN_Multiple_Users.md](docs/0064_OpenVPN_Multiple_Users.md)
 * [0063_OpenVPN.md](docs/0063_OpenVPN.md)
 * [0062_U-Boot_Compile.md](docs/0062_U-Boot_Compile.md)
