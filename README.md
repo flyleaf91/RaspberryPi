@@ -20,6 +20,7 @@
 
 ## 笔记文档
 
+* [0067_xrdp.md](docs/0067_xrdp.md)
 * [0066_M24128_EEPROM.md](docs/0066_M24128_EEPROM.md)
 * [0065_Continue_Show_dmesg.md](docs/0065_Continue_Show_dmesg.md)
 * [0064_OpenVPN_Multiple_Users.md](docs/0064_OpenVPN_Multiple_Users.md)
