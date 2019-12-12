@@ -20,6 +20,7 @@
 
 ## 笔记文档
 
+* [0069_PADS.md](docs/0069_PADS.md)
 * [0068_wav_Sound_Generator.md](docs/0068_wav_Sound_Generator.md)
 * [0067_xrdp.md](docs/0067_xrdp.md)
 * [0066_M24128_EEPROM.md](docs/0066_M24128_EEPROM.md)
