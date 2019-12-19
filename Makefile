@@ -1,7 +1,7 @@
 # main compiler
 CC := gcc
 
-TARGET1 := gpioIrq
+TARGET1 := PWMCount
 all: $(TARGET1) 
 
 $(TARGET1): 

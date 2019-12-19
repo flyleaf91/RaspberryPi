@@ -5,6 +5,9 @@
 #include <unistd.h>
 #include <fcntl.h>
 #include <poll.h>
+#include <sys/time.h>
+#include <unistd.h>
+#include <signal.h>
 
  /****************************************************************
  * Constants
@@ -184,6 +187,39 @@ int gpio_fd_close(int fd)
 	return close(fd);
 }
 
+int pwm_count = 0;
+void prompt_info(int signo)
+{
+	printf("pwm count: %dHz\n", pwm_count / 2);  //暂时没找到为什么要除以2才是真的频率
+	pwm_count = 0;
+}
+
+// 建立信号处理机制
+void init_sigaction(void)
+{
+	struct sigaction tact;
+	/*信号到了要执行的任务处理函数为prompt_info*/
+	tact.sa_handler = prompt_info;
+	tact.sa_flags = 0;
+	/*初始化信号集*/
+	sigemptyset(&tact.sa_mask);
+	/*建立信号处理机制*/
+	sigaction(SIGALRM, &tact, NULL);
+}
+
+void init_time()
+{
+	struct itimerval value;
+	/*设定执行任务的时间间隔为2秒0微秒*/
+	value.it_value.tv_sec = 2;
+	value.it_value.tv_usec = 0;
+	/*设定初始时间计数也为2秒0微秒*/
+	value.it_interval = value.it_value;
+	/*设置计时器ITIMER_REAL*/
+	setitimer(ITIMER_REAL, &value, NULL);
+}
+
+
 /****************************************************************
  * Main
  ****************************************************************/
@@ -213,7 +249,11 @@ int main(int argc, char **argv, char **envp)
 	gpio_set_edge(gpio, argv[2]);
 	gpio_fd = gpio_fd_open(gpio);
 
+	init_sigaction();
+	init_time();
+
 	timeout = POLL_TIMEOUT;
+	pwm_count = 0;
 
 	while (1) {
 		memset((void*)fdset, 0, sizeof(fdset));
@@ -227,8 +267,9 @@ int main(int argc, char **argv, char **envp)
 		rc = poll(fdset, nfds, timeout);
 
 		if (rc < 0) {
-			printf("\npoll() failed!\n");
-			return -1;
+			// printf("\npoll() failed!\n");
+			// return -1;
+			continue;
 		}
 
 		if (rc == 0) {
@@ -238,8 +279,9 @@ int main(int argc, char **argv, char **envp)
 		if (fdset[1].revents & POLLPRI) {
 			lseek(fdset[1].fd, 0, SEEK_SET);
 			len = read(fdset[1].fd, buf, MAX_BUF);
-			printf("\npoll() GPIO %d interrupt occurred\n", gpio);
-			printf("\tread value: '%c'\n", buf[0]);
+			// printf("\npoll() GPIO %d interrupt occurred\n", gpio);
+			// printf("\tread value: '%c'\n", buf[0]);
+			pwm_count++;
 		}
 
 		if (fdset[0].revents & POLLIN) {

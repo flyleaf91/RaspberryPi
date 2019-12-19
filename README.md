@@ -1,9 +1,9 @@
-# gpioIrq
+# PWMCount
 
 ## Usage
 
 ```
-./gpioIrq <GPIO-Number> <irq type>
+./PWMCount <GPIO-Number> <irq type>
 ```
 
 * riq type
