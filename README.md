@@ -1,6 +1,6 @@
 # README
 
-树莓派应该算是目前开源硬件里学习嵌入式Linux系统最好的工具，里面的设计思路和一些工具是很值得借鉴的，这里主要使用Raspberry Pi ZERO W进行系统架构分析。
+树莓派应该算是目前开源硬件里学习嵌入式Linux系统最好的工具，里面的设计思路和一些工具是很值得借鉴的，这里主要使用Raspberry Pi ZERO W和Raspberry Pi 4B进行系统架构分析。
 
 之前在使用树莓派的过程中有记录一些东西，不过没有进行全面系统性的分析，相对比较零散。
 
@@ -20,6 +20,7 @@
 
 ## 笔记文档
 
+* [0072_RPI4_USB_Camera.md](docs/0072_RPI4_USB_Camera.md)
 * [0071_WiFi_AP.md](docs/0071_WiFi_AP.md)
 * [0070_PWM_Counter.md](docs/0070_PWM_Counter.md)
 * [0069_PADS.md](docs/0069_PADS.md)
