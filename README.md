@@ -20,6 +20,7 @@
 
 ## 笔记文档
 
+* [0073_MathJax.md](docs/0073_MathJax.md)
 * [0072_RPI4_USB_Camera.md](docs/0072_RPI4_USB_Camera.md)
 * [0071_WiFi_AP.md](docs/0071_WiFi_AP.md)
 * [0070_PWM_Counter.md](docs/0070_PWM_Counter.md)
