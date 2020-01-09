@@ -20,6 +20,7 @@
 
 ## 笔记文档
 
+* [0075_Kernel_Panic_trigger.md](docs/0075_Kernel_Panic_trigger.md)
 * [0074_Core_Files.md](docs/0074_Core_Files.md)
 * [0073_MathJax.md](docs/0073_MathJax.md)
 * [0072_RPI4_USB_Camera.md](docs/0072_RPI4_USB_Camera.md)
