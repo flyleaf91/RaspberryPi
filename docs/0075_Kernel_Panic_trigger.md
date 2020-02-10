@@ -122,110 +122,17 @@
   [  106.633384] ---[ end Kernel panic - not syncing: Fatal exception ]---
   ```
 
+
 ## kdump
 
 * [为树莓派编译Kdump kernel](http://weinan.io/2018/06/18/kdump.html)
 * [Configuring the kernel](https://www.raspberrypi.org/documentation/linux/kernel/configuring.md)
 * sudo apt-get install kdump-tools
   * 安装失败，会提示内核不支持
-* CONFIG_DEBUG_INFO
-  ```
-   .config - Linux/arm64 4.19.71 Kernel Configuration
-   > Search (CONFIG_DEBUG_INFO) ─
-    ┌─ Search Results ─┐
-    │ Symbol: DEBUG_INFO [=n]                                                 │
-    │ Type  : bool                                                            │
-    │ Prompt: Compile the kernel with debug info                              │
-    │   Location:                                                             │
-    │     -> Kernel hacking
-    │ (1)   -> Compile-time checks and compiler options
-    │   Defined at lib/Kconfig.debug:153                                      │
-    │   Depends on: DEBUG_KERNEL [=y] && !COMPILE_TEST [=n]                   │
-    │                                                                         │
-    │                                                                         │
-    │ Symbol: DEBUG_INFO_DWARF4 [=n]                                          │
-    │ Type  : bool                                                            │
-    │ Prompt: Generate dwarf4 debuginfo                                       │
-    │   Location:                                                             │
-    │     -> Kernel hacking                                                   │
-    ├─┤        Kernel Features  --->                                  ( 31%)│ │
-    │                          < Exit >     < Help >                          │
-    └─┘    [ ] Kernel support for 32-bit EL0 (NEW)                          │ │
-  ```
-* CONFIG_CRASH_DUMP
-  ```
-   .config - Linux/arm64 4.19.71 Kernel Configuration
-   > Search (CONFIG_CRASH_DUMP) ─
-    ┌─ Search Results ─┐
-    │ Symbol: CRASH_DUMP [=n]                                                 │
-    │ Type  : bool                                                            │
-    │ Prompt: Build kdump crash kernel                                        │
-    │   Location:                                                             │
-    │ (1) -> Kernel Features                                                  │
-    │   Defined at arch/arm64/Kconfig:865                                     │
-    │                                                                         │
-    │                                                                         │
-    │                                                                         │
-    │                                                                         │
-    │                                                                         │
-    │                                                                         │
-    │                                                                         │
-    │                                                                         │
-    │                                                                         │
-    ├─(100%)──┤
-    │                                < Exit >                                 │
-    └─┘
-  ```
-* CONFIG_PROC_VMCORE
-  ```
-   .config - Linux/arm64 4.19.71 Kernel Configuration
-   > Search (CONFIG_PROC_VMCORE)
-    ┌─ Search Results ─┐
-    │ Symbol: PROC_VMCORE [=n]                                                │
-    │ Type  : bool                                                            │
-    │ Prompt: /proc/vmcore support                                            │
-    │   Location:                                                             │
-    │     -> File systems
-    │       -> Pseudo filesystems
-    │ (1)     -> /proc file system support (PROC_FS [=y])                     │
-    │   Defined at fs/proc/Kconfig:40                                         │
-    │   Depends on: PROC_FS [=y] && CRASH_DUMP [=n]                           │
-    │                                                                         │
-    │                                                                         │
-    │ Symbol: PROC_VMCORE_DEVICE_DUMP [=n]                                    │
-    │ Type  : bool                                                            │
-    │ Prompt: Device Hardware/Firmware Log Collection                         │
-    │   Location:                                                             │
-    ├─┤        Kernel Features  --->                                  ( 62%)│ │
-    │                          < Exit >     < Help >                          │
-    └─┘    [ ] Kernel support for 32-bit EL0 (NEW)                          │ │
-  ```
-* KEXEC
-  ```
-   .config - Linux/arm64 4.19.71 Kernel Configuration
-   > Search (KEXEC) PROC_VMCORE)
-    ┌─ Search Results ─┐
-    │ Symbol: KEXEC [=n]                                                      │
-    │ Type  : bool                                                            │
-    │ Prompt: kexec system call                                               │
-    │   Location:                                                             │
-    │ (1) -> Kernel Features                                                  │
-    │   Defined at arch/arm64/Kconfig:855                                     │
-    │   Depends on: PM_SLEEP_SMP [=n]                                         │
-    │   Selects: KEXEC_CORE [=n]                                              │
-    │                                                                         │
-    │
-    │ Symbol: HAVE_IMA_KEXEC [=n]
-    │ Type  : bool                                                            │
-    │   Defined at arch/Kconfig:21                                            │
-    │                                                                         │
-    │                                                                         │
-    ├─┤        Kernel Features  --->                                  ( 20%)│ │
-    │                          < Exit >     < Help >                          │
-    └─┘    [ ] Kernel support for 32-bit EL0 (NEW)                          │ │
-  ```
-* cmdline
-  * cat cmdline.txt
-    ```
-    dwc_otg.lpm_enable=1 console=ttyS0,115200 root=PARTUUID=48597d87-02 rootfstype=ext4 elevator=deadline fsck.repair=yes rootwait splash plymouth.ignore-serial-consoles modules-load=dwc2,g_ether crashkernel=128M
-    ```
+* arch/arm/configs/bcm2711_defconfig
+* make CROSS_COMPILE=arm-linux-gnueabihf- menuconfig 
+  * CONFIG_DEBUG_INFO
+  * CONFIG_CRASH_DUMP
+  * CONFIG_PROC_VMCORE
+  * KEXEC
+* 默认不支持kdump

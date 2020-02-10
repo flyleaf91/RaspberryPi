@@ -14,6 +14,7 @@ https://github.com/raspberrypi/linux
 * download kernel source code and `cd` to kernel root path
 * `KERNEL=kernel7l`
 * `make bcm2711_defconfig`
+  * arch/arm/configs/bcm2711_defconfig
 * `make -j4 zImage modules dtbs`
   * config dir: `arch/arm64/configs/bcm2711_defconfig`
   * overlay dir: `arch/arm/boot/dts/overlays`
@@ -51,7 +52,7 @@ https://github.com/raspberrypi/linux
 
 ## menuconfig
 
-`make ARCH=arm64 CROSS_COMPILE=arm-linux-gnueabihf- menuconfig`
+`make CROSS_COMPILE=arm-linux-gnueabihf- menuconfig`
 
 ## Check version
 
