@@ -20,6 +20,7 @@
 
 ## 笔记文档
 
+* [0079_Local_Socket.md](docs/0079_Local_Socket.md)
 * [0078_OpenGrok.md](docs/0078_OpenGrok.md)
 * [0077_Large_File_Split.md](docs/0077_Large_File_Split.md)
 * [0076_PCM5122.md](docs/0076_PCM5122.md)
