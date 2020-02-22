@@ -1,4 +1,4 @@
-# Local Socket
+# Android Init Base Arch
 
 ## 参考文档
 
