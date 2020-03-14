@@ -20,6 +20,7 @@
 
 ## 笔记文档
 
+* [0082_wpa_cli.md](docs/0082_wpa_cli.md)
 * [0081_Android_Binder.md](docs/0081_Android_Binder.md)
 * [0080_Thread_Pool.md](docs/0080_Thread_Pool.md)
 * [0079_Android_Init_Base_Arch.md](docs/0079_Android_Init_Base_Arch.md)
