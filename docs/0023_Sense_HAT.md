@@ -1,5 +1,7 @@
 # Sense HAT
 
+Sense HAT使用方法
+
 ## 参考文档
 
 * [rpi-sense firmware souce code](https://github.com/raspberrypi/rpi-sense)

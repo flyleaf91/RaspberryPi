@@ -1,5 +1,6 @@
 # Kernel Panic trigger
 
+手动触发内核Panic
 
 ## 参考文档
 

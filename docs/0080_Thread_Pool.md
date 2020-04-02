@@ -1,5 +1,7 @@
 # Thread Pool
 
+了解线程池的工作原理
+
 ## 参考文档
 
 * https://github.com/xiethon/pthread_poll

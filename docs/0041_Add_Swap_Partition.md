@@ -1,5 +1,7 @@
 # Add Swap Partition
 
+手动添加Swap分区，内存不够的时候可以尝试用用
+
 ## 参考源代码
 
 * [Linux 下 swap 分区及作用详解](https://blog.csdn.net/a860mhz/article/details/51124153)

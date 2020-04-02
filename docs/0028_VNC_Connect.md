@@ -1,5 +1,7 @@
 # VNC Connect
 
+打开VNC功能
+
 ## 参考文档
 
 * [VNC (Virtual Network Computing)](https://www.raspberrypi.org/documentation/remote-access/vnc/)

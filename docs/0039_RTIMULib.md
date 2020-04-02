@@ -1,5 +1,7 @@
 # RTIMULib
 
+尝试一下RTIMULib库的使用方法
+
 ## Source code
 
 https://github.com/RPi-Distro/RTIMULib/tree/master/Linux

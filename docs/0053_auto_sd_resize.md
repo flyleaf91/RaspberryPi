@@ -1,5 +1,7 @@
 # auto sd resize
 
+分析SD卡自动resize功能
+
 ## 参考文档
 
 * [Automatic Expand Filesystem after cloning a Rasbian image](https://www.raspberrypi.org/forums/viewtopic.php?t=174434)

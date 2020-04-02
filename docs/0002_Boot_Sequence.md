@@ -1,5 +1,7 @@
 # Boot Sequence
 
+启动时序
+
 ## 参考文档
 
 * [What is the boot sequence?](https://raspberrypi.stackexchange.com/questions/10442/what-is-the-boot-sequence)

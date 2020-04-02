@@ -1,5 +1,7 @@
 # dtoverlay
 
+分析设备树overlay功能，和上篇文档一样
+
 ## 参考文档
 
 * [dtbocfg - Device Tree Blob Overlay Configuration File System](https://github.com/ikwzm/dtbocfg)

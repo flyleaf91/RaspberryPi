@@ -1,5 +1,7 @@
 # libdrm modetest
 
+编译libdrm，可以用于调试drm驱动的屏
+
 ## source code
 
 https://github.com/grate-driver/libdrm

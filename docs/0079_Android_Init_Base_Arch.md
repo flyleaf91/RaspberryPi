@@ -1,5 +1,7 @@
 # Android Init Base Arch
 
+理解Android Init进程监听子进程原理
+
 ## 参考文档
 
 * [unix_server.c](https://gist.github.com/tscho/397539)

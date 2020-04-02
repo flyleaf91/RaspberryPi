@@ -1,5 +1,6 @@
 # Sense HAT ATtiny88
 
+分析Sense HAT的ATtiny88 MCU代码
 
 ## 参考文档
 

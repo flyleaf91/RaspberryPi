@@ -1,5 +1,7 @@
 # HTTP Auth
 
+尝试HTTP认证
+
 ## Install
 
 * `sudo apt-get install apache2 apache2-utils`

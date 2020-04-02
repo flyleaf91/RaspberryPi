@@ -1,5 +1,7 @@
 # OpenCV
 
+学习OpenCV的基本使用方法
+
 ## 参考文档
 
 * [ImportError: libcblas.so.3: cannot open shared object file: No such file or directory](https://stackoverflow.com/questions/53347759/importerror-libcblas-so-3-cannot-open-shared-object-file-no-such-file-or-dire)

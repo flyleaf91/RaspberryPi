@@ -1,5 +1,7 @@
 # SoC Device Tree
 
+SoC设备树
+
 ## proc file
 
 * `cat /proc/device-tree/compatible`

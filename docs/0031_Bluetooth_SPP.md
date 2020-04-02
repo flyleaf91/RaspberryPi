@@ -1,5 +1,7 @@
 # Bluetooth SPP
 
+尝试蓝牙串口功能
+
 ## 参考文档
 
 * [GUIDE: How to establish Bluetooth serial communication between two Pi 3's](https://www.reddit.com/r/raspberry_pi/comments/6nchaj/guide_how_to_establish_bluetooth_serial/)

@@ -1,5 +1,7 @@
 # Linux Kernel Compile
 
+内核编译方法
+
 ## 参考文档
 
 * [Kernel building](https://www.raspberrypi.org/documentation/linux/kernel/building.md)

@@ -1,5 +1,7 @@
 # Tensorflow Install
 
+安装Tensorflow，不过不会用
+
 ## python install 
 
 * `sudo pip3 install tensorflow`

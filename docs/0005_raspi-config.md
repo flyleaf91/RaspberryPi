@@ -1,5 +1,7 @@
 # raspi-config
 
+raspi-config解析
+
 ## 参考文档
 
 * [raspi-config](https://github.com/raspberrypi/documentation/blob/master/configuration/raspi-config.md)

@@ -1,5 +1,7 @@
 # Cscope
 
+和ctags一样好用的代码跟踪工具
+
 http://cscope.sourceforge.net/
 
 

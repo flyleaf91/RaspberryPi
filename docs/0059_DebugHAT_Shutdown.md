@@ -1,5 +1,6 @@
 # DebugHAT Shutdown
 
+Debug HAT Shutdown按钮
 
 ## 参考文档
 

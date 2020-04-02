@@ -1,5 +1,7 @@
 # Auto Login Via TTY
 
+自动登录，好像没什么用处
+
 ## 参考代码
 
 * https://github.com/raspberrypi/tools/blob/master/test_code/main.c

@@ -1,5 +1,7 @@
 # Timer
 
+Linux系统常用定时器
+
 ## 参考文档
 
 * [linux应用层定时器](http://blog.chinaunix.net/uid-27717694-id-3658941.html)

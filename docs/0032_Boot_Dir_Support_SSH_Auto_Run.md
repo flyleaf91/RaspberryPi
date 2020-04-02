@@ -1,5 +1,7 @@
 # Boot Dir Support SSH Auto Run
 
+分析自动打开SSH和网络配置原理
+
 ## raspberrypi-net-mods.service
 
 * `ls -al /etc/systemd/system/multi-user.target.wants/raspberrypi-net-mods.service`

@@ -1,5 +1,7 @@
 # Samba for NAS
 
+搭建Samba服务
+
 ## 参考文档
 
 * [Samba/CIFS](https://www.raspberrypi.org/documentation/remote-access/samba.md)

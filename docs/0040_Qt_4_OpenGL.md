@@ -1,5 +1,7 @@
 # Qt 4 OpenGL
 
+学习使用OpenGL，但不知为何QT 5用不了
+
 ## 参考源代码
 
 * https://github.com/openwebos/qt/tree/master/examples/opengl/hellogl

@@ -1,5 +1,7 @@
 # MBR GPT
 
+分析MBR GPT分区格式
+
 ## 参考文档
 
 * [MBR分区表详解](https://blog.csdn.net/gkxg001/article/details/82870109)

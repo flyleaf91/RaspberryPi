@@ -1,5 +1,7 @@
 # MathJax
 
+在GitHub上渲染数学公式
+
 崔博想在GitHub显示公式，只看GFM（Github Flavored Markdown）规范，貌似不支持处理公式，于是觉得直接引用MathJax就可以在GitHub上渲染出效果来了，结果是不行的。
 
 不过发现[CodeCogs里有工具](https://www.codecogs.com/latex/eqneditor.php)可以用来专门做这件事情；

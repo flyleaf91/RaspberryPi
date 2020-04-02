@@ -1,5 +1,7 @@
 # Create Raspbian Image
 
+如果你想看看树莓派镜像是如何打包出来，可以看看这个
+
 ## 参考
 
 * [pi-gen](https://github.com/RPi-Distro/pi-gen)

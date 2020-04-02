@@ -1,5 +1,7 @@
 # Dynamic Device Tree
 
+动态设备树工作原理
+
 ## 参考文档
 
 * [Device tree future](https://elinux.org/Device_tree_future#Material_to_review_before_the_conference)

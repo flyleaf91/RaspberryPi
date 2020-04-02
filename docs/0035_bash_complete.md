@@ -1,5 +1,7 @@
 # bash complete
 
+按tab键命令自动补全功能
+
 ## 参考文档
 
 * [Creating a bash completion script](https://iridakos.com/tutorials/2018/03/01/bash-programmable-completion-tutorial.html)

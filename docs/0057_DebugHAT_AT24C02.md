@@ -1,5 +1,6 @@
 # DebugHAT AT24C02
 
+DebugHAT AT24C02 EEPROM使用方法
 
 ## 参考文档
 

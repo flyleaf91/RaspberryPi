@@ -1,5 +1,7 @@
 # Kernel Message To UART Port
 
+将内核信息输出到Console Port
+
 ## 参考文档
 
 * [How to enable boot messages over UART](https://www.raspberrypi.org/forums/viewtopic.php?t=184718)

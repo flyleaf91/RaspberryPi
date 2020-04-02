@@ -1,5 +1,7 @@
 # wav Sound Generator
 
+C代码生成wav声音文件生成方法
+
 ## 参考文档
 
 * [Generate wavfile](https://github.com/ZengjfOS/ASoC/blob/master/docs/0019_Generate_wavfile/README.md)

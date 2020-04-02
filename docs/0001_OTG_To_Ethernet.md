@@ -1,5 +1,7 @@
 # OTG To Ethernet
 
+设置USB为OTG网卡
+
 ## 参考文档
 
 * [Jan Raspberry Pi Zero W Headless setup – Windows 10 RNDIS Driver issue resolved](https://www.factoryforward.com/pi-zero-w-headless-setup-windows10-rndis-driver-issue-resolved/)

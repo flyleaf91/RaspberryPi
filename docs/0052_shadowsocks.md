@@ -1,5 +1,7 @@
 # shadowsocks
 
+搭建shadowsocks服务器
+
 ## Install
 
 * sudo pip install shadowsocks
