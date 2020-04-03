@@ -6,12 +6,14 @@
 * [二、trace_marker](#二trace_marker)
 * [三、测试trace_marker](#三测试trace_marker)
 * [四、系统支持的监听event](#四系统支持的监听event)
+* [五、Kernel Tracers](#五Kernel-Tracers)
 
 ## 一、参考文档
 
 * [Event Tracing](https://www.kernel.org/doc/Documentation/trace/events.rst)
 * [Event Tracing](https://www.kernel.org/doc/html/v4.18/trace/events.html)
 * [Android 使用 ftrace](https://source.android.com/devices/tech/debug/ftrace)
+* [Trace-cmd and kernelshark trace viewer](https://wiki.st.com/stm32mpu/wiki/Trace-cmd_and_kernelshark_trace_viewer)
 
 ## 二、trace_marker
 
@@ -61,3 +63,46 @@ void trace_write(const char *fmt, ...)
 ## 四、系统支持的监听event
 
 `cat /sys/kernel/debug/tracing/available_events`
+
+## 五、Kernel Tracers
+
+```
+ .config - Linux/arm 4.19.71 Kernel Configuration
+ → Kernel hacking → Tracers ────────────────────────────────────────────────────────────────────────────────────
+  ┌──────────────────────────────────────────────── Tracers ─────────────────────────────────────────────────┐
+  │  Arrow keys navigate the menu.  <Enter> selects submenus ---> (or empty submenus ----).  Highlighted     │
+  │  letters are hotkeys.  Pressing <Y> includes, <N> excludes, <M> modularizes features.  Press <Esc><Esc>  │
+  │  to exit, <?> for Help, </> for Search.  Legend: [*] built-in  [ ] excluded  <M> module  < > module      │
+  │  capable                                                                                                 │
+  │ ┌──────────────────────────────────────────────────────────────────────────────────────────────────────┐ │
+  │ │                --- Tracers                                                                           │ │
+  │ │                -*-   Kernel Function Tracer                                                          │ │
+  │ │                [*]     Kernel Function Graph Tracer                                                  │ │
+  │ │                [ ]   Enable trace events for preempt and irq disable/enable                          │ │
+  │ │                [*]   Interrupts-off Latency Tracer                                                   │ │
+  │ │                [*]   Scheduling Latency Tracer                                                       │ │
+  │ │                [ ]   Tracer to detect hardware latencies (like SMIs)                                 │ │
+  │ │                [ ]   Trace syscalls                                                                  │ │
+  │ │                -*-   Create a snapshot trace buffer                                                  │ │
+  │ │                -*-     Allow snapshot to swap per CPU                                                │ │
+  │ │                      Branch Profiling (No branch profiling)  --->                                    │ │
+  │ │                [*]   Trace max stack                                                                 │ │
+  │ │                [*]   Support for tracing block IO actions                                            │ │
+  │ │                [*]   Enable kprobes-based dynamic events                                             │ │
+  │ │                [ ]   Enable uprobes-based dynamic events                                             │ │
+  │ │                [*]   enable/disable function tracing dynamically                                     │ │
+  │ │                [*]   Kernel function profiler                                                        │ │
+  │ │                [ ]   Perform a startup test on ftrace                                                │ │
+  │ │                [ ]   Add tracepoint that benchmarks tracepoints                                      │ │
+  │ │                < >   Ring buffer benchmark stress tester                                             │ │
+  │ │                [ ]   Ring buffer startup self test                                                   │ │
+  │ │                < >   Preempt / IRQ disable delay thread to test latency tracers                      │ │
+  │ │                [ ]   Show eval mappings for trace events                                             │ │
+  │ │                [*]   Trace gpio events                                                               │ │
+  │ │                                                                                                      │ │
+  │ │                                                                                                      │ │
+  │ └──────────────────────────────────────────────────────────────────────────────────────────────────────┘ │
+  ├──────────────────────────────────────────────────────────────────────────────────────────────────────────┤
+  │                         <Select>    < Exit >    < Help >    < Save >    < Load >                         │
+  └──────────────────────────────────────────────────────────────────────────────────────────────────────────┘
+```

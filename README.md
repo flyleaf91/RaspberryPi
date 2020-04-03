@@ -22,6 +22,8 @@
 
 NO.|文件名称|摘要
 :--:|:--|:--
+0088| [ftrace_CPU_Frequency.md](docs/0088_ftrace_CPU_Frequency.md) | 理解CPU自动调频
+0087| [strace.md](docs/0087_strace.md) | 理解strace(system call trace)系统调用跟踪
 0086| [trace-cmd.md](docs/0086_trace-cmd.md) | 理解trace-cmd工作原理
 0085| [netlink.md](docs/0085_netlink.md) | libnl基本使用方法
 0084| [wpa_supplicant_daemon.md](docs/0084_wpa_supplicant_daemon.md) | 分析wpa_supplicant后台程序工作原理
