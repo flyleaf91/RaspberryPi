@@ -22,6 +22,7 @@
 
 NO.|文件名称|摘要
 :--:|:--|:--
+0089| [ftrace_I2C.md](docs/0089_ftrace_I2C.md) | 使用ftrace观察I2C，EEPROM是扩展板上的
 0088| [ftrace_CPU_Frequency.md](docs/0088_ftrace_CPU_Frequency.md) | 理解CPU自动调频
 0087| [strace.md](docs/0087_strace.md) | 理解strace(system call trace)系统调用跟踪
 0086| [trace-cmd.md](docs/0086_trace-cmd.md) | 理解trace-cmd工作原理
