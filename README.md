@@ -22,6 +22,7 @@
 
 NO.|文件名称|摘要
 :--:|:--|:--
+0092| [Wifi_Linux_Driver.md](docs/0092_Wifi_Linux_Driver.md) | Wifi驱动加载及基本调试
 0091| [systemd-journald.md](docs/0091_systemd-journald.md) | 系统日志
 0090| [systemd-timesyncd.md](docs/0090_systemd-timesyncd.md) | 系统是如何同步时钟的
 0089| [ftrace_I2C.md](docs/0089_ftrace_I2C.md) | 使用ftrace观察I2C，EEPROM是扩展板上的
