@@ -9,6 +9,11 @@ libnl基本使用方法
 * [五、Netlink分层模型及消息格式](#五Netlink分层模型及消息格式)
 * [六、Install libnl-3-dev](#六Install-libnl-3-dev)
 * [七、编译应用程序](#七编译应用程序)
+* [八、Linux Driver](#八Linux-Driver)
+  * [8.1 参考分析](#81-参考分析)
+  * [8.2 地址协议简写](#82-地址协议简写)
+  * [8.3 消息格式](#83-消息格式)
+  * [8.4 合成消息示例](#84-合成消息示例)
 
 ## 一、参考文档
 
@@ -169,4 +174,78 @@ int main(void)
     nl_socket_free(s);
     return 0;
 }
+```
+
+## 八、Linux Driver
+
+### 8.1 参考分析
+
+* [内核通信之Netlink源码分析-基础架构](https://www.cnblogs.com/ck1020/p/7118236.html)
+* [Netlink 内核实现分析 X](https://www.cnblogs.com/codestack/category/1744619.html)
+
+### 8.2 地址协议简写
+
+* AF == Address Family
+* PF == Protocol Family
+
+### 8.3 消息格式
+
+```
+Message Format:
+   <--- nlmsg_total_size(payload)  --->
+   <-- nlmsg_msg_size(payload) ->
+  +----------+- - -+-------------+- - -+-------- - -
+  | nlmsghdr | Pad |   Payload   | Pad | nlmsghdr
+  +----------+- - -+-------------+- - -+-------- - -
+  nlmsg_data(nlh)---^                   ^
+  nlmsg_next(nlh)-----------------------+
+
+Payload Format:
+   <---------------------- nlmsg_len(nlh) --------------------->
+   <------ hdrlen ------>       <- nlmsg_attrlen(nlh, hdrlen) ->
+  +----------------------+- - -+--------------------------------+
+  |     Family Header    | Pad |           Attributes           |
+  +----------------------+- - -+--------------------------------+
+  nlmsg_attrdata(nlh, hdrlen)---^
+```
+
+### 8.4 合成消息示例
+
+```C
+#define TEST_DATA_LEN    16
+#define TEST_DATA        "netlink send test"        /* 仅作为示例，内核NETLINK_ROUTE套接字无法解析 */
+ 
+struct sockaddr_nl nladdr;
+struct msghdr msg;
+struct nlmsghdr *nlhdr;
+struct iovec iov;
+ 
+/* 填充目的地址结构 */
+memset(&nladdr, 0, sizeof(nladdr));
+nladdr.nl_family = AF_NETLINK;
+nladdr.nl_pid = 0;                        /* 地址为内核 */
+nladdr.nl_groups = 0;                        /* 单播 */
+ 
+/* 填充netlink消息头 */
+nlhdr = (struct nlmsghdr *)malloc(NLMSG_SPACE(TEST_DATA_LEN));
+ 
+nlhdr->nlmsg_len = NLMSG_LENGTH(TEST_DATA_LEN);
+nlhdr->nlmsg_flags = NLM_F_REQUEST;
+nlhdr->nlmsg_pid = get_pid();                    /* 当前套接字所绑定的ID号（此处为本进程的PID） */
+nlhdr->nlmsg_seq = 0;
+ 
+/* 填充netlink消息实际载荷 */
+strcpy(NLMSG_DATA(nlhdr), TEST_DATA);
+iov.iov_base = (void *)nlhdr;
+iov.iov_len = nlhdr->nlmsg_len;
+    
+/* 填充数据消息结构 */
+memset(&msg, 0, sizeof(msg));
+msg.msg_name = (void *)&(nladdr);
+msg.msg_namelen = sizeof(nladdr);
+msg.msg_iov = &iov;
+msg.msg_iovlen = 1;
+ 
+/* 发送netlink消息 */
+sendmsg (sock, &msg, 0); /* sock 为NETLINK_ROUTE类型套接字 */
 ```

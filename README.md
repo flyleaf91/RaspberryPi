@@ -20,6 +20,7 @@
 
 ## 笔记文档
 
+* [0095_Kernel_Tools_Compile.md](docs/0095_Kernel_Tools_Compile.md)
 * [0094_NFC_PN532.md](docs/0094_NFC_PN532.md)
 * [0093_PCM_Data_Format.md](docs/0093_PCM_Data_Format.md)
 * [0092_Wifi_Linux_Driver.md](docs/0092_Wifi_Linux_Driver.md)
