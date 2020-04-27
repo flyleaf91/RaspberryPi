@@ -28,8 +28,9 @@ netlink是基于socket，并且是内核和用户进程都创建各自的socket�
 
 netlink作为套接字的一种，也遵循socket标准接口，其sockaddr的结构体实现包括：协议族(AF_NETLINK)、进程tgid、组播组
 
-Netlink sockets are connectionless, and operate in much the same way UDP2
-sockets do. 
+Netlink sockets are connectionless, and operate in much the same way UDP2 sockets do. 
+
+LLCP: Logical Link Control Protocol
 
 ## 三、nlmsghdr
 
@@ -182,6 +183,7 @@ int main(void)
 
 * [内核通信之Netlink源码分析-基础架构](https://www.cnblogs.com/ck1020/p/7118236.html)
 * [Netlink 内核实现分析 X](https://www.cnblogs.com/codestack/category/1744619.html)
+* [用户空间和内核空间通讯--netlink](https://e-mailky.github.io/2017-02-14-netlink-user-kernel1#%E7%AC%AC%E4%B8%80%E6%AD%A5)
 
 ### 8.2 地址协议简写
 
@@ -249,3 +251,36 @@ msg.msg_iovlen = 1;
 /* 发送netlink消息 */
 sendmsg (sock, &msg, 0); /* sock 为NETLINK_ROUTE类型套接字 */
 ```
+
+### 8.5 Netlink驱动示例
+
+https://github.com/ZengjfOS/RaspberryPi/tree/netlink
+
+
+### 九、当前系统注册的netlink子系统
+
+* grep netlink_kernel_create * -R
+  ```
+  crypto/crypto_user.c:   crypto_nlsk = netlink_kernel_create(&init_net, NETLINK_CRYPTO, &cfg);
+  drivers/power/supply/mediatek/battery/mtk_battery.c:    gm.daemo_nl_sk = netlink_kernel_create(&init_net, NETLINK_FGD, &cfg);
+  drivers/staging/gdm724x/netlink_k.c:    sock = netlink_kernel_create(&init_net, unit, &cfg);
+  drivers/infiniband/core/netlink.c:      nls = netlink_kernel_create(&init_net, NETLINK_RDMA, &cfg);
+  drivers/input/fingerprint/goodix/gf_spi_tee.c:          netlink_kernel_create(&init_net, GF_NETLINK_ROUTE, &cfg);
+  drivers/connector/connector.c:  dev->nls = netlink_kernel_create(&init_net, NETLINK_CONNECTOR, &cfg);
+  drivers/scsi/scsi_netlink.c:    scsi_nl_sock = netlink_kernel_create(&init_net, NETLINK_SCSITRANSPORT,
+  drivers/scsi/scsi_transport_iscsi.c:    nls = netlink_kernel_create(&init_net, NETLINK_ISCSI, &cfg);
+  drivers/misc/mediatek/thermal/common/coolers/mtk_ta.c:  daemo_nl_sk = netlink_kernel_create(&init_net, NETLINK_TAD, &cfg);
+  drivers/misc/mediatek/usb11/musbfsh_icusb.c:        netlink_kernel_create(&init_net, NETLINK_USERSOCK, &nl_cfg);
+  drivers/misc/mediatek/sysenv/mtk_sysenv.c:      netlink_sock = netlink_kernel_create(&init_net, NETLINK_USERSOCK, NULL);
+  kernel/audit.c: aunet->nlsk = netlink_kernel_create(net, NETLINK_AUDIT, &cfg);
+  lib/kobject_uevent.c:   ue_sk->sk = netlink_kernel_create(net, NETLINK_KOBJECT_UEVENT, &cfg);
+  net/core/rtnetlink.c:   sk = netlink_kernel_create(net, NETLINK_ROUTE, &cfg);
+  net/core/sock_diag.c:   net->diag_nlsk = netlink_kernel_create(net, NETLINK_SOCK_DIAG, &cfg);
+  net/decnet/netfilter/dn_rtmsg.c:        dnrmg = netlink_kernel_create(&init_net, NETLINK_DNRTMSG, &cfg);
+  net/netlink/genetlink.c:        net->genl_sock = netlink_kernel_create(net, NETLINK_GENERIC, &cfg);
+  net/netfilter/nfnetlink.c:      nfnl = netlink_kernel_create(net, NETLINK_NETFILTER, &cfg);
+  net/netfilter/xt_quota2.c:      nflognl = netlink_kernel_create(&init_net, NETLINK_NFLOG, NULL);
+  net/ipv4/fib_frontend.c:        sk = netlink_kernel_create(net, NETLINK_FIB_LOOKUP, &cfg);
+  net/xfrm/xfrm_user.c:   nlsk = netlink_kernel_create(net, NETLINK_XFRM, &cfg);
+  security/selinux/netlink.c:     selnl = netlink_kernel_create(&init_net, NETLINK_SELINUX, &cfg);
+  ```
