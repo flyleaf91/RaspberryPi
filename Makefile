@@ -24,7 +24,9 @@
 CC=gcc
 CFLAGS=-g -Wall
 INCS=-Iinclude/
-LIBS=-lnl-genl
+INCS=-Iinclude/ -I/usr/include/libnl3/
+LIBS=-lnl-3 -lnl-genl-3
+
 OBJS=misc.o tag_mifare.o nfcctl.o main.o
 
 nfcex:	$(OBJS)
