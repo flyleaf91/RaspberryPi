@@ -22,6 +22,7 @@
 
 NO.|文件名称|摘要
 :--:|:--|:--
+0099| [socketpair.md](docs/0099_socketpair.md) | socketpair用于创建一对无名的、相互连接的套接字，于进程间通信。
 0098| [QTTabBar.md](docs/0098_QTTabBar.md) | Windows文件夹工具，配合battool打开文件夹，防遗忘
 0097| [Kernel_Complete.md](docs/0097_Kernel_Complete.md) | 理解内核Complete同步机制
 0096| [Kernel_Notifier.md](docs/0096_Kernel_Notifier.md) | 理解内核通知
