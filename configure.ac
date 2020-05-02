@@ -69,8 +69,7 @@ PKG_CHECK_MODULES(gio, gio-unix-2.0 >= 2.30,
 	AC_MSG_ERROR(gio-unix-2.0 >= 2.30 is required))
 
 PKG_CHECK_MODULES([rl], [libedit],
-	[CPPFLAGS="-DHAVE_LIBEDIT $CPPFLAGS"],
-	[PKG_CHECK_MODULES([rl], [readline])]
+	[CPPFLAGS="-DHAVE_LIBEDIT $CPPFLAGS"]
 )
 
 AC_PATH_TOOL([DOXYGEN], [doxygen])

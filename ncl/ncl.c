@@ -170,7 +170,7 @@ NCLError ncl_exec(char *cmd)
 	char **argv = NULL;
 	int argc;
 
-	if (!g_shell_parse_argv(g_strstrip(cmd), &argc, &argv, &gerr))
+	if (g_shell_parse_argv(g_strstrip(g_strdup(cmd)), &argc, &argv, &gerr) == FALSE)
 		goto exit;
 
 	if (!(func = ncl_prv_find_func(argv[0]))) {
