@@ -10,6 +10,8 @@
 
 https://github.com/raspberrypi/linux
 
+下载`rpi-4.19.y`最新的代码编译就行了，后面的小版本不影响编译及使用；
+
 ## steps
 
 * `sudo apt-get install git bc bison flex libssl-dev`
@@ -51,6 +53,8 @@ https://github.com/raspberrypi/linux
   ```
   Linux raspberrypi 4.19.71-v7l #1 SMP Mon Sep 9 12:24:09 BST 2019 armv7l GNU/Linux
   ```
+* 这里很重要的一点就是`module`的编译环境也同时弄好了；
+  * `ls /lib/modules/4.19.71-v7l/build`
 
 ## menuconfig
 

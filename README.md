@@ -22,6 +22,7 @@
 
 NO.|文件名称|摘要
 :--:|:--|:--
+0105| [mirror_apt_source.md](docs/0105_mirror_apt_source.md) | 默认的源update有点慢
 0104| [Android_RefBase_sp_wp.md](docs/0104_Android_RefBase_sp_wp.md) | 本来想把Android RefBase sp wp移到RPI上使用，暂时不行
 0103| [fs_modify_for_developer.md](docs/0103_fs_modify_for_developer.md) | 常用的文件系统默认修改
 0102| [WM8960.md](docs/0102_WM8960.md) | 分析声卡WM8960
