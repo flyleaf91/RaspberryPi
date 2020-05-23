@@ -22,6 +22,8 @@
 
 NO.|文件名称|摘要
 :--:|:--|:--
+0107| [Windows10_Mount_ext4.md](docs/0107_Windows10_Mount_ext4.md) | 重新制作系统SD卡的时候，Windows打开ext4文件系统直接配置系统还是挺重要的
+0106| [Source_Compare_Tools.md](docs/0106_Source_Compare_Tools.md) | 对比源代码工具`Beyond Compare`、`WinMerge`
 0105| [mirror_apt_source.md](docs/0105_mirror_apt_source.md) | 默认的源update有点慢
 0104| [Android_RefBase_sp_wp.md](docs/0104_Android_RefBase_sp_wp.md) | 本来想把Android RefBase sp wp移到RPI上使用，暂时不行
 0103| [fs_modify_for_developer.md](docs/0103_fs_modify_for_developer.md) | 常用的文件系统默认修改
