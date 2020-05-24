@@ -7,6 +7,7 @@
 * [ImportError: libcblas.so.3: cannot open shared object file: No such file or directory](https://stackoverflow.com/questions/53347759/importerror-libcblas-so-3-cannot-open-shared-object-file-no-such-file-or-dire)
 * [OpenCV-Python Tutorials](https://opencv-python-tutroals.readthedocs.io/en/latest/py_tutorials/py_tutorials.html)
 * [OpenCV-Python中文教程](https://www.kancloud.cn/aollo/aolloopencv)
+* [树莓派OpenCV教程](http://www.waveshare.net/study/portal.php?mod=list&catid=65)
 
 ## python3 Install OpenCV
 
