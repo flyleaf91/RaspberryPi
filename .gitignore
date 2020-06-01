@@ -1,0 +1,5 @@
+*.o
+*.dtbo
+*.dtb
+*.img
+*.swp

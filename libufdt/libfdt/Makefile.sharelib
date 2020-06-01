@@ -1,0 +1,15 @@
+# Makefile
+#
+# This is not a complete Makefile of itself.  Instead, it is designed to
+# be easily embeddable into other systems of Makefiles.
+#
+
+LIBFDT_SRCS = fdt.c fdt_ro.c fdt_wip.c fdt_sw.c fdt_rw.c fdt_strerror.c fdt_empty_tree.c \
+	fdt_addresses.c fdt_overlay.c acpi.c
+
+all:
+	gcc -fPIC -shared $(LIBFDT_SRCS) -o libfdt.so
+	cp libfdt.so ../
+
+clean: 
+	rm libfdt.so

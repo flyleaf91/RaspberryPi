@@ -1,0 +1,14 @@
+# Makefile
+#
+# This is not a complete Makefile of itself.  Instead, it is designed to
+# be easily embeddable into other systems of Makefiles.
+#
+
+LIBFDT_SRCS = libufdt_sysdeps_posix.c # libufdt_sysdeps_vendor.c
+
+all:
+	gcc -Iinclude -fPIC -shared $(LIBFDT_SRCS) -o libufdt_sysdeps.so
+	cp libufdt_sysdeps.so ../
+
+clean: 
+	rm libufdt_sysdeps.so
