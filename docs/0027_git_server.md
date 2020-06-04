@@ -23,3 +23,26 @@
   git@192.168.31.189's password:
   warning: You appear to have cloned an empty repository.
   ```
+* 树莓重装系统之后ssh指纹修改了
+  ```
+  $ git push git@192.168.137.2:RaspberryPI.git master
+  @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+  @    WARNING: REMOTE HOST IDENTIFICATION HAS CHANGED!     @
+  @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+  IT IS POSSIBLE THAT SOMEONE IS DOING SOMETHING NASTY!
+  Someone could be eavesdropping on you right now (man-in-the-middle attack)!
+  It is also possible that a host key has just been changed.
+  The fingerprint for the ECDSA key sent by the remote host is
+  SHA256:RxQb/R2LbS5J8V/srH68+F+7wmZU2kSWD9vYd4OHW0Q.
+  Please contact your system administrator.
+  Add correct host key in /c/Users/zengjianfeng/.ssh/known_hosts to get rid of this message.
+  Offending ECDSA key in /c/Users/zengjianfeng/.ssh/known_hosts:1
+  ECDSA host key for 192.168.137.2 has changed and you have requested strict checking.
+  Host key verification failed.
+  fatal: Could not read from remote repository.
+  
+  Please make sure you have the correct access rights
+  and the repository exists.
+  ```
+  * [How to fix warning about ECDSA host key](https://superuser.com/questions/421004/how-to-fix-warning-about-ecdsa-host-key)
+  * ssh-keygen -R 192.168.137.2
