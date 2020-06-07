@@ -126,7 +126,7 @@ repo使用及GitHub加速
   
   repo has been initialized in /home/pi/zengjf/NFC
   ```
-* ../git-repo/repo sync --no-tags
+* ../git-repo/repo sync
   ```bash
   remote: Enumerating objects: 58, done.
   remote: Total 58 (delta 0), reused 0 (delta 0), pack-reused 58
