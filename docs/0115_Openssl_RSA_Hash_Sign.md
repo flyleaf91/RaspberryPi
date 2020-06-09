@@ -12,6 +12,9 @@ RAS Hash签名、验签
   * [DER的编码范例](https://zh.wikipedia.org/wiki/ASN.1#DER%E7%9A%84%E7%B7%A8%E7%A2%BC%E7%AF%84%E4%BE%8B)
   * DER uses a pattern of type-length-value triplets
 * [ASN.1格式的RSA私钥PEM包含额外字节](https://xbuba.com/questions/48404917)
+* [为什么RSA 公钥指数(e=65537)](https://blog.csdn.net/hherima/article/details/52461759)
+* [RSA密钥长度、明文长度和密文长度](https://blog.csdn.net/dengcanjun6/article/details/83141764)
+* [RSA签名的PSS模式](https://www.cnblogs.com/qcloud1001/p/10373760.html)
 
 ## RAS基本概念
 
@@ -46,6 +49,7 @@ RSA模数和指数，对应到结构中分别是其中的`n`和`e`，模反数�
 * openssl rsautl -sign -in hash.txt -out hash.sig -inkey rsa_private_key.pem
 * openssl rsautl -verify -in hash.sig -out hash.verify -inkey rsa_public_key.pem -pubin
 * cmp hash.txt hash.verify
+* 以上签名是直接对Hash签名，还有一种是对Hash进行PASS签名
 
 ## der解析
 
@@ -80,3 +84,38 @@ RSA模数和指数，对应到结构中分别是其中的`n`和`e`，模反数�
           * 03: 3个字节
           * 010001: 数字 65537, , 为RSA密钥中e
 * 我们只需要模数和指数，所以不用解析第一部分、
+
+## PSS签名验签
+
+如下是stackoverflow上的示例
+
+[How to verify signature with pss padding?](https://stackoverflow.com/questions/44428095/how-to-verify-signature-with-pss-padding)
+```bash
+$ openssl dgst -sha256 -binary payload.bin > cp1.bin
+$ openssl pkeyutl -sign \
+  -in cp1.bin -inkey pvt_dbg.pem \
+  -out sig1.bin \
+  -pkeyopt digest:sha256 \
+  -pkeyopt rsa_padding_mode:pss \
+  -pkeyopt rsa_pss_saltlen:-1
+$ openssl pkeyutl -verify \
+  -in cp1.bin -sigfile sig1.bin \
+  -pkeyopt rsa_padding_mode:pss \
+  -pubin -inkey pub_dbg.pem \
+  -pkeyopt rsa_pss_saltlen:-1 \
+  -pkeyopt digest:sha256
+```
+
+`rsa_pss_saltlen`可以尝试改成`32`，当然效果不会有什么特殊的，测试一下自己的命令：
+
+* openssl dgst -sha256 -binary hash.txt > hash.bin
+* openssl pkeyutl -sign -in hash.bin -inkey rsa_private_key.pem -out hash.sig -pkeyopt digest:sha256 -pkeyopt rsa_padding_mode:pss -pkeyopt rsa_pss_saltlen:32
+* openssl pkeyutl -verify -in hash.bin -sigfile hash.sig -pkeyopt rsa_padding_mode:pss -pubin -inkey rsa_public_key.pem -pkeyopt rsa_pss_saltlen:32 -pkeyopt digest:sha256
+* 执行流程
+  ```bash
+  pi@raspberrypi:hash $ openssl dgst -sha256 -binary hash.txt > hash.bin
+  pi@raspberrypi:hash $ openssl pkeyutl -sign -in hash.bin -inkey rsa_private_key.pem -out hash.sig -pkeyopt digest:sha256 -pkeyopt rsa_padding_mode:pss -pkeyopt rsa_pss_saltlen:32
+  pi@raspberrypi:hash $ openssl pkeyutl -verify -in hash.bin -sigfile hash.sig -pkeyopt rsa_padding_mode:pss -pubin -inkey rsa_public_key.pem -pkeyopt rsa_pss_saltlen:32 -pkeyopt digest:sha256
+  Signature Verified Successfully
+  pi@raspberrypi:hash $
+  ```
