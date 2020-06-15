@@ -305,6 +305,7 @@ OpenVPN搭建
   comp-lzo
   verb 3
   ```
+* `client.ovpn`和`client.conf`是一样的
 
 ## OpenVPN Windows
 
@@ -494,3 +495,27 @@ OpenVPN搭建
   [...省略]
   ```
 * rc.local中添加开机启动：openvpn --config <path to your client.ovpn> >/var/log/openvpn.log &
+* 树莓派设置默认开机自动启动连接，使用`systemctl`进行操作，注意修改`client.conf`中的路径：
+  * /etc/openvpn
+    ```
+    .
+    ├── client
+    │   ├── ca.crt
+    │   ├── client.conf
+    │   ├── client.crt
+    │   ├── client.csr
+    │   ├── client.key
+    │   ├── client_keys.tar.bz2
+    │   ├── client.ovpn
+    │   └── login.conf
+    ├── client.conf
+    ├── server
+    └── update-resolv-conf
+    
+    2 directories, 10 files
+    ```
+    * 注意上面`client.conf`和`client.ovpn`的IP，上面的IP都是随便写的；
+  * systemctl enable openvpn.service
+  * systemctl restart openvpn.service
+  * systemctl status openvpn.service
+  * ifconfig
