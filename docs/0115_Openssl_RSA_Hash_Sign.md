@@ -119,3 +119,39 @@ $ openssl pkeyutl -verify \
   Signature Verified Successfully
   pi@raspberrypi:hash $
   ```
+
+## ASN1 Decode
+
+* https://python-asn1.readthedocs.io/en/latest/introduction_to_asn1.html
+* DER is a binary format for data structures described by ASN.1.
+* <tag> <length+> <value>
+  * http://luca.ntop.org/Teaching/Appunti/asn1.html
+  * tag:
+    * tag[8:7]: type
+    * tag[6]: class
+    * tag[5:0]: number
+  * length: 
+    * lenth[8]: 短/长编码
+    * length: 短编码：长度立即数；长编码：长度字节数；
+    * length+: 长编码长度
+  * value: 实际数据
+* https://github.com/andrivet/python-asn1/blob/master/examples/dump.py
+  ```diff
+  diff --git a/examples/dump.py b/examples/dump.py
+  index a0cf0be..a9e1a73 100755
+  --- a/examples/dump.py
+  +++ b/examples/dump.py
+  @@ -154,10 +154,10 @@ parser.set_default('mode', 'pem')
+   (opts, args) = parser.parse_args()
+  
+   if opts.mode == 'pem':
+  -    input_file = open(sys.argv[1], 'r')
+  +    input_file = open(args[0], 'r')
+       input_data = read_pem(input_file)
+   else:
+  -    input_file = open(sys.argv[1], 'rb')
+  +    input_file = open(args[0], 'rb')
+       input_data = input_file.read()
+  
+   if opts.output:
+  ```

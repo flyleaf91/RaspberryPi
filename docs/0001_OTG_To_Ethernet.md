@@ -10,7 +10,7 @@
 
 ## 支持USB转Ethernet
 
-* `/boot/cmdline.txt`: 第一行尾添加`modules-load=dwc2,g_ether`；
+* `/boot/cmdline.txt`: 第一行尾添加`modules-load=dwc2,g_ether dwc_otg.lpm_enable=1`；
 * `/boot/config.txt`: 文件最后添加`dtoverlay=dwc2`；
 * 开启SSH：For headless setup, SSH can be enabled by placing a file named ssh, without any extension, onto the boot partition of the SD card from another computer. When the Pi boots, it looks for the ssh file. If it is found, SSH is enabled and the file is deleted. The content of the file does not matter; it could contain text, or nothing at all.
 * 参考第一篇参考文档；
