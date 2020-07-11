@@ -22,6 +22,9 @@
 
 NO.|文件名称|摘要
 :--:|:--|:--
+0126| [crontab_timer_for_build.md](docs/0126_crontab_timer_for_build.md) | Linux定时编译任务，针对git
+0125| [git_staged_patch.md](docs/0125_git_staged_patch.md) | 一些git补丁、撤销方法
+0124| [pyusb_MTK_PL_Mode.md](docs/0124_pyusb_MTK_PL_Mode.md) | 分析MTK PL Mode选择
 0123| [Write_Sort.md](docs/0123_Write_Sort.md) | 以前确实没怎么关注算法，学习一下算法，列一下写一个算法的基本架构
 0122| [RSA_Modulus_Exponent_Decrypt.md](docs/0122_RSA_Modulus_Exponent_Decrypt.md) | 论证芯片签名、验签基本流程示例
 0121| [RSA_HTTP_Sign.md](docs/0121_RSA_HTTP_Sign.md) | 利用HTTP请求来对HASH数进行签名
