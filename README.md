@@ -22,6 +22,10 @@
 
 NO.|文件名称|摘要
 :--:|:--|:--
+0130| [sftp_transfer_file.md](docs/0130_sftp_transfer_file.md) | sftp上传文件
+0129| [RK_jar_unpack_pack.md](docs/0129_RK_jar_unpack_pack.md) | RK镜像及Jar打包、解包
+0128| [John.md](docs/0128_John.md) | 学习John破解密码怎么做的
+0127| [HTTPS_SSL_Server_Client.md](docs/0127_HTTPS_SSL_Server_Client.md) | 尝试搭建自己签名服务器和访问的证书
 0126| [crontab_timer_for_build.md](docs/0126_crontab_timer_for_build.md) | Linux定时编译任务，针对git
 0125| [git_staged_patch.md](docs/0125_git_staged_patch.md) | 一些git补丁、撤销方法
 0124| [pyusb_MTK_PL_Mode.md](docs/0124_pyusb_MTK_PL_Mode.md) | 分析MTK PL Mode选择

@@ -21,4 +21,4 @@
 
 ## unstage
 
-* get reset <file path>
+* git reset <file path>

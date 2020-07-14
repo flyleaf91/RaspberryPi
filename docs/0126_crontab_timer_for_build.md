@@ -95,3 +95,8 @@ echo "end build time..." >> lastBuildTime.txt
 ```
 0 3 * * * /home/pi/zengjf/crontab/auto.sh
 ```
+
+
+## 时区问题
+
+我们在东八区，如上设置的3点，结果执行的是11点，差8小时，这个需要注意；
