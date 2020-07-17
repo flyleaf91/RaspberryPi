@@ -42,9 +42,13 @@ RK镜像及Jar打包、解包
 * 修改内容
 * umount /mnt
 * rk3308-mkupdate.sh
+  * 注意这里最终生成还是update.img，也就是覆盖之前的update.img
 
 ## Jar unpack pack
 
 * 解压：`jar xvf project.jar`
 * 采用压缩方式打包：`jar -cvfM project.jar ./`
 * 不采用压缩方式打包：`jar -cvfM0 project.jar ./`
+* ssh
+  * root
+  * @@af1123@@

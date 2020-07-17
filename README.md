@@ -22,6 +22,8 @@
 
 NO.|文件名称|摘要
 :--:|:--|:--
+0132| [Qemu.md](docs/0132_Qemu.md) | 尝试一下Qemu启动init文件系统
+0131| [OP-TEE.md](docs/0131_OP-TEE.md) | 理解OP-TEE工作原理
 0130| [sftp_transfer_file.md](docs/0130_sftp_transfer_file.md) | sftp上传文件
 0129| [RK_jar_unpack_pack.md](docs/0129_RK_jar_unpack_pack.md) | RK镜像及Jar打包、解包
 0128| [John.md](docs/0128_John.md) | 学习John破解密码怎么做的
