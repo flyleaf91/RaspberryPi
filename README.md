@@ -22,6 +22,7 @@
 
 NO.|文件名称|摘要
 :--:|:--|:--
+0134| [Capture_ftrace_event.md](docs/0134_Capture_ftrace_event.md) | 手动操作一下获取ftrace event并转换到kernelshark显示
 0133| [Wireshark_Bluetooth_HCI.md](docs/0133_Wireshark_Bluetooth_HCI.md) | 使用Wireshark分析BT HCI(类比到Wifi nl80211)
 0132| [Qemu.md](docs/0132_Qemu.md) | 尝试一下Qemu启动init文件系统
 0131| [OP-TEE.md](docs/0131_OP-TEE.md) | 理解OP-TEE工作原理
