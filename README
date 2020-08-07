@@ -1,0 +1,7 @@
+# README
+
+## Android Q
+
+* Put the trace-cmd to external directory in Android source tree.
+* mmm external/trace-cmd
+
