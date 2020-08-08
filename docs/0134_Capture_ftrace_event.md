@@ -15,10 +15,18 @@
   ```
   printk:console
   ```
+* cat events/printk/enable
+  ```
+  0
+  ```
 * echo "printk:console" > set_event
 * cat set_event
   ```
   printk:console 
+  ```
+* cat events/printk/enable
+  ```
+  1
   ```
 * echo > set_event_pid
 * echo > trace
