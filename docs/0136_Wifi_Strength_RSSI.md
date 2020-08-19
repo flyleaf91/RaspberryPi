@@ -51,3 +51,7 @@ Wifi信号强度RSSI(Received Signal Strength Indication)
     CENTER_FRQ1=5755
     ```
 * 如上可知，RSSI也就是signal level，Wifi Scan的时候就能获取到信号的强度信息，并提供给上层进行分析显示；
+
+## Android Wifi Settings Show BSSID
+
+* [开发者选项] --> [NETWORKING] --> [Enable Wi-Fi Verbose Logging] -> ON
