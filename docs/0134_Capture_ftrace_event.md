@@ -66,6 +66,14 @@
 * kernelshark  
   下图中除了我自己输入的第一条，后面的是别的进程输出  
   ![Capture_ftrace_event.png](images/Capture_ftrace_event.png)
+
+## trace-cmd采集数据原理
+
+* 采集所有CPU输出的Trace
+  * /sys/kernel/debug/tracing/per_cpu/
+    * cpu[x]
+      * trace_pipe_raw
+* 将上面的CPU执行时输出的trace通过splice/pip/socket传输，socket接收到数据，然后解析到trace.dat中
   
 
 ## KernelShark Build

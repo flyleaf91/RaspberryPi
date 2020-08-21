@@ -22,6 +22,7 @@
 
 NO.|文件名称|摘要
 :--:|:--|:--
+0139| [Linux_Splice.md](docs/0139_Linux_Splice.md) | 理解零拷贝有助于理解Android Binder通信
 0138| [Wifi_Beacon.md](docs/0138_Wifi_Beacon.md) | Wifi的心跳包
 0137| [dmesg_grep_realtime.md](docs/0137_dmesg_grep_realtime.md) | 像logcat那样看内核log
 0136| [Wifi_Strength_RSSI.md](docs/0136_Wifi_Strength_RSSI.md) | Wifi信号强度RSSI(Received Signal Strength Indication)
