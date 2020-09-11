@@ -10,6 +10,10 @@
 * [Get and build the solution](https://optee.readthedocs.io/en/latest/building/gits/build.html#get-and-build-the-solution)
 * [OP-TEE博客文档](https://blog.csdn.net/shuaifengyun/category_6909494_2.html)
 
+## 阿里TEE
+
+[物联网可信执行环境-Link TEE（Trusted Execution Environment）为物联网设备提供TEE安全框架和安全应用的全生命周期管理，提供符合Global Platform TEE标准接口的安全、可信执行环境。](https://help.aliyun.com/product/123201.html?spm=a2c4g.11174283.6.540.6a4d605ao1NhKq)
+
 ## 基本概念
 
 ### 异常等级
