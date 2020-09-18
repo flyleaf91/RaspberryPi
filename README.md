@@ -22,6 +22,7 @@
 
 NO.|文件名称|摘要
 :--:|:--|:--
+0142| [Kernel_Float_Calculation.md](docs/0142_Kernel_Float_Calculation.md) | 内核浮点运算
 0141| [ARMv8_backtrace_Analysis.md](docs/0141_ARMv8_backtrace_Analysis.md) | ARMv8汇编分析，Android backtrace分析
 0140| [ARM_CPU_Refer_Docs.md](docs/0140_ARM_CPU_Refer_Docs.md) | CPU方面的一些文档参考
 0139| [Linux_Splice.md](docs/0139_Linux_Splice.md) | 理解零拷贝有助于理解Android Binder通信

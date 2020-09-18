@@ -4,7 +4,7 @@
 
 ## 文档目录
 
-* [0010ARM_CPU.drawio](0010ARM_CPU.drawio)
+* [0010_ARM_CPU.drawio](0010_ARM_CPU.drawio)
 * [0009_Makefile.drawio](0009_Makefile.drawio)
 * [0008_AndroidProfiler.drawio](0008_AndroidProfiler.drawio)
 * [0007_Sign.drawio](0007_Sign.drawio)
