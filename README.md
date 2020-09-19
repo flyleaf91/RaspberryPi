@@ -22,6 +22,7 @@
 
 NO.|文件名称|摘要
 :--:|:--|:--
+0143| [Process_Swith.md](docs/0143_Process_Swith.md) | 如果每个进程地址空间都是4G，MMU做虚拟地址映射，每次进程切换都要切换映射表？
 0142| [Kernel_Float_Calculation.md](docs/0142_Kernel_Float_Calculation.md) | 内核浮点运算
 0141| [ARMv8_backtrace_Analysis.md](docs/0141_ARMv8_backtrace_Analysis.md) | ARMv8汇编分析，Android backtrace分析
 0140| [ARM_CPU_Refer_Docs.md](docs/0140_ARM_CPU_Refer_Docs.md) | CPU方面的一些文档参考

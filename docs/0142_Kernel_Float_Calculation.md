@@ -10,13 +10,11 @@
 
 关于内核使用浮点， Robert Love’s 《Linux Kernel Development》(Linux内核设计与实现)书中提到：
 
-```
-No (Easy) Use of Floating Point
+No (Easy) Use of Floating Point:
 
 When a user-space process uses floating-point instructions, the kernel manages the transition from integer to floating point mode. What the kernel has to do when using floating-point instructions varies by architecture, but the kernel normally catches a trap and then initiates the transition from integer to floating point mode.
 
 Unlike user-space, the kernel does not have the luxury of seamless support for floating point because it cannot easily trap itself. Using a floating point inside the kernel requires manually saving and restoring the floating point registers, among other possible chores. The short answer is: Don’t do it! Except in the rare cases, no floating-point operations are in the kernel.
-```
 
 后面这句话提到如果内核使用浮点则需要保存恢复浮点寄存器等其他杂项，这样会导致内核性能下降，所以一般不建议使用浮点，除非特殊情况。
 
