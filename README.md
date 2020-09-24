@@ -22,6 +22,7 @@
 
 NO.|文件名称|摘要
 :--:|:--|:--
+0144| [Multiple_Project_Auto_Dir.md](docs/0144_Multiple_Project_Auto_Dir.md) | 解决多个Android BSP源代基准目录跳转问题
 0143| [Process_Swith.md](docs/0143_Process_Swith.md) | 如果每个进程地址空间都是4G，MMU做虚拟地址映射，每次进程切换都要切换映射表？
 0142| [Kernel_Float_Calculation.md](docs/0142_Kernel_Float_Calculation.md) | 内核浮点运算
 0141| [ARMv8_backtrace_Analysis.md](docs/0141_ARMv8_backtrace_Analysis.md) | ARMv8汇编分析，Android backtrace分析
