@@ -22,6 +22,7 @@
 
 NO.|文件名称|摘要
 :--:|:--|:--
+0148| [ARM_SWI.md](docs/0148_ARM_SWI.md) | SWI指令引起软件中断异常，为操作系统应用程序调用系统接口提供的一种机制
 0147| [Android_AVB_vbmeta_public_key.md](docs/0147_Android_AVB_vbmeta_public_key.md) | Android AVB启动vbmeta如何确保安全？
 0146| [printf_Hex_Format.md](docs/0146_printf_Hex_Format.md) | 进行二进制数据查看的时候常用的16 byte对齐输出参考
 0145| [Makefile_Assignment.md](docs/0145_Makefile_Assignment.md) | Makefile赋值`=`/`:=`/`?=`/`+=`区别
