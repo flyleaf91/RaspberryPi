@@ -22,6 +22,7 @@
 
 NO.|文件名称|摘要
 :--:|:--|:--
+0150| [BlueZ.md](docs/0150_BlueZ.md) | 可用于测试Android蓝牙通信或者协议栈修改，譬如安全方面的修改，理解just_works
 0149| [Linux_Lock.md](docs/0149_Linux_Lock.md) | 常见的几种内核驱动涉及的锁，理解原子操作比较重要
 0148| [ARM_SWI.md](docs/0148_ARM_SWI.md) | SWI指令引起软件中断异常，为操作系统应用程序调用系统接口提供的一种机制
 0147| [Android_AVB_vbmeta_public_key.md](docs/0147_Android_AVB_vbmeta_public_key.md) | Android AVB启动vbmeta如何确保安全？

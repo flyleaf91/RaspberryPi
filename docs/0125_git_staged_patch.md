@@ -45,3 +45,7 @@
 ## unstage
 
 * git reset \<file path\>
+
+## pull
+
+`git pull`命令会将远程仓库所有的分支都pull下来，不够暂时不清楚为什么加了路径就不会
