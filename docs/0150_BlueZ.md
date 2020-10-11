@@ -10,6 +10,8 @@
 * [Android 9.0 Bluetooth源码分析（一）蓝牙开启流程](https://www.jianshu.com/p/a150d55e29ca)
 * [Android 9.0 Bluetooth源码分析（二）蓝牙扫描流程](https://www.jianshu.com/p/4ce366089c1d)
 * [Android 9.0 Bluetooth源码分析（三）蓝牙配对流程](https://www.jianshu.com/p/0b748b11fa62)
+* [Core_v4.2.pdf](refers/Core_v4.2.pdf)
+* [Core_v5.0.pdf](refers/Core_v5.0.pdf)
 
 
 ## 协议栈说明
