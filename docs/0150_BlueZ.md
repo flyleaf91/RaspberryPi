@@ -12,6 +12,8 @@
 * [Android 9.0 Bluetooth源码分析（三）蓝牙配对流程](https://www.jianshu.com/p/0b748b11fa62)
 * [Core_v4.2.pdf](refers/Core_v4.2.pdf)
 * [Core_v5.0.pdf](refers/Core_v5.0.pdf)
+* [Traditional Profile Specifications](https://www.bluetooth.com/specifications/profiles-overview/)
+* https://github.com/android/connectivity-samples
 
 
 ## 协议栈说明
@@ -390,10 +392,124 @@ hci0 type 7 discovering on
 
 ### 架构运行图
 
-![fluoride_architecture.png](images/fluoride_architecture.png)
+#### 体系架构
 
-### 参考文档
+![fluoride_architecture.png](images/fluoride_architecture.png)  
 
-* [Android 9.0 Bluetooth源码分析（一）蓝牙开启流程](https://www.jianshu.com/p/a150d55e29ca)
-* [Android 9.0 Bluetooth源码分析（二）蓝牙扫描流程](https://www.jianshu.com/p/4ce366089c1d)
-* [Android 9.0 Bluetooth源码分析（三）蓝牙配对流程](https://www.jianshu.com/p/0b748b11fa62)
+#### 运行架构
+
+![Fluoride_Arch.png](images/Fluoride_Arch.png)
+
+* [bluedroid 框架](https://blog.csdn.net/luopingfeng/article/details/44001511)
+  * BTIF: Bluetooth Interface
+  * BTU: Bluetooth Upper Layer
+  * BTM: Bluetooth Manager 
+  * BTE: Bluetooth embedded system
+  * BTA: Blueetooth application layer
+  * CO: call out\CI: call in
+  * HF: Handsfree Profile
+  * HH: HID Host Profile
+  * HL: Health Device Profile
+  * AV: audio\vidio
+  * ag: audio gateway 
+  * ar: audio/video registration
+  * gattc: GATT client
+
+```
+          Java                                                                                   
++--------------------------------+
+  +-----------------+     C++/C
+  |       BTIF      |
+  +-----------------+
+  |       BTA       |
+  +-----------------+
+  | Bluedroid Stack |
+  +-----------------+  user space
++---------------------------------+
+          kernel space     
+```
+
+### BTIF
+
+Bluetooth Profile Interface在Bluetooth Application task (BTA)和JNI层之间充当了胶水层的角色，对上层（JNI）提供了所有profile功能性的接口。这一层上有一个Bluetooth Interface Instance，所有Profile的操作函数都注册在其中（GAP, AV, DM, PAN, HF,HH, HL, Storage, Sockets）。Client应用通过操作这个Instance来操作Profile。
+
+### BTA
+
+这一层实现了各种Profile状态机。用户通过驱动状态机来操作Profile。Profile状态机包含以下几个主要组成部分：
+
+* BTA_profilexx_act.c => 包含对应Profile的"Action"函数，一般来说由Profile状态机调用。
+* BTA_profilexx_api.c => 对应Profile的API的具体实现。通常它们是提供给用户使用，完成usecase的函数和回调
+* BTA_profilexx_ci.c => 对应Profile的"call-in"函数的实现（供Profile以外的模块调用）
+* BTA_profilexx_co.c => 对应Profile的"call-out"函数的实现（调用Profile以外的模块）
+* BTA_profilexx_main.c => 对应Profile的状态机和处理协议栈上传消息的handler的具体实现。主要负责维护Profile状态的变化及其引起的"Action"
+
+例如，调用"BTA_profilexx_act.c"中的API函数时，各部分的执行流程图如下所示：
+
+```
+                                                 seq2 +---------------------+   seq3   +-----------------------+
+                                                 +----> BTA_Profilexx_API.c <----------> BTA's SYS Msg Posting |
+                                                 |    +----------^----------+          +-----------^-----------+
+                                                 |               |                                 |            
+                                                 |               |seq7                             | seq4       
+                                                 |               |                                 |            
++--------------+  seq1   +------------------+    |    +----------v-----------+   seq5  +-----------v-------+    
+| User Command <---------> BTIF_Exposed_API +----+----> BTA_Profilexx_Main.c <---------> OS Message Posted |    
++--------------+  seq9   +------------------+    seq8 +----------^-----------+         +-------------------+    
+                                                                 |                                              
+                                                                 |seq6                                          
+                                                                 |                                              
+                                                      +----------v---------+ 
+                                                      | BTA_Profilexx.Ci.c | 
+                                                      +--------------------+ 
+```
+
+### RFCOMM工作流程
+
+* [The Implementation of RFCOMM in Android](https://blog.csdn.net/Wendell_Gong/article/details/45060337)
+
+![RFCOMM_Writing_Process.png](images/RFCOMM_Writing_Process.png)
+
+
+## BLE基础
+
+参考: [BLE基础概念](https://draapho.github.io/2017/04/19/1713-ble/)
+
+BLE点对点连接的数据交换示意图, 也同时说明了频道的变化:
+
+![ble-connect.png](images/ble-connect.png)
+
+* Advertiser: 广播者, 处于 Advertising 模式即广播者
+* Scanner: 扫描者, 处于 Scanning 模式即扫描者
+* Initiator: 扫描者, 处于 Initiating 模式的扫描, 用于准备建立连接
+* Slave (Server): 建立通讯后 (Connection 模式), 之前的广播者就变成了Slave从机
+* Master (Client): 建立通讯后 (Connection 模式), 之前的扫描者/发起者就变成了Master主机
+* Server: 提供信息(即Attribute)的一方为服务方, 一般是传感器节点 (大多数情况是Advertiser/Slaver/Peripheral)
+* Client: 访问信息(即Attribute)的一方为客户端, 一般是手机等终端 (大多数情况是Scanner/Master/Central)
+
+GATT访问及Profile架构如下：
+
+![ble-gatt_client_server.png](images/ble-gatt_client_server.png)
+
+![ble-gatt_profile.gif](images/ble-gatt_profile.gif)
+
+* Profile是基于GATT所派生出的真正的Profile， 由一个或者多个和某一应用场景有关的 Service 组成
+* Service包含一个或者多个 Characteristic, 也可以通过Include的方式, 包含其它 Service
+* Characteristic则是GATT profile中最基本的数据单位, 由一个 Properties / Declaration, 一个 Value, 一个或者多个Descriptor组成
+* Characteristic Properties / Declaration定义了characteristic的Value如何被使用，以及characteristic的Descriptor如何被访问。
+* Characteristic Value是特征的实际值，例如一个温度特征，其Characteristic Value就是温度值就。
+* Characteristic Descriptor则保存了一些和Characteristic Value相关的信息。
+
+一个 BLE 设备，可以使用两种类型的地址（一个 BLE 设备可同时具备两种地址）: Public Device Address 和 Random Device Address。
+
+* Public Device Address: 在通信系统中，设备地址是用来唯一识别一个物理设备的，如 TCP/IP 网络中的 MAC 地址、传统蓝牙中的蓝牙地址等。 对设备地址而言，一个重要的特性，就是唯一性。
+* Random Device Address：是在设备设备启动后随机生成的。根据不同的目的 Random Device Address 分为 Static Device Address 和 Private Device Address 两类。
+  * Static Device Address: 是在设备上电时随机生成的；
+  * Private Device Address: Static Device Address 通过地址随机生成的方式，解决了部分问题，Private Device Address 则更进一步，通过定时更新和地址加密两种方法，提高蓝牙地址的可靠性和安全性。根据地址是否加密，Private Device Address 又分为两类，Non-resolvable private address 和 Resolvable private address。
+    * Non-resolvable private address: 会定时更新，更新的周期是由GAP规定的，称作T_GAP(private_addr_int)，建议值是15分钟。
+    * Resolvable private address: 比较有用，它通过一个随机数和一个称作 identity resolving key (IRK) 的密码生成，因此只能被拥有相同 IRK 的设备扫描到，可以防止被未知设备扫描和追踪。
+
+## 蓝牙安全连接
+
+* SC最先提出在BR/EDR中，追溯其起源可以到Core 2.1，在Core 2.1之前，加密认证方式所有的安全均建立在0-16位的数字上，存在被破解的风险，于是人们提出了SSP（Secure Simple Pairing），SSP是一种在传统认证基础上改进过来的认证加密方式；SSP的改变主要在于认证阶段，采用椭圆曲线非对称加密方式，交换公钥、存留私钥、公钥结合私钥计算共享密钥的方式进行认证，最终认证通过后由共享密钥生成连接密钥（Link Key）；可以发现在认证加密过程中密钥的生成存在随机性，并且用户都不会直接接触到密钥，大大的提高了其安全系数，并且椭圆曲线非对称加密算法其加密程度也非常高，在此基础上，配对的安全系数提高了加密过程依然采用传统的E0算法，直到在Core 4.1中将BLE的AES-CCM加密算法引入过来，将SSP认证与AES-CCM加密结合，提出了SC加密认证机制。
+* BLE直接将BR/EDR的SC安全机制借鉴过来，提出LE Secure Connections，新提出的安全机制对于BLE来讲，改变的仅仅是配对阶段，加密阶段原本BLE就是使用的AES-CCM。
+
