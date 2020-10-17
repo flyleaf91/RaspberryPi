@@ -1,0 +1,2623 @@
+Bluetooth monitor ver 5.50
+< HCI Command: Reset (0x03|0x0003) plen 0                           #1 0.057955
+> HCI Event: Command Complete (0x0e) plen 4                         #2 0.064023
+      Reset (0x03|0x0003) ncmd 1
+        Status: Success (0x00)
+< HCI Command: Read Buffer Size (0x04|0x0005) plen 0                #3 0.065487
+> HCI Event: Command Complete (0x0e) plen 11                        #4 0.069557
+      Read Buffer Size (0x04|0x0005) ncmd 1
+        Status: Success (0x00)
+        ACL MTU: 1021 ACL max packet: 6
+        SCO MTU: 184  SCO max packet: 1
+< HCI Command: Host Buffer Size (0x03|0x0033) plen 7                #5 0.070279
+        ACL MTU: 1691 ACL max packet: 20
+        SCO MTU: 255  SCO max packet: 10
+> HCI Event: Command Complete (0x0e) plen 4                         #6 0.072453
+      Host Buffer Size (0x03|0x0033) ncmd 1
+        Status: Success (0x00)
+< HCI Command: Read Local Version Information (0x04|0x0001) plen 0  #7 0.073451
+> HCI Event: Command Complete (0x0e) plen 12                        #8 0.074951
+      Read Local Version Information (0x04|0x0001) ncmd 1
+        Status: Success (0x00)
+        HCI version: Bluetooth 5.0 (0x09) - Revision 6168 (0x1818)
+        LMP version: Bluetooth 5.0 (0x09) - Subversion 8201 (0x2009)
+        Manufacturer: MediaTek, Inc. (70)
+< HCI Command: Read BD ADDR (0x04|0x0009) plen 0                    #9 0.075740
+> HCI Event: Command Complete (0x0e) plen 10                       #10 0.077857
+      Read BD ADDR (0x04|0x0009) ncmd 1
+        Status: Success (0x00)
+        Address: CE:6B:46:CA:0D:DB (OUI CE-6B-46)
+< HCI Command: Read Local Supported Commands (0x04|0x0002) plen 0  #11 0.078957
+> HCI Event: Command Complete (0x0e) plen 68                       #12 0.080456
+      Read Local Supported Commands (0x04|0x0002) ncmd 1
+        Status: Success (0x00)
+        Commands: 177 entries
+          Inquiry (Octet 0 - Bit 0)
+          Inquiry Cancel (Octet 0 - Bit 1)
+          Periodic Inquiry Mode (Octet 0 - Bit 2)
+          Exit Periodic Inquiry Mode (Octet 0 - Bit 3)
+          Create Connection (Octet 0 - Bit 4)
+          Disconnect (Octet 0 - Bit 5)
+          Add SCO Connection (Octet 0 - Bit 6)
+          Create Connection Cancel (Octet 0 - Bit 7)
+          Accept Connection Request (Octet 1 - Bit 0)
+          Reject Connection Request (Octet 1 - Bit 1)
+          Link Key Request Reply (Octet 1 - Bit 2)
+          Link Key Request Negative Reply (Octet 1 - Bit 3)
+          PIN Code Request Reply (Octet 1 - Bit 4)
+          PIN Code Request Negative Reply (Octet 1 - Bit 5)
+          Change Connection Packet Type (Octet 1 - Bit 6)
+          Authentication Requested (Octet 1 - Bit 7)
+          Set Connection Encryption (Octet 2 - Bit 0)
+          Change Connection Link Key (Octet 2 - Bit 1)
+          Master Link Key (Octet 2 - Bit 2)
+          Remote Name Request (Octet 2 - Bit 3)
+          Remote Name Request Cancel (Octet 2 - Bit 4)
+          Read Remote Supported Features (Octet 2 - Bit 5)
+          Read Remote Extended Features (Octet 2 - Bit 6)
+          Read Remote Version Information (Octet 2 - Bit 7)
+          Read Clock Offset (Octet 3 - Bit 0)
+          Read LMP Handle (Octet 3 - Bit 1)
+          Sniff Mode (Octet 4 - Bit 2)
+          Exit Sniff Mode (Octet 4 - Bit 3)
+          QoS Setup (Octet 4 - Bit 6)
+          Role Discovery (Octet 4 - Bit 7)
+          Switch Role (Octet 5 - Bit 0)
+          Read Link Policy Settings (Octet 5 - Bit 1)
+          Write Link Policy Settings (Octet 5 - Bit 2)
+          Read Default Link Policy Settings (Octet 5 - Bit 3)
+          Write Default Link Policy Settings (Octet 5 - Bit 4)
+          Flow Specification (Octet 5 - Bit 5)
+          Set Event Mask (Octet 5 - Bit 6)
+          Reset (Octet 5 - Bit 7)
+          Set Event Filter (Octet 6 - Bit 0)
+          Flush (Octet 6 - Bit 1)
+          Read PIN Type (Octet 6 - Bit 2)
+          Write PIN Type (Octet 6 - Bit 3)
+          Create New Unit Key (Octet 6 - Bit 4)
+          Read Stored Link Key (Octet 6 - Bit 5)
+          Write Stored Link Key (Octet 6 - Bit 6)
+          Delete Stored Link Key (Octet 6 - Bit 7)
+          Write Local Name (Octet 7 - Bit 0)
+          Read Local Name (Octet 7 - Bit 1)
+          Read Connection Accept Timeout (Octet 7 - Bit 2)
+          Write Connection Accept Timeout (Octet 7 - Bit 3)
+          Read Page Timeout (Octet 7 - Bit 4)
+          Write Page Timeout (Octet 7 - Bit 5)
+          Read Scan Enable (Octet 7 - Bit 6)
+          Write Scan Enable (Octet 7 - Bit 7)
+          Read Page Scan Activity (Octet 8 - Bit 0)
+          Write Page Scan Activity (Octet 8 - Bit 1)
+          Read Inquiry Scan Activity (Octet 8 - Bit 2)
+          Write Inquiry Scan Activity (Octet 8 - Bit 3)
+          Read Authentication Enable (Octet 8 - Bit 4)
+          Write Authentication Enable (Octet 8 - Bit 5)
+          Read Encryption Mode (Octet 8 - Bit 6)
+          Write Encryption Mode (Octet 8 - Bit 7)
+          Read Class of Device (Octet 9 - Bit 0)
+          Write Class of Device (Octet 9 - Bit 1)
+          Read Voice Setting (Octet 9 - Bit 2)
+          Write Voice Setting (Octet 9 - Bit 3)
+          Read Automatic Flush Timeout (Octet 9 - Bit 4)
+          Write Automatic Flush Timeout (Octet 9 - Bit 5)
+          Read Num Broadcast Retransmissions (Octet 9 - Bit 6)
+          Write Num Broadcast Retransmissions (Octet 9 - Bit 7)
+          Read Transmit Power Level (Octet 10 - Bit 2)
+          Read Sync Flow Control Enable (Octet 10 - Bit 3)
+          Write Sync Flow Control Enable (Octet 10 - Bit 4)
+          Set Controller To Host Flow Control (Octet 10 - Bit 5)
+          Host Buffer Size (Octet 10 - Bit 6)
+          Host Number of Completed Packets (Octet 10 - Bit 7)
+          Read Link Supervision Timeout (Octet 11 - Bit 0)
+          Write Link Supervision Timeout (Octet 11 - Bit 1)
+          Read Number of Supported IAC (Octet 11 - Bit 2)
+          Read Current IAC LAP (Octet 11 - Bit 3)
+          Write Current IAC LAP (Octet 11 - Bit 4)
+          Read Page Scan Mode (Octet 11 - Bit 7)
+          Write Page Scan Mode (Octet 12 - Bit 0)
+          Set AFH Host Channel Classification (Octet 12 - Bit 1)
+          Read Inquiry Scan Type (Octet 12 - Bit 4)
+          Write Inquiry Scan Type (Octet 12 - Bit 5)
+          Read Inquiry Mode (Octet 12 - Bit 6)
+          Write Inquiry Mode (Octet 12 - Bit 7)
+          Read Page Scan Type (Octet 13 - Bit 0)
+          Write Page Scan Type (Octet 13 - Bit 1)
+          Read AFH Channel Assessment Mode (Octet 13 - Bit 2)
+          Write AFH Channel Assessment Mode (Octet 13 - Bit 3)
+          Read Local Version Information (Octet 14 - Bit 3)
+          Read Local Supported Features (Octet 14 - Bit 5)
+          Read Local Extended Features (Octet 14 - Bit 6)
+          Read Buffer Size (Octet 14 - Bit 7)
+          Read Country Code (Octet 15 - Bit 0)
+          Read BD ADDR (Octet 15 - Bit 1)
+          Read Failed Contact Counter (Octet 15 - Bit 2)
+          Reset Failed Contact Counter (Octet 15 - Bit 3)
+          Read Link Quality (Octet 15 - Bit 4)
+          Read RSSI (Octet 15 - Bit 5)
+          Read AFH Channel Map (Octet 15 - Bit 6)
+          Read Clock (Octet 15 - Bit 7)
+          Read Loopback Mode (Octet 16 - Bit 0)
+          Write Loopback Mode (Octet 16 - Bit 1)
+          Enable Device Under Test Mode (Octet 16 - Bit 2)
+          Setup Synchronous Connection (Octet 16 - Bit 3)
+          Accept Synchronous Connection Request (Octet 16 - Bit 4)
+          Reject Synchronous Connection Request (Octet 16 - Bit 5)
+          Read Extended Inquiry Response (Octet 17 - Bit 0)
+          Write Extended Inquiry Response (Octet 17 - Bit 1)
+          Refresh Encryption Key (Octet 17 - Bit 2)
+          Sniff Subrating (Octet 17 - Bit 4)
+          Read Simple Pairing Mode (Octet 17 - Bit 5)
+          Write Simple Pairing Mode (Octet 17 - Bit 6)
+          Read Local OOB Data (Octet 17 - Bit 7)
+          Read Inquiry Response TX Power Level (Octet 18 - Bit 0)
+          Write Inquiry Transmit Power Level (Octet 18 - Bit 1)
+          Read Default Erroneous Data Reporting (Octet 18 - Bit 2)
+          Write Default Erroneous Data Reporting (Octet 18 - Bit 3)
+          IO Capability Request Reply (Octet 18 - Bit 7)
+          User Confirmation Request Reply (Octet 19 - Bit 0)
+          User Confirmation Request Neg Reply (Octet 19 - Bit 1)
+          User Passkey Request Reply (Octet 19 - Bit 2)
+          User Passkey Request Negative Reply (Octet 19 - Bit 3)
+          Remote OOB Data Request Reply (Octet 19 - Bit 4)
+          Write Simple Pairing Debug Mode (Octet 19 - Bit 5)
+          Enhanced Flush (Octet 19 - Bit 6)
+          Remote OOB Data Request Neg Reply (Octet 19 - Bit 7)
+          Send Keypress Notification (Octet 20 - Bit 2)
+          IO Capability Request Negative Reply (Octet 20 - Bit 3)
+          Read Encryption Key Size (Octet 20 - Bit 4)
+          Set Event Mask Page 2 (Octet 22 - Bit 2)
+          Read Enhanced Transmit Power Level (Octet 24 - Bit 0)
+          Enhanced Setup Synchronous Connection (Octet 29 - Bit 3)
+          Enhanced Accept Synchronous Connection Request (Octet 29 - Bit 4)
+          Read Local Supported Codecs (Octet 29 - Bit 5)
+          Set Triggered Clock Capture (Octet 30 - Bit 5)
+          Truncated Page (Octet 30 - Bit 6)
+          Truncated Page Cancel (Octet 30 - Bit 7)
+          Set Connectionless Slave Broadcast (Octet 31 - Bit 0)
+          Start Synchronization Train (Octet 31 - Bit 2)
+          Set Reserved LT_ADDR (Octet 31 - Bit 4)
+          Delete Reserved LT_ADDR (Octet 31 - Bit 5)
+          Set Connectionless Slave Broadcast Data (Octet 31 - Bit 6)
+          Read Synchronization Train Parameters (Octet 31 - Bit 7)
+          Write Synchronization Train Parameters (Octet 32 - Bit 0)
+          Remote OOB Extended Data Request Reply (Octet 32 - Bit 1)
+          Read Authenticated Payload Timeout (Octet 32 - Bit 4)
+          Write Authenticated Payload Timeout (Octet 32 - Bit 5)
+          Read Local OOB Extended Data (Octet 32 - Bit 6)
+          Write Secure Connections Test Mode (Octet 32 - Bit 7)
+          Read Extended Page Timeout (Octet 33 - Bit 0)
+          Write Extended Page Timeout (Octet 33 - Bit 1)
+          Read Extended Inquiry Length (Octet 33 - Bit 2)
+          Write Extended Inquiry Length (Octet 33 - Bit 3)
+          LE Set Data Length (Octet 33 - Bit 6)
+          LE Read Suggested Default Data Length (Octet 33 - Bit 7)
+          LE Write Suggested Default Data Length (Octet 34 - Bit 0)
+          LE Read Local P-256 Public Key (Octet 34 - Bit 1)
+          LE Generate DHKey (Octet 34 - Bit 2)
+          LE Add Device To Resolving List (Octet 34 - Bit 3)
+          LE Remove Device From Resolving List (Octet 34 - Bit 4)
+          LE Clear Resolving List (Octet 34 - Bit 5)
+          LE Read Resolving List Size (Octet 34 - Bit 6)
+          LE Read Peer Resolvable Address (Octet 34 - Bit 7)
+          LE Read Local Resolvable Address (Octet 35 - Bit 0)
+          LE Set Address Resolution Enable (Octet 35 - Bit 1)
+          LE Set Resolvable Private Address Timeout (Octet 35 - Bit 2)
+          LE Read Maximum Data Length (Octet 35 - Bit 3)
+          LE Read PHY (Octet 35 - Bit 4)
+          LE Set Default PHY (Octet 35 - Bit 5)
+          LE Set PHY (Octet 35 - Bit 6)
+          LE Enhanced Receiver Test (Octet 35 - Bit 7)
+          LE Enhanced Transmitter Test (Octet 36 - Bit 0)
+          LE Set Privacy Mode (Octet 39 - Bit 2)
+< HCI Command: Read Local Extended Features (0x04|0x0004) plen 1   #13 0.081421
+        Page: 0
+> HCI Event: Command Complete (0x0e) plen 14                       #14 0.083050
+      Read Local Extended Features (0x04|0x0004) ncmd 1
+        Status: Success (0x00)
+        Page: 0/2
+        Features: 0xbf 0x3e 0x8d 0xfe 0xdb 0xff 0x5b 0x87
+          3 slot packets
+          5 slot packets
+          Encryption
+          Slot offset
+          Timing accuracy
+          Role switch
+          Sniff mode
+          Power control requests
+          Channel quality driven data rate (CQDDR)
+          SCO link
+          HV2 packets
+          HV3 packets
+          CVSD synchronous data
+          Power control
+          Transparent synchronous data
+          Broadcast Encryption
+          Enhanced Data Rate ACL 2 Mbps mode
+          Enhanced Data Rate ACL 3 Mbps mode
+          Enhanced inquiry scan
+          Interlaced inquiry scan
+          Interlaced page scan
+          RSSI with inquiry results
+          Extended SCO link (EV3 packets)
+          EV4 packets
+          EV5 packets
+          AFH capable slave
+          AFH classification slave
+          LE Supported (Controller)
+          3-slot Enhanced Data Rate ACL packets
+          5-slot Enhanced Data Rate ACL packets
+          Sniff subrating
+          Pause encryption
+          AFH capable master
+          AFH classification master
+          Enhanced Data Rate eSCO 2 Mbps mode
+          Enhanced Data Rate eSCO 3 Mbps mode
+          3-slot Enhanced Data Rate eSCO packets
+          Extended Inquiry Response
+          Simultaneous LE and BR/EDR (Controller)
+          Secure Simple Pairing
+          Encapsulated PDU
+          Non-flushable Packet Boundary Flag
+          Link Supervision Timeout Changed Event
+          Inquiry TX Power Level
+          Enhanced Power Control
+          Extended features
+< HCI Command: Write Simple Pairing Mode (0x03|0x0056) plen 1      #15 0.083858
+        Mode: Enabled (0x01)
+> HCI Event: Command Complete (0x0e) plen 4                        #16 0.085636
+      Write Simple Pairing Mode (0x03|0x0056) ncmd 1
+        Status: Success (0x00)
+< HCI Command: Write LE Host Supported (0x03|0x006d) plen 2        #17 0.086681
+        Supported: 0x01
+        Simultaneous: 0x01
+> HCI Event: Command Complete (0x0e) plen 4                        #18 0.088993
+      Write LE Host Supported (0x03|0x006d) ncmd 1
+        Status: Success (0x00)
+< HCI Command: Read Local Extended Features (0x04|0x0004) plen 1   #19 0.089994
+        Page: 1
+> HCI Event: Command Complete (0x0e) plen 14                       #20 0.091377
+      Read Local Extended Features (0x04|0x0004) ncmd 1
+        Status: Success (0x00)
+        Page: 1/2
+        Features: 0x07 0x00 0x00 0x00 0x00 0x00 0x00 0x00
+          Secure Simple Pairing (Host Support)
+          LE Supported (Host)
+          Simultaneous LE and BR/EDR (Host)
+< HCI Command: Read Local Extended Features (0x04|0x0004) plen 1   #21 0.092054
+        Page: 2
+> HCI Event: Command Complete (0x0e) plen 14                       #22 0.093794
+      Read Local Extended Features (0x04|0x0004) ncmd 1
+        Status: Success (0x00)
+        Page: 2/2
+        Features: 0x05 0x03 0x00 0x00 0x00 0x00 0x00 0x00
+          Connectionless Slave Broadcast - Master
+          Synchronization Train
+          Secure Connections (Controller Support)
+          Ping
+< HCI Command: Write Secure Connections Ho.. (0x03|0x007a) plen 1  #23 0.094507
+        Support: Enabled (0x01)
+> HCI Event: Command Complete (0x0e) plen 4                        #24 0.095959
+      Write Secure Connections Host Support (0x03|0x007a) ncmd 1
+        Status: Success (0x00)
+< HCI Command: LE Read White List Size (0x08|0x000f) plen 0        #25 0.096672
+> HCI Event: Command Complete (0x0e) plen 5                        #26 0.098513
+      LE Read White List Size (0x08|0x000f) ncmd 1
+        Status: Success (0x00)
+        Size: 64
+< HCI Command: LE Read Buffer Size (0x08|0x0002) plen 0            #27 0.099282
+> HCI Event: Command Complete (0x0e) plen 7                        #28 0.100673
+      LE Read Buffer Size (0x08|0x0002) ncmd 1
+        Status: Success (0x00)
+        Data packet length: 251
+        Num data packets: 8
+< HCI Command: LE Read Supported States (0x08|0x001c) plen 0       #29 0.101619
+> HCI Event: Command Complete (0x0e) plen 12                       #30 0.103255
+      LE Read Supported States (0x08|0x001c) ncmd 1
+        Status: Success (0x00)
+        States: 0x000003ffffffffff
+          Non-connectable Advertising State
+          Scannable Advertising State
+          Connectable Advertising State
+          High Duty Cycle Directed Advertising State
+          Passive Scanning State
+          Active Scanning State
+          Initiating State
+            and Connection State (Master Role)
+          Connection State (Slave Role)
+          Non-connectable Advertising State
+            and Passive Scanning State
+          Scannable Advertising State
+            and Passive Scanning State
+          Connectable Advertising State
+            and Passive Scanning State
+          High Duty Cycle Directed Advertising State
+            and Passive Scanning State
+          Non-connectable Advertising State
+            and Active Scanning State
+          Scannable Advertising State
+            and Active Scanning State
+          Connectable Advertising State
+            and Active Scanning State
+          High Duty Cycle Directed Advertising State
+            and Active Scanning State
+          Non-connectable Advertising State
+            and Initiating State
+          Scannable Advertising State
+            and Initiating State
+          Non-connectable Advertising State
+            and Connection State (Master Role)
+          Scannable Advertising State
+            and Connection State (Master Role)
+          Non-connectable Advertising State
+            and Connection State (Slave Role)
+          Scannable Advertising State
+            and Connection State (Slave Role)
+          Passive Scanning State
+            and Initiating State
+          Active Scanning State
+            and Initiating State
+          Passive Scanning State
+            and Connection State (Master Role)
+          Active Scanning State
+            and Connection State (Master Role)
+          Passive Scanning State
+            and Connection State (Slave Role)
+          Active Scanning State
+            and Connection State (Slave Role)
+          Initiating State
+            and Connection State (Master Role)
+            and Master Role & Master Role
+          Low Duty Cycle Directed Advertising State
+          Low Duty Cycle Directed Advertising State
+            and Passive Scanning State
+          Low Duty Cycle Directed Advertising State
+            and Active Scanning State
+          Connectable Advertising State
+            and Initiating State
+            and Master Role & Slave Role
+          High Duty Cycle Directed Advertising State
+            and Initiating State
+            and Master Role & Slave Role
+          Low Duty Cycle Directed Advertising State
+            and Initiating State
+            and Master Role & Slave Role
+          Connectable Advertising State
+            and Connection State (Master Role)
+            and Master Role & Slave Role
+          High Duty Cycle Directed Advertising State
+            and Connection State (Master Role)
+            and Master Role & Slave Role
+          Low Duty Cycle Directed Advertising State
+            and Connection State (Master Role)
+            and Master Role & Slave Role
+          Connectable Advertising State
+            and Connection State (Slave Role)
+            and Master Role & Slave Role
+          High Duty Cycle Directed Advertising State
+            and Connection State (Slave Role)
+            and Slave Role & Slave Role
+          Low Duty Cycle Directed Advertising State
+            and Connection State (Slave Role)
+            and Slave Role & Slave Role
+          Initiating State
+            and Connection State (Slave Role)
+            and Master Role & Slave Role
+< HCI Command: LE Read Local Supported Fea.. (0x08|0x0003) plen 0  #31 0.104027
+> HCI Event: Command Complete (0x0e) plen 12                       #32 0.105880
+      LE Read Local Supported Features (0x08|0x0003) ncmd 1
+        Status: Success (0x00)
+        Features: 0xfd 0x7f 0x01 0x00 0x00 0x00 0x00 0x00
+          LE Encryption
+          Extended Reject Indication
+          Slave-initiated Features Exchange
+          LE Ping
+          LE Data Packet Length Extension
+          LL Privacy
+          Extended Scanner Filter Policies
+          LE 2M PHY
+          Stable Modulation Index - Transmitter
+          Stable Modulation Index - Receiver
+          LE Coded PHY
+          LE Extended Advertising
+          LE Periodic Advertising
+          Channel Selection Algorithm #2
+          Minimum Number of Used Channels Procedure
+< HCI Command: LE Read Resolving List Size (0x08|0x002a) plen 0    #33 0.106619
+> HCI Event: Command Complete (0x0e) plen 5                        #34 0.108088
+      LE Read Resolving List Size (0x08|0x002a) ncmd 1
+        Status: Success (0x00)
+        Size: 32
+< HCI Command: LE Read Maximum Data Length (0x08|0x002f) plen 0    #35 0.109329
+> HCI Event: Command Complete (0x0e) plen 12                       #36 0.110791
+      LE Read Maximum Data Length (0x08|0x002f) ncmd 1
+        Status: Success (0x00)
+        Max TX octets: 251
+        Max TX time: 17040
+        Max RX octets: 251
+        Max RX time: 17040
+< HCI Command: LE Read Suggested Default D.. (0x08|0x0023) plen 0  #37 0.111489
+> HCI Event: Command Complete (0x0e) plen 8                        #38 0.113012
+      LE Read Suggested Default Data Length (0x08|0x0023) ncmd 1
+        Status: Success (0x00)
+        TX octets: 251
+        TX time: 17040
+< HCI Command: LE Read Maximum Advertising.. (0x08|0x003a) plen 0  #39 0.113741
+> HCI Event: Command Complete (0x0e) plen 6                        #40 0.115227
+      LE Read Maximum Advertising Data Length (0x08|0x003a) ncmd 1
+        Status: Success (0x00)
+        Max length: 192
+< HCI Command: LE Read Number of Supported.. (0x08|0x003b) plen 0  #41 0.115886
+> HCI Event: Command Complete (0x0e) plen 5                        #42 0.117424
+      LE Read Number of Supported Advertising Sets (0x08|0x003b) ncmd 1
+        Status: Success (0x00)
+        Num supported adv sets: 8
+< HCI Command: LE Set Event Mask (0x08|0x0001) plen 8              #43 0.118147
+        Mask: 0x0000000000021e7f
+          LE Connection Complete
+          LE Advertising Report
+          LE Connection Update Complete
+          LE Read Remote Used Features Complete
+          LE Long Term Key Request
+          LE Remote Connection Parameter Request
+          LE Data Length Change
+          LE Enhanced Connection Complete
+          LE Direct Advertising Report
+          LE PHY Update Complete
+          LE Extended Advertising Report
+          LE Extended Advertising Set Terminated
+> HCI Event: Command Complete (0x0e) plen 4                        #44 0.119678
+      LE Set Event Mask (0x08|0x0001) ncmd 1
+        Status: Success (0x00)
+< HCI Command: Set Event Mask (0x03|0x0001) plen 8                 #45 0.120342
+        Mask: 0x3dbfffffffffffff
+          Inquiry Complete
+          Inquiry Result
+          Connection Complete
+          Connection Request
+          Disconnection Complete
+          Authentication Complete
+          Remote Name Request Complete
+          Encryption Change
+          Change Connection Link Key Complete
+          Master Link Key Complete
+          Read Remote Supported Features Complete
+          Read Remote Version Information Complete
+          QoS Setup Complete
+          Command Complete
+          Command Status
+          Hardware Error
+          Flush Occurred
+          Role Change
+          Number of Completed Packets
+          Mode Change
+          Return Link Keys
+          PIN Code Request
+          Link Key Request
+          Link Key Notification
+          Loopback Command
+          Data Buffer Overflow
+          Max Slots Change
+          Read Clock Offset Complete
+          Connection Packet Type Changed
+          QoS Violation
+          Page Scan Mode Change
+          Page Scan Repetition Mode Change
+          Flow Specification Complete
+          Inquiry Result with RSSI
+          Read Remote Extended Features Complete
+          Synchronous Connection Complete
+          Synchronous Connection Changed
+          Sniff Subrating
+          Extended Inquiry Result
+          Encryption Key Refresh Complete
+          IO Capability Request
+          IO Capability Request Reply
+          User Confirmation Request
+          User Passkey Request
+          Remote OOB Data Request
+          Simple Pairing Complete
+          Link Supervision Timeout Changed
+          Enhanced Flush Complete
+          User Passkey Notification
+          Keypress Notification
+          Remote Host Supported Features Notification
+          LE Meta
+          Unknown mask (0x000007f800000000)
+> HCI Event: Command Complete (0x0e) plen 4                        #46 0.122189
+      Set Event Mask (0x03|0x0001) ncmd 1
+        Status: Success (0x00)
+< HCI Command: Read Local Supported Codecs (0x04|0x000b) plen 0    #47 0.122953
+> HCI Event: Command Complete (0x0e) plen 8                        #48 0.124759
+      Read Local Supported Codecs (0x04|0x000b) ncmd 1
+        Status: Success (0x00)
+        Number of supported codecs: 2
+          Codec: CVSD (0x02)
+          Codec: Transparent (0x03)
+        Number of vendor codecs: 0
+< HCI Command: LE Clear Resolving List (0x08|0x0029) plen 0        #49 0.126993
+> HCI Event: Command Complete (0x0e) plen 4                        #50 0.128666
+      LE Clear Resolving List (0x08|0x0029) ncmd 1
+        Status: Success (0x00)
+< HCI Command: LE Set Resolvable Private A.. (0x08|0x002e) plen 2  #51 0.129527
+        Timeout: 900 seconds
+> HCI Event: Command Complete (0x0e) plen 4                        #52 0.131441
+      LE Set Resolvable Private Address Timeout (0x08|0x002e) ncmd 1
+        Status: Success (0x00)
+< HCI Command: Write Inquiry Mode (0x03|0x0045) plen 1             #53 0.132941
+        Mode: Inquiry Result with RSSI or Extended Inquiry Result (0x02)
+> HCI Event: Command Complete (0x0e) plen 4                        #54 0.134347
+      Write Inquiry Mode (0x03|0x0045) ncmd 1
+        Status: Success (0x00)
+< HCI Command: Write Page Scan Type (0x03|0x0047) plen 1           #55 0.134894
+        Type: Interlaced Scan (0x01)
+> HCI Event: Command Complete (0x0e) plen 4                        #56 0.136649
+      Write Page Scan Type (0x03|0x0047) ncmd 1
+        Status: Success (0x00)
+< HCI Command: Write Inquiry Scan Type (0x03|0x0043) plen 1        #57 0.137045
+        Type: Interlaced Scan (0x01)
+> HCI Event: Command Complete (0x0e) plen 4                        #58 0.139461
+      Write Inquiry Scan Type (0x03|0x0043) ncmd 1
+        Status: Success (0x00)
+< HCI Command: Write Class of Device (0x03|0x0024) plen 3          #59 0.139935
+        Class: 0x5a020c
+          Major class: Phone (cellular, cordless, payphone, modem)
+          Minor class: Smart phone
+          Networking (LAN, Ad hoc)
+          Capturing (Scanner, Microphone)
+          Object Transfer (v-Inbox, v-Folder)
+          Telephony (Cordless telephony, Modem, Headset)
+> HCI Event: Command Complete (0x0e) plen 4                        #60 0.141810
+      Write Class of Device (0x03|0x0024) ncmd 1
+        Status: Success (0x00)
+< HCI Command: LE Rand (0x08|0x0018) plen 0                        #61 0.142191
+> HCI Event: Command Complete (0x0e) plen 12                       #62 0.143867
+      LE Rand (0x08|0x0018) ncmd 1
+        Status: Success (0x00)
+        Random number: 0x192e89d7f347ec8f
+< HCI Command: Write Page Timeout (0x03|0x0018) plen 2             #63 0.144086
+        Timeout: 5120.000 msec (0x2000)
+> HCI Event: Command Complete (0x0e) plen 4                        #64 0.145977
+      Write Page Timeout (0x03|0x0018) ncmd 1
+        Status: Success (0x00)
+< HCI Command: Write Default Link Policy S.. (0x02|0x000f) plen 2  #65 0.146314
+        Link policy: 0x0005
+          Enable Role Switch
+          Enable Sniff Mode
+> HCI Event: Command Complete (0x0e) plen 4                        #66 0.147705
+      Write Default Link Policy Settings (0x02|0x000f) ncmd 1
+        Status: Success (0x00)
+< HCI Command: Vendor (0x3f|0x0153) plen 0                         #67 0.148005
+> HCI Event: Command Complete (0x0e) plen 18                       #68 0.149975
+      Vendor (0x3f|0x0153) ncmd 1
+        Status: Success (0x00)
+        08 00 60 06 08 01 0a 00 60 00 0a 00 00 00        ..`.....`.....  
+< HCI Command: Read Local Name (0x03|0x0014) plen 0                #69 0.150261
+> HCI Event: Command Complete (0x0e) plen 252                      #70 0.151829
+      Read Local Name (0x03|0x0014) ncmd 1
+        Status: Success (0x00)
+        Name: MTK CONNAC #1
+< HCI Command: LE Rand (0x08|0x0018) plen 0                        #71 0.152257
+> HCI Event: Command Complete (0x0e) plen 12                       #72 0.154742
+      LE Rand (0x08|0x0018) ncmd 1
+        Status: Success (0x00)
+        Random number: 0xb6f9391011d8ac3f
+< HCI Command: LE Rand (0x08|0x0018) plen 0                        #73 0.155276
+> HCI Event: Command Complete (0x0e) plen 12                       #74 0.157455
+      LE Rand (0x08|0x0018) ncmd 1
+        Status: Success (0x00)
+        Random number: 0x8ac8b88668b8e21d
+< HCI Command: LE Rand (0x08|0x0018) plen 0                        #75 0.158086
+> HCI Event: Command Complete (0x0e) plen 12                       #76 0.159400
+      LE Rand (0x08|0x0018) ncmd 1
+        Status: Success (0x00)
+        Random number: 0xcc63a2aa20f5d5e8
+< HCI Command: Write Local Name (0x03|0x0013) plen 248             #77 0.295793
+        Name: M50_CDEF
+> HCI Event: Command Complete (0x0e) plen 4                        #78 0.299389
+      Write Local Name (0x03|0x0013) ncmd 1
+        Status: Success (0x00)
+< HCI Command: Write Extended Inquiry Re.. (0x03|0x0052) plen 241  #79 0.299756
+        FEC: Required (0x01)
+        Name (complete): M50_CDEF
+        128-bit Service UUIDs (complete): 8 entries
+          Vendor specific (00000000-0000-0000-0000-000000000000)
+          Vendor specific (00000000-0000-0000-0000-000000000000)
+          Vendor specific (00000000-0000-0000-0000-000000000000)
+          Vendor specific (00000000-0000-0000-0000-000000000000)
+          Vendor specific (00000000-0000-0000-0000-000000000000)
+          Vendor specific (00000000-0000-0000-0000-000000000000)
+          Vendor specific (00000000-0000-0000-0000-000000000000)
+          Vendor specific (00000000-0000-0000-0000-000000000000)
+> HCI Event: Command Complete (0x0e) plen 4                        #80 0.301749
+      Write Extended Inquiry Response (0x03|0x0052) ncmd 1
+        Status: Success (0x00)
+< HCI Command: LE Rand (0x08|0x0018) plen 0                        #81 0.302434
+> HCI Event: Command Complete (0x0e) plen 12                       #82 0.303959
+      LE Rand (0x08|0x0018) ncmd 1
+        Status: Success (0x00)
+        Random number: 0x105646c9dd79acdc
+< HCI Command: LE Set Random Address (0x08|0x0005) plen 6          #83 0.304512
+        Address: 79:AC:DC:AB:97:C8 (Resolvable)
+> HCI Event: Command Complete (0x0e) plen 4                        #84 0.306018
+      LE Set Random Address (0x08|0x0005) ncmd 1
+        Status: Success (0x00)
+< HCI Command: Write Extended Inquiry Re.. (0x03|0x0052) plen 241  #85 0.323065
+        FEC: Required (0x01)
+        Name (complete): M50_CDEF
+        16-bit Service UUIDs (complete): 1 entry
+          PnP Information (0x1200)
+        128-bit Service UUIDs (complete): 8 entries
+          Vendor specific (00000000-0000-0000-0000-000000000000)
+          Vendor specific (00000000-0000-0000-0000-000000000000)
+          Vendor specific (00000000-0000-0000-0000-000000000000)
+          Vendor specific (00000000-0000-0000-0000-000000000000)
+          Vendor specific (00000000-0000-0000-0000-000000000000)
+          Vendor specific (00000000-0000-0000-0000-000000000000)
+          Vendor specific (00000000-0000-0000-0000-000000000000)
+          Vendor specific (00000000-0000-0000-0000-000000000000)
+> HCI Event: Command Complete (0x0e) plen 4                        #86 0.448138
+      Write Extended Inquiry Response (0x03|0x0052) ncmd 1
+        Status: Success (0x00)
+< HCI Command: Write Voice Setting (0x03|0x0026) plen 2            #87 0.529550
+        Setting: 0x0060
+          Input Coding: Linear
+          Input Data Format: 2's complement
+          Input Sample Size: 16-bit
+          # of bits padding at MSB: 0
+          Air Coding Format: CVSD
+> HCI Event: Command Complete (0x0e) plen 4                        #88 0.541834
+      Write Voice Setting (0x03|0x0026) ncmd 1
+        Status: Success (0x00)
+< HCI Command: Write Extended Inquiry Re.. (0x03|0x0052) plen 241  #89 0.542333
+        FEC: Required (0x01)
+        Name (complete): M50_CDEF
+        16-bit Service UUIDs (complete): 2 entries
+          Headset AG (0x1112)
+          PnP Information (0x1200)
+        128-bit Service UUIDs (complete): 8 entries
+          Vendor specific (00000000-0000-0000-0000-000000000000)
+          Vendor specific (00000000-0000-0000-0000-000000000000)
+          Vendor specific (00000000-0000-0000-0000-000000000000)
+          Vendor specific (00000000-0000-0000-0000-000000000000)
+          Vendor specific (00000000-0000-0000-0000-000000000000)
+          Vendor specific (00000000-0000-0000-0000-000000000000)
+          Vendor specific (00000000-0000-0000-0000-000000000000)
+          Vendor specific (00000000-0000-0000-0000-000000000000)
+> HCI Event: Command Complete (0x0e) plen 4                        #90 0.548282
+      Write Extended Inquiry Response (0x03|0x0052) ncmd 1
+        Status: Success (0x00)
+< HCI Command: Write Extended Inquiry Re.. (0x03|0x0052) plen 241  #91 0.548741
+        FEC: Required (0x01)
+        Name (complete): M50_CDEF
+        16-bit Service UUIDs (complete): 3 entries
+          Headset AG (0x1112)
+          Handsfree Audio Gateway (0x111f)
+          PnP Information (0x1200)
+        128-bit Service UUIDs (complete): 8 entries
+          Vendor specific (00000000-0000-0000-0000-000000000000)
+          Vendor specific (00000000-0000-0000-0000-000000000000)
+          Vendor specific (00000000-0000-0000-0000-000000000000)
+          Vendor specific (00000000-0000-0000-0000-000000000000)
+          Vendor specific (00000000-0000-0000-0000-000000000000)
+          Vendor specific (00000000-0000-0000-0000-000000000000)
+          Vendor specific (00000000-0000-0000-0000-000000000000)
+          Vendor specific (00000000-0000-0000-0000-000000000000)
+> HCI Event: Command Complete (0x0e) plen 4                        #92 0.554890
+      Write Extended Inquiry Response (0x03|0x0052) ncmd 1
+        Status: Success (0x00)
+< HCI Command: Write Extended Inquiry Re.. (0x03|0x0052) plen 241  #93 0.695725
+        FEC: Required (0x01)
+        Name (complete): M50_CDEF
+        16-bit Service UUIDs (complete): 4 entries
+          A/V Remote Control Target (0x110c)
+          Headset AG (0x1112)
+          Handsfree Audio Gateway (0x111f)
+          PnP Information (0x1200)
+        128-bit Service UUIDs (complete): 8 entries
+          Vendor specific (00000000-0000-0000-0000-000000000000)
+          Vendor specific (00000000-0000-0000-0000-000000000000)
+          Vendor specific (00000000-0000-0000-0000-000000000000)
+          Vendor specific (00000000-0000-0000-0000-000000000000)
+          Vendor specific (00000000-0000-0000-0000-000000000000)
+          Vendor specific (00000000-0000-0000-0000-000000000000)
+          Vendor specific (00000000-0000-0000-0000-000000000000)
+          Vendor specific (00000000-0000-0000-0000-000000000000)
+> HCI Event: Command Complete (0x0e) plen 4                        #94 0.709549
+      Write Extended Inquiry Response (0x03|0x0052) ncmd 1
+        Status: Success (0x00)
+< HCI Command: Write Extended Inquiry Re.. (0x03|0x0052) plen 241  #95 0.709927
+        FEC: Required (0x01)
+        Name (complete): M50_CDEF
+        16-bit Service UUIDs (complete): 5 entries
+          Audio Source (0x110a)
+          A/V Remote Control Target (0x110c)
+          Headset AG (0x1112)
+          Handsfree Audio Gateway (0x111f)
+          PnP Information (0x1200)
+        128-bit Service UUIDs (complete): 8 entries
+          Vendor specific (00000000-0000-0000-0000-000000000000)
+          Vendor specific (00000000-0000-0000-0000-000000000000)
+          Vendor specific (00000000-0000-0000-0000-000000000000)
+          Vendor specific (00000000-0000-0000-0000-000000000000)
+          Vendor specific (00000000-0000-0000-0000-000000000000)
+          Vendor specific (00000000-0000-0000-0000-000000000000)
+          Vendor specific (00000000-0000-0000-0000-000000000000)
+          Vendor specific (00000000-0000-0000-0000-000000000000)
+> HCI Event: Command Complete (0x0e) plen 4                        #96 0.715704
+      Write Extended Inquiry Response (0x03|0x0052) ncmd 1
+        Status: Success (0x00)
+< HCI Command: Write Extended Inquiry Re.. (0x03|0x0052) plen 241  #97 0.716301
+        FEC: Required (0x01)
+        Name (complete): M50_CDEF
+        16-bit Service UUIDs (complete): 6 entries
+          Audio Source (0x110a)
+          A/V Remote Control Target (0x110c)
+          A/V Remote Control (0x110e)
+          Headset AG (0x1112)
+          Handsfree Audio Gateway (0x111f)
+          PnP Information (0x1200)
+        128-bit Service UUIDs (complete): 8 entries
+          Vendor specific (00000000-0000-0000-0000-000000000000)
+          Vendor specific (00000000-0000-0000-0000-000000000000)
+          Vendor specific (00000000-0000-0000-0000-000000000000)
+          Vendor specific (00000000-0000-0000-0000-000000000000)
+          Vendor specific (00000000-0000-0000-0000-000000000000)
+          Vendor specific (00000000-0000-0000-0000-000000000000)
+          Vendor specific (00000000-0000-0000-0000-000000000000)
+          Vendor specific (00000000-0000-0000-0000-000000000000)
+> HCI Event: Command Complete (0x0e) plen 4                        #98 0.722711
+      Write Extended Inquiry Response (0x03|0x0052) ncmd 1
+        Status: Success (0x00)
+< HCI Command: Write Current IAC LAP (0x03|0x003a) plen 4          #99 0.778693
+        Number of IAC: 1
+        Access code: 0x9e8b33 (General Inquiry)
+> HCI Event: Command Complete (0x0e) plen 4                       #100 0.792053
+      Write Current IAC LAP (0x03|0x003a) ncmd 1
+        Status: Success (0x00)
+< HCI Command: Write Inquiry Scan Activity (0x03|0x001e) plen 4   #101 0.792542
+        Interval: 1280.000 msec (0x0800)
+        Window: 11.250 msec (0x0012)
+> HCI Event: Command Complete (0x0e) plen 4                       #102 0.796042
+      Write Inquiry Scan Activity (0x03|0x001e) ncmd 1
+        Status: Success (0x00)
+< HCI Command: Write Scan Enable (0x03|0x001a) plen 1             #103 0.796505
+        Scan enable: Inquiry Scan (0x01)
+> HCI Event: Command Complete (0x0e) plen 4                       #104 0.800659
+      Write Scan Enable (0x03|0x001a) ncmd 1
+        Status: Success (0x00)
+< HCI Command: Write Scan Enable (0x03|0x001a) plen 1             #105 0.801380
+        Scan enable: Inquiry Scan + Page Scan (0x03)
+> HCI Event: Command Complete (0x0e) plen 4                       #106 0.806095
+      Write Scan Enable (0x03|0x001a) ncmd 1
+        Status: Success (0x00)
+< HCI Command: Write Inquiry Scan Activity (0x03|0x001e) plen 4   #107 0.806770
+        Interval: 2560.000 msec (0x1000)
+        Window: 11.250 msec (0x0012)
+> HCI Event: Command Complete (0x0e) plen 4                       #108 0.809923
+      Write Inquiry Scan Activity (0x03|0x001e) ncmd 1
+        Status: Success (0x00)
+< HCI Command: Write Scan Enable (0x03|0x001a) plen 1             #109 0.810536
+        Scan enable: Page Scan (0x02)
+> HCI Event: Command Complete (0x0e) plen 4                       #110 0.815714
+      Write Scan Enable (0x03|0x001a) ncmd 1
+        Status: Success (0x00)
+< HCI Command: Write Scan Enable (0x03|0x001a) plen 1             #111 0.816135
+        Scan enable: No Scans (0x00)
+> HCI Event: Command Complete (0x0e) plen 4                       #112 0.821073
+      Write Scan Enable (0x03|0x001a) ncmd 1
+        Status: Success (0x00)
+< HCI Command: Write Extended Inquiry R.. (0x03|0x0052) plen 241  #113 0.821431
+        FEC: Required (0x01)
+        Name (complete): M50_CDEF
+        16-bit Service UUIDs (complete): 7 entries
+          Audio Source (0x110a)
+          A/V Remote Control Target (0x110c)
+          A/V Remote Control (0x110e)
+          Headset AG (0x1112)
+          NAP (0x1116)
+          Handsfree Audio Gateway (0x111f)
+          PnP Information (0x1200)
+        128-bit Service UUIDs (complete): 8 entries
+          Vendor specific (00000000-0000-0000-0000-000000000000)
+          Vendor specific (00000000-0000-0000-0000-000000000000)
+          Vendor specific (00000000-0000-0000-0000-000000000000)
+          Vendor specific (00000000-0000-0000-0000-000000000000)
+          Vendor specific (00000000-0000-0000-0000-000000000000)
+          Vendor specific (00000000-0000-0000-0000-000000000000)
+          Vendor specific (00000000-0000-0000-0000-000000000000)
+          Vendor specific (00000000-0000-0000-0000-000000000000)
+> HCI Event: Command Complete (0x0e) plen 4                       #114 0.827450
+      Write Extended Inquiry Response (0x03|0x0052) ncmd 1
+        Status: Success (0x00)
+< HCI Command: Write Extended Inquiry R.. (0x03|0x0052) plen 241  #115 0.827872
+        FEC: Required (0x01)
+        Name (complete): M50_CDEF
+        16-bit Service UUIDs (complete): 8 entries
+          Audio Source (0x110a)
+          A/V Remote Control Target (0x110c)
+          A/V Remote Control (0x110e)
+          Headset AG (0x1112)
+          PANU (0x1115)
+          NAP (0x1116)
+          Handsfree Audio Gateway (0x111f)
+          PnP Information (0x1200)
+        128-bit Service UUIDs (complete): 8 entries
+          Vendor specific (00000000-0000-0000-0000-000000000000)
+          Vendor specific (00000000-0000-0000-0000-000000000000)
+          Vendor specific (00000000-0000-0000-0000-000000000000)
+          Vendor specific (00000000-0000-0000-0000-000000000000)
+          Vendor specific (00000000-0000-0000-0000-000000000000)
+          Vendor specific (00000000-0000-0000-0000-000000000000)
+          Vendor specific (00000000-0000-0000-0000-000000000000)
+          Vendor specific (00000000-0000-0000-0000-000000000000)
+> HCI Event: Command Complete (0x0e) plen 4                       #116 0.833939
+      Write Extended Inquiry Response (0x03|0x0052) ncmd 1
+        Status: Success (0x00)
+< HCI Command: Write Extended Inquiry R.. (0x03|0x0052) plen 241  #117 0.834448
+        FEC: Required (0x01)
+        Name (complete): M50_CDEF
+        16-bit Service UUIDs (complete): 8 entries
+          Audio Source (0x110a)
+          A/V Remote Control Target (0x110c)
+          A/V Remote Control (0x110e)
+          Headset AG (0x1112)
+          PANU (0x1115)
+          NAP (0x1116)
+          Handsfree Audio Gateway (0x111f)
+          PnP Information (0x1200)
+        128-bit Service UUIDs (complete): 8 entries
+          Vendor specific (00000000-0000-0000-0000-000000000000)
+          Vendor specific (00000000-0000-0000-0000-000000000000)
+          Vendor specific (00000000-0000-0000-0000-000000000000)
+          Vendor specific (00000000-0000-0000-0000-000000000000)
+          Vendor specific (00000000-0000-0000-0000-000000000000)
+          Vendor specific (00000000-0000-0000-0000-000000000000)
+          Vendor specific (00000000-0000-0000-0000-000000000000)
+          Vendor specific (00000000-0000-0000-0000-000000000000)
+> HCI Event: Command Complete (0x0e) plen 4                       #118 0.839321
+      Write Extended Inquiry Response (0x03|0x0052) ncmd 1
+        Status: Success (0x00)
+< HCI Command: Write Extended Inquiry R.. (0x03|0x0052) plen 241  #119 0.839715
+        FEC: Required (0x01)
+        Name (complete): M50_CDEF
+        16-bit Service UUIDs (complete): 8 entries
+          Audio Source (0x110a)
+          A/V Remote Control Target (0x110c)
+          A/V Remote Control (0x110e)
+          Headset AG (0x1112)
+          PANU (0x1115)
+          NAP (0x1116)
+          Handsfree Audio Gateway (0x111f)
+          PnP Information (0x1200)
+        128-bit Service UUIDs (complete): 8 entries
+          Vendor specific (00000000-0000-0000-0000-000000000000)
+          Vendor specific (00000000-0000-0000-0000-000000000000)
+          Vendor specific (00000000-0000-0000-0000-000000000000)
+          Vendor specific (00000000-0000-0000-0000-000000000000)
+          Vendor specific (00000000-0000-0000-0000-000000000000)
+          Vendor specific (00000000-0000-0000-0000-000000000000)
+          Vendor specific (00000000-0000-0000-0000-000000000000)
+          Vendor specific (00000000-0000-0000-0000-000000000000)
+> HCI Event: Command Complete (0x0e) plen 4                       #120 0.845828
+      Write Extended Inquiry Response (0x03|0x0052) ncmd 1
+        Status: Success (0x00)
+< HCI Command: Write Extended Inquiry R.. (0x03|0x0052) plen 241  #121 0.846376
+        FEC: Required (0x01)
+        Name (complete): M50_CDEF
+        16-bit Service UUIDs (complete): 8 entries
+          Audio Source (0x110a)
+          A/V Remote Control Target (0x110c)
+          A/V Remote Control (0x110e)
+          Headset AG (0x1112)
+          PANU (0x1115)
+          NAP (0x1116)
+          Handsfree Audio Gateway (0x111f)
+          PnP Information (0x1200)
+        128-bit Service UUIDs (complete): 8 entries
+          Vendor specific (00000000-0000-0000-0000-000000000000)
+          Vendor specific (00000000-0000-0000-0000-000000000000)
+          Vendor specific (00000000-0000-0000-0000-000000000000)
+          Vendor specific (00000000-0000-0000-0000-000000000000)
+          Vendor specific (00000000-0000-0000-0000-000000000000)
+          Vendor specific (00000000-0000-0000-0000-000000000000)
+          Vendor specific (00000000-0000-0000-0000-000000000000)
+          Vendor specific (00000000-0000-0000-0000-000000000000)
+> HCI Event: Command Complete (0x0e) plen 4                       #122 0.852556
+      Write Extended Inquiry Response (0x03|0x0052) ncmd 1
+        Status: Success (0x00)
+< HCI Command: Write Extended Inquiry R.. (0x03|0x0052) plen 241  #123 0.902007
+        FEC: Required (0x01)
+        Name (complete): M50_CDEF
+        16-bit Service UUIDs (complete): 9 entries
+          Audio Source (0x110a)
+          A/V Remote Control Target (0x110c)
+          A/V Remote Control (0x110e)
+          Headset AG (0x1112)
+          PANU (0x1115)
+          NAP (0x1116)
+          Handsfree Audio Gateway (0x111f)
+          PnP Information (0x1200)
+          Message Access Server (0x1132)
+        128-bit Service UUIDs (complete): 8 entries
+          Vendor specific (00000000-0000-0000-0000-000000000000)
+          Vendor specific (00000000-0000-0000-0000-000000000000)
+          Vendor specific (00000000-0000-0000-0000-000000000000)
+          Vendor specific (00000000-0000-0000-0000-000000000000)
+          Vendor specific (00000000-0000-0000-0000-000000000000)
+          Vendor specific (00000000-0000-0000-0000-000000000000)
+          Vendor specific (00000000-0000-0000-0000-000000000000)
+          Vendor specific (00000000-0000-0000-0000-000000000000)
+> HCI Event: Command Complete (0x0e) plen 4                       #124 0.915395
+      Write Extended Inquiry Response (0x03|0x0052) ncmd 1
+        Status: Success (0x00)
+< HCI Command: Write Inquiry Scan Activity (0x03|0x001e) plen 4   #125 1.097155
+        Interval: 1280.000 msec (0x0800)
+        Window: 11.250 msec (0x0012)
+> HCI Event: Command Complete (0x0e) plen 4                       #126 1.111937
+      Write Inquiry Scan Activity (0x03|0x001e) ncmd 1
+        Status: Success (0x00)
+< HCI Command: Write Scan Enable (0x03|0x001a) plen 1             #127 1.112480
+        Scan enable: No Scans (0x00)
+> HCI Event: Command Complete (0x0e) plen 4                       #128 1.116715
+      Write Scan Enable (0x03|0x001a) ncmd 1
+        Status: Success (0x00)
+< HCI Command: Write Scan Enable (0x03|0x001a) plen 1             #129 1.117293
+        Scan enable: Page Scan (0x02)
+> HCI Event: Command Complete (0x0e) plen 4                       #130 1.121825
+      Write Scan Enable (0x03|0x001a) ncmd 1
+        Status: Success (0x00)
+< HCI Command: Write Extended Inquiry R.. (0x03|0x0052) plen 241  #131 1.127959
+        FEC: Required (0x01)
+        Name (complete): M50_CDEF
+        16-bit Service UUIDs (complete): 10 entries
+          Audio Source (0x110a)
+          A/V Remote Control Target (0x110c)
+          A/V Remote Control (0x110e)
+          Headset AG (0x1112)
+          PANU (0x1115)
+          NAP (0x1116)
+          Handsfree Audio Gateway (0x111f)
+          Phonebook Access Server (0x112f)
+          PnP Information (0x1200)
+          Message Access Server (0x1132)
+        128-bit Service UUIDs (complete): 8 entries
+          Vendor specific (00000000-0000-0000-0000-000000000000)
+          Vendor specific (00000000-0000-0000-0000-000000000000)
+          Vendor specific (00000000-0000-0000-0000-000000000000)
+          Vendor specific (00000000-0000-0000-0000-000000000000)
+          Vendor specific (00000000-0000-0000-0000-000000000000)
+          Vendor specific (00000000-0000-0000-0000-000000000000)
+          Vendor specific (00000000-0000-0000-0000-000000000000)
+          Vendor specific (00000000-0000-0000-0000-000000000000)
+> HCI Event: Command Complete (0x0e) plen 4                       #132 1.133125
+      Write Extended Inquiry Response (0x03|0x0052) ncmd 1
+        Status: Success (0x00)
+< HCI Command: Write Extended Inquiry R.. (0x03|0x0052) plen 241  #133 1.133701
+        FEC: Required (0x01)
+        Name (complete): M50_CDEF
+        16-bit Service UUIDs (complete): 10 entries
+          Audio Source (0x110a)
+          A/V Remote Control Target (0x110c)
+          A/V Remote Control (0x110e)
+          Headset AG (0x1112)
+          PANU (0x1115)
+          NAP (0x1116)
+          Handsfree Audio Gateway (0x111f)
+          Phonebook Access Server (0x112f)
+          PnP Information (0x1200)
+          Message Access Server (0x1132)
+        128-bit Service UUIDs (complete): 8 entries
+          Vendor specific (00000000-0000-0000-0000-000000000000)
+          Vendor specific (00000000-0000-0000-0000-000000000000)
+          Vendor specific (00000000-0000-0000-0000-000000000000)
+          Vendor specific (00000000-0000-0000-0000-000000000000)
+          Vendor specific (00000000-0000-0000-0000-000000000000)
+          Vendor specific (00000000-0000-0000-0000-000000000000)
+          Vendor specific (00000000-0000-0000-0000-000000000000)
+          Vendor specific (00000000-0000-0000-0000-000000000000)
+> HCI Event: Command Complete (0x0e) plen 4                       #134 1.138117
+      Write Extended Inquiry Response (0x03|0x0052) ncmd 1
+        Status: Success (0x00)
+< HCI Command: Write Extended Inquiry R.. (0x03|0x0052) plen 241  #135 1.187686
+        FEC: Required (0x01)
+        Name (complete): M50_CDEF
+        16-bit Service UUIDs (complete): 11 entries
+          OBEX Object Push (0x1105)
+          Audio Source (0x110a)
+          A/V Remote Control Target (0x110c)
+          A/V Remote Control (0x110e)
+          Headset AG (0x1112)
+          PANU (0x1115)
+          NAP (0x1116)
+          Handsfree Audio Gateway (0x111f)
+          Phonebook Access Server (0x112f)
+          PnP Information (0x1200)
+          Message Access Server (0x1132)
+        128-bit Service UUIDs (complete): 8 entries
+          Vendor specific (00000000-0000-0000-0000-000000000000)
+          Vendor specific (00000000-0000-0000-0000-000000000000)
+          Vendor specific (00000000-0000-0000-0000-000000000000)
+          Vendor specific (00000000-0000-0000-0000-000000000000)
+          Vendor specific (00000000-0000-0000-0000-000000000000)
+          Vendor specific (00000000-0000-0000-0000-000000000000)
+          Vendor specific (00000000-0000-0000-0000-000000000000)
+          Vendor specific (00000000-0000-0000-0000-000000000000)
+> HCI Event: Command Complete (0x0e) plen 4                       #136 1.201273
+      Write Extended Inquiry Response (0x03|0x0052) ncmd 1
+        Status: Success (0x00)
+< HCI Command: Write Extended Inquiry R.. (0x03|0x0052) plen 241  #137 1.201700
+        FEC: Required (0x01)
+        Name (complete): M50_CDEF
+        16-bit Service UUIDs (complete): 12 entries
+          OBEX Object Push (0x1105)
+          Audio Source (0x110a)
+          A/V Remote Control Target (0x110c)
+          A/V Remote Control (0x110e)
+          Headset AG (0x1112)
+          PANU (0x1115)
+          NAP (0x1116)
+          Handsfree Audio Gateway (0x111f)
+          SIM Access (0x112d)
+          Phonebook Access Server (0x112f)
+          PnP Information (0x1200)
+          Message Access Server (0x1132)
+        128-bit Service UUIDs (complete): 8 entries
+          Vendor specific (00000000-0000-0000-0000-000000000000)
+          Vendor specific (00000000-0000-0000-0000-000000000000)
+          Vendor specific (00000000-0000-0000-0000-000000000000)
+          Vendor specific (00000000-0000-0000-0000-000000000000)
+          Vendor specific (00000000-0000-0000-0000-000000000000)
+          Vendor specific (00000000-0000-0000-0000-000000000000)
+          Vendor specific (00000000-0000-0000-0000-000000000000)
+          Vendor specific (00000000-0000-0000-0000-000000000000)
+> HCI Event: Command Complete (0x0e) plen 4                       #138 1.207780
+      Write Extended Inquiry Response (0x03|0x0052) ncmd 1
+        Status: Success (0x00)
+< HCI Command: Write Current IAC LAP (0x03|0x003a) plen 4       #139 246.255315
+        Number of IAC: 1
+        Access code: 0x9e8b33 (General Inquiry)
+> HCI Event: Command Complete (0x0e) plen 4                     #140 246.275310
+      Write Current IAC LAP (0x03|0x003a) ncmd 1
+        Status: Success (0x00)
+< HCI Command: Write Scan Enable (0x03|0x001a) plen 1           #141 246.276735
+        Scan enable: Inquiry Scan + Page Scan (0x03)
+> HCI Event: Command Complete (0x0e) plen 4                     #142 246.283447
+      Write Scan Enable (0x03|0x001a) ncmd 1
+        Status: Success (0x00)
+< HCI Command: Write Scan Enable (0x03|0x001a) plen 1           #143 246.284567
+        Scan enable: Inquiry Scan + Page Scan (0x03)
+> HCI Event: Command Complete (0x0e) plen 4                     #144 246.290278
+      Write Scan Enable (0x03|0x001a) ncmd 1
+        Status: Success (0x00)
+< HCI Command: Write Scan Enable (0x03|0x001a) plen 1           #145 247.800597
+        Scan enable: Page Scan (0x02)
+> HCI Event: Command Complete (0x0e) plen 4                     #146 247.813897
+      Write Scan Enable (0x03|0x001a) ncmd 1
+        Status: Success (0x00)
+< HCI Command: Write Scan Enable (0x03|0x001a) plen 1           #147 247.814943
+        Scan enable: Page Scan (0x02)
+> HCI Event: Command Complete (0x0e) plen 4                     #148 247.821242
+      Write Scan Enable (0x03|0x001a) ncmd 1
+        Status: Success (0x00)
+< HCI Command: LE Rand (0x08|0x0018) plen 0                     #149 275.091267
+> HCI Event: Command Complete (0x0e) plen 12                    #150 275.104699
+      LE Rand (0x08|0x0018) ncmd 1
+        Status: Success (0x00)
+        Random number: 0xe9d4cfed1f72e3d2
+< HCI Command: LE Set Extended Adverti.. (0x08|0x0036) plen 25  #151 275.106337
+        Handle: 0x00
+        Properties: 0x0013
+          Connectable
+          Scannable
+          Use legacy advertising PDUs: ADV_IND
+        Min advertising interval: 1000.000 msec (0x0640)
+        Max advertising interval: 1031.250 msec (0x0672)
+        Channel map: 37, 38, 39 (0x07)
+        Own address type: Random (0x01)
+        Peer address type: Public (0x00)
+        Peer address: 00:00:00:00:00:00 (OUI 00-00-00)
+        Filter policy: Allow Scan Request from Any, Allow Connect Request from Any (0x00)
+        TX power: -7 dbm (0xfffffff9)
+        Primary PHY: LE 1M (0x01)
+        Secondary max skip: 0x00
+        Secondary PHY: LE 1M (0x01)
+        SID: 0x01
+        Scan request notifications: Disabled (0x00)
+> HCI Event: Command Complete (0x0e) plen 5                     #152 275.111735
+      LE Set Extended Advertising Parameters (0x08|0x0036) ncmd 1
+        Status: Success (0x00)
+        TX power (selected): -10 dbm (0xfffffff6)
+< HCI Command: LE Set Advertising Set R.. (0x08|0x0035) plen 7  #153 275.113837
+        Advertising handle: 0x00
+        Advertising random address: 72:E3:D2:FD:DA:52 (OUI 72-E3-D2)
+> HCI Event: Command Complete (0x0e) plen 4                     #154 275.118605
+      LE Set Advertising Set Random Address (0x08|0x0035) ncmd 1
+        Status: Success (0x00)
+< HCI Command: LE Set Extended Adverti.. (0x08|0x0037) plen 35  #155 275.120342
+        Handle: 0x00
+        Operation: Complete extended advertising data (0x03)
+        Fragment preference: Minimize fragmentation (0x01)
+        Data length: 0x1f
+        Flags: 0x02
+          LE General Discoverable Mode
+        Name (complete): M50_CDEF
+        128-bit Service UUIDs (complete): 1 entry
+          Vendor specific (49535343-fe7d-4ae5-8fa9-9fafd205e455)
+> HCI Event: Command Complete (0x0e) plen 4                     #156 275.125916
+      LE Set Extended Advertising Data (0x08|0x0037) ncmd 1
+        Status: Success (0x00)
+< HCI Command: LE Set Extended Scan Res.. (0x08|0x0038) plen 4  #157 275.126848
+        Handle: 0x00
+        Operation: Complete scan response data (0x03)
+        Fragment preference: Minimize fragmentation (0x01)
+        Data length: 0x00
+> HCI Event: Command Complete (0x0e) plen 4                     #158 275.130402
+      LE Set Extended Scan Response Data (0x08|0x0038) ncmd 1
+        Status: Success (0x00)
+< HCI Command: LE Set Extended Advertis.. (0x08|0x0039) plen 6  #159 275.131540
+        Extended advertising: Enabled (0x01)
+        Number of sets: 1 (0x01)
+        Entry 0
+          Handle: 0x00
+          Duration: 0 ms (0x00)
+          Max ext adv events: 0
+> HCI Event: Command Complete (0x0e) plen 4                     #160 275.135626
+      LE Set Extended Advertising Enable (0x08|0x0039) ncmd 1
+        Status: Success (0x00)
+> HCI Event: LE Meta Event (0x3e) plen 31                       #161 326.165440
+      LE Enhanced Connection Complete (0x0a)
+        Status: Success (0x00)
+        Handle: 512
+        Role: Slave (0x01)
+        Peer address type: Public (0x00)
+        Peer address: DC:A6:32:B2:F8:FF (OUI DC-A6-32)
+        Local resolvable private address: 00:00:00:00:00:00 (Non-Resolvable)
+        Peer resolvable private address: 00:00:00:00:00:00 (Non-Resolvable)
+        Connection interval: 48.75 msec (0x0027)
+        Connection latency: 0 (0x0000)
+        Supervision timeout: 420 msec (0x002a)
+        Master clock accuracy: 0x01
+> HCI Event: LE Meta Event (0x3e) plen 6                        #162 326.172009
+      LE Advertising Set Terminated (0x12)
+        Status: Success (0x00)
+        Handle: 0
+        Connection handle: 512
+        Number of completed extended advertising events: 51
+< HCI Command: LE Read Remote Used Feat.. (0x08|0x0016) plen 2  #163 326.183084
+        Handle: 512
+> HCI Event: Command Status (0x0f) plen 4                       #164 326.196651
+      LE Read Remote Used Features (0x08|0x0016) ncmd 1
+        Status: Success (0x00)
+< HCI Command: LE Set Extended Advertis.. (0x08|0x0039) plen 6  #165 326.197388
+        Extended advertising: Enabled (0x01)
+        Number of sets: 1 (0x01)
+        Entry 0
+          Handle: 0x00
+          Duration: 0 ms (0x00)
+          Max ext adv events: 0
+> HCI Event: Command Complete (0x0e) plen 4                     #166 326.201935
+      LE Set Extended Advertising Enable (0x08|0x0039) ncmd 1
+        Status: Success (0x00)
+> HCI Event: LE Meta Event (0x3e) plen 12                       #167 326.304153
+      LE Read Remote Used Features (0x04)
+        Status: Success (0x00)
+        Handle: 512
+        Features: 0x3d 0x00 0x00 0x00 0x00 0x00 0x00 0x00
+          LE Encryption
+          Extended Reject Indication
+          Slave-initiated Features Exchange
+          LE Ping
+          LE Data Packet Length Extension
+< HCI Command: Read Remote Version Info.. (0x01|0x001d) plen 2  #168 326.307207
+        Handle: 512
+> HCI Event: Command Status (0x0f) plen 4                       #169 326.312386
+      Read Remote Version Information (0x01|0x001d) ncmd 1
+        Status: Success (0x00)
+> HCI Event: LE Meta Event (0x3e) plen 11                       #170 326.348735
+      LE Data Length Change (0x07)
+        Handle: 512
+        Max TX octets: 251
+        Max TX time: 2120
+        Max RX octets: 251
+        Max RX time: 2120
+> ACL Data RX: Handle 512 flags 0x02 dlen 11                    #171 326.351941
+      SMP: Pairing Request (0x01) len 6
+        IO capability: DisplayYesNo (0x01)
+        OOB data: Authentication data not present (0x00)
+        Authentication requirement: Bonding, MITM, SC, No Keypresses (0x0d)
+        Max encryption key size: 16
+        Initiator key distribution: EncKey Sign (0x05)
+        Responder key distribution: EncKey IdKey Sign (0x07)
+> ACL Data RX: Handle 512 flags 0x02 dlen 7                     #172 326.357441
+      ATT: Exchange MTU Request (0x02) len 2
+        Client RX MTU: 517
+< ACL Data TX: Handle 512 flags 0x00 dlen 7                     #173 326.363526
+      ATT: Exchange MTU Response (0x03) len 2
+        Server RX MTU: 517
+< HCI Command: LE Set Extended Advertis.. (0x08|0x0039) plen 6  #174 326.390411
+        Extended advertising: Disabled (0x00)
+        Number of sets: 1 (0x01)
+        Entry 0
+          Handle: 0x00
+          Duration: 0 ms (0x00)
+          Max ext adv events: 0
+> HCI Event: Command Complete (0x0e) plen 4                     #175 326.394410
+      LE Set Extended Advertising Enable (0x08|0x0039) ncmd 1
+        Status: Success (0x00)
+< HCI Command: LE Remove Advertising Set (0x08|0x003c) plen 1   #176 326.395418
+        Handle: 0
+> HCI Event: Read Remote Version Complete (0x0c) plen 8         #177 326.397841
+        Status: Success (0x00)
+        Handle: 512
+        LMP version: Bluetooth 5.0 (0x09) - Subversion 24857 (0x6119)
+        Manufacturer: Cypress Semiconductor Corporation (305)
+> HCI Event: Command Complete (0x0e) plen 4                     #178 326.401143
+      LE Remove Advertising Set (0x08|0x003c) ncmd 1
+        Status: Success (0x00)
+> HCI Event: Number of Completed Packets (0x13) plen 5          #179 326.470214
+        Num handles: 1
+        Handle: 512
+        Count: 1
+> ACL Data RX: Handle 512 flags 0x02 dlen 11                    #180 326.492221
+      ATT: Read By Group Type Request (0x10) len 6
+        Handle range: 0x0001-0xffff
+        Attribute group type: Primary Service (0x2800)
+< ACL Data TX: Handle 512 flags 0x00 dlen 18                    #181 326.493369
+      ATT: Read By Group Type Response (0x11) len 13
+        Attribute data length: 6
+        Attribute group list: 2 entries
+        Handle range: 0x0001-0x0003
+        UUID: Generic Attribute Profile (0x1801)
+        Handle range: 0x0014-0x001a
+        UUID: Generic Access Profile (0x1800)
+> HCI Event: Number of Completed Packets (0x13) plen 5          #182 326.591977
+        Num handles: 1
+        Handle: 512
+        Count: 1
+> ACL Data RX: Handle 512 flags 0x02 dlen 11                    #183 326.593716
+      ATT: Read By Group Type Request (0x10) len 6
+        Handle range: 0x001b-0xffff
+        Attribute group type: Primary Service (0x2800)
+< ACL Data TX: Handle 512 flags 0x00 dlen 26                    #184 326.594735
+      ATT: Read By Group Type Response (0x11) len 21
+        Attribute data length: 20
+        Attribute group list: 1 entry
+        Handle range: 0x0028-0xffff
+        UUID: Vendor specific (49535343-fe7d-4ae5-8fa9-9fafd205e455)
+> HCI Event: Number of Completed Packets (0x13) plen 5          #185 326.691303
+        Num handles: 1
+        Handle: 512
+        Count: 1
+> ACL Data RX: Handle 512 flags 0x02 dlen 11                    #186 326.696039
+      ATT: Read By Group Type Request (0x10) len 6
+        Handle range: 0x0001-0xffff
+        Attribute group type: Secondary Service (0x2801)
+< ACL Data TX: Handle 512 flags 0x00 dlen 9                     #187 326.696953
+      ATT: Error Response (0x01) len 4
+        Read By Group Type Request (0x10)
+        Handle: 0x0001
+        Error: Unsupported Group Type (0x10)
+> HCI Event: Number of Completed Packets (0x13) plen 5          #188 326.787570
+        Num handles: 1
+        Handle: 512
+        Count: 1
+> ACL Data RX: Handle 512 flags 0x02 dlen 11                    #189 326.789844
+      ATT: Read By Type Request (0x08) len 6
+        Handle range: 0x0001-0xffff
+        Attribute type: Include (0x2802)
+< ACL Data TX: Handle 512 flags 0x00 dlen 9                     #190 326.791388
+      ATT: Error Response (0x01) len 4
+        Read By Type Request (0x08)
+        Handle: 0x0001
+        Error: Attribute Not Found (0x0a)
+> HCI Event: Number of Completed Packets (0x13) plen 5          #191 326.884292
+        Num handles: 1
+        Handle: 512
+        Count: 1
+> ACL Data RX: Handle 512 flags 0x02 dlen 11                    #192 326.885760
+      ATT: Read By Type Request (0x08) len 6
+        Handle range: 0x0001-0xffff
+        Attribute type: Characteristic (0x2803)
+< ACL Data TX: Handle 512 flags 0x00 dlen 34                    #193 326.887229
+      ATT: Read By Type Response (0x09) len 29
+        Attribute data length: 7
+        Attribute data list: 4 entries
+        Handle: 0x0002
+        Value: 200300052a
+        Handle: 0x0015
+        Value: 021600002a
+        Handle: 0x0017
+        Value: 021800012a
+        Handle: 0x0019
+        Value: 021a00a62a
+> HCI Event: Number of Completed Packets (0x13) plen 5          #194 326.982521
+        Num handles: 1
+        Handle: 512
+        Count: 1
+> ACL Data RX: Handle 512 flags 0x02 dlen 11                    #195 326.985495
+      ATT: Read By Type Request (0x08) len 6
+        Handle range: 0x001a-0xffff
+        Attribute type: Characteristic (0x2803)
+< ACL Data TX: Handle 512 flags 0x00 dlen 48                    #196 326.986612
+      ATT: Read By Type Response (0x09) len 43
+        Attribute data length: 21
+        Attribute data list: 2 entries
+        Handle: 0x0029
+        Value: 102a0016962447c62361bad94b4d1e43535349
+        Handle: 0x002b
+        Value: 082c00b39b7234beecd4a8f443418843535349
+> HCI Event: Number of Completed Packets (0x13) plen 5          #197 327.080159
+        Num handles: 1
+        Handle: 512
+        Count: 1
+> ACL Data RX: Handle 512 flags 0x02 dlen 11                    #198 327.081708
+      ATT: Read By Type Request (0x08) len 6
+        Handle range: 0x002c-0xffff
+        Attribute type: Characteristic (0x2803)
+< ACL Data TX: Handle 512 flags 0x00 dlen 9                     #199 327.082474
+      ATT: Error Response (0x01) len 4
+        Read By Type Request (0x08)
+        Handle: 0x002c
+        Error: Attribute Not Found (0x0a)
+> HCI Event: Number of Completed Packets (0x13) plen 5          #200 327.177721
+        Num handles: 1
+        Handle: 512
+        Count: 1
+> ACL Data RX: Handle 512 flags 0x02 dlen 9                     #201 327.178849
+      ATT: Find Information Request (0x04) len 4
+        Handle range: 0x002d-0xffff
+< ACL Data TX: Handle 512 flags 0x00 dlen 9                     #202 327.180010
+      ATT: Error Response (0x01) len 4
+        Find Information Request (0x04)
+        Handle: 0x002d
+        Error: Attribute Not Found (0x0a)
+> HCI Event: Number of Completed Packets (0x13) plen 5          #203 327.323782
+        Num handles: 1
+        Handle: 512
+        Count: 1
+> ACL Data RX: Handle 512 flags 0x02 dlen 7                     #204 327.325250
+      ATT: Read Request (0x0a) len 2
+        Handle: 0x0016
+< ACL Data TX: Handle 512 flags 0x00 dlen 13                    #205 327.326159
+      ATT: Read Response (0x0b) len 8
+        Value: 4d35305f43444546
+> HCI Event: Number of Completed Packets (0x13) plen 5          #206 327.470364
+        Num handles: 1
+        Handle: 512
+        Count: 1
+> ACL Data RX: Handle 512 flags 0x02 dlen 7                     #207 327.471844
+      ATT: Read Request (0x0a) len 2
+        Handle: 0x0018
+< ACL Data TX: Handle 512 flags 0x00 dlen 7                     #208 327.474217
+      ATT: Read Response (0x0b) len 2
+        Value: 0000
+> HCI Event: Number of Completed Packets (0x13) plen 5          #209 327.567069
+        Num handles: 1
+        Handle: 512
+        Count: 1
+< ACL Data TX: Handle 512 flags 0x00 dlen 11                    #210 331.243812
+      SMP: Pairing Response (0x02) len 6
+        IO capability: KeyboardDisplay (0x04)
+        OOB data: Authentication data not present (0x00)
+        Authentication requirement: Bonding, MITM, SC, No Keypresses, CT2 (0x2d)
+        Max encryption key size: 16
+        Initiator key distribution: EncKey Sign (0x05)
+        Responder key distribution: EncKey IdKey Sign (0x07)
+< HCI Command: LE Rand (0x08|0x0018) plen 0                     #211 331.246283
+> HCI Event: Command Complete (0x0e) plen 12                    #212 331.250738
+      LE Rand (0x08|0x0018) ncmd 1
+        Status: Success (0x00)
+        Random number: 0x80c8eb9159ab2c2b
+< HCI Command: LE Rand (0x08|0x0018) plen 0                     #213 331.251878
+> HCI Event: Command Complete (0x0e) plen 12                    #214 331.255076
+      LE Rand (0x08|0x0018) ncmd 1
+        Status: Success (0x00)
+        Random number: 0x46de8f7578cb6546
+< HCI Command: LE Rand (0x08|0x0018) plen 0                     #215 331.255971
+> HCI Event: Command Complete (0x0e) plen 12                    #216 331.261199
+      LE Rand (0x08|0x0018) ncmd 1
+        Status: Success (0x00)
+        Random number: 0x12410c40c93c5812
+< HCI Command: LE Rand (0x08|0x0018) plen 0                     #217 331.262499
+> HCI Event: Command Complete (0x0e) plen 12                    #218 331.265133
+      LE Rand (0x08|0x0018) ncmd 1
+        Status: Success (0x00)
+        Random number: 0xcdc06c33714650db
+> HCI Event: Number of Completed Packets (0x13) plen 5          #219 331.320574
+        Num handles: 1
+        Handle: 512
+        Count: 1
+> ACL Data RX: Handle 512 flags 0x02 dlen 69                    #220 331.321949
+      SMP: Pairing Public Key (0x0c) len 64
+        X: 87105902b57555d1f7c19d26d3b119fae189e9c2627b08a004a6e76e903971c0
+        Y: bd997e32776ad56779b3b673ce14b2c2b6dcf374d613d65dd21c41074d5dcbc1
+< ACL Data TX: Handle 512 flags 0x00 dlen 69                    #221 331.326039
+      SMP: Pairing Public Key (0x0c) len 64
+        X: 4e520e7811079903a807d8f82c5e45187f87319797b9de0685257c3475cde5ca
+        Y: 3d59e7732ae7fb7b8577fdc52ea7f6f5cba19cc1d0a70f2de5ea1f3faa9373a6
+< HCI Command: LE Rand (0x08|0x0018) plen 0                     #222 331.327332
+> HCI Event: Command Complete (0x0e) plen 12                    #223 331.329368
+      LE Rand (0x08|0x0018) ncmd 1
+        Status: Success (0x00)
+        Random number: 0x3f29504eb769fe61
+< HCI Command: LE Rand (0x08|0x0018) plen 0                     #224 331.330075
+> HCI Event: Command Complete (0x0e) plen 12                    #225 331.332310
+      LE Rand (0x08|0x0018) ncmd 1
+        Status: Success (0x00)
+        Random number: 0x93682b79e0366612
+< ACL Data TX: Handle 512 flags 0x00 dlen 21                    #226 331.333359
+      SMP: Pairing Confirm (0x03) len 16
+        Confim value: a4800ef6e92eb6273fb8ed0f92e7682e
+> HCI Event: Number of Completed Packets (0x13) plen 5          #227 331.417275
+        Num handles: 1
+        Handle: 512
+        Count: 1
+> HCI Event: Number of Completed Packets (0x13) plen 5          #228 331.515215
+        Num handles: 1
+        Handle: 512
+        Count: 1
+> ACL Data RX: Handle 512 flags 0x02 dlen 21                    #229 331.517323
+      SMP: Pairing Random (0x04) len 16
+        Random value: 9d4af4cf6af198e7fcbf30f4be16d669
+< ACL Data TX: Handle 512 flags 0x00 dlen 21                    #230 331.518290
+      SMP: Pairing Random (0x04) len 16
+        Random value: 61fe69b74e50293f126636e0792b6893
+> HCI Event: Number of Completed Packets (0x13) plen 5          #231 331.612787
+        Num handles: 1
+        Handle: 512
+        Count: 1
+> ACL Data RX: Handle 512 flags 0x02 dlen 21                    #232 335.516600
+      SMP: Pairing DHKey Check (0x0d) len 16
+        E: fd983895a558f9c05183a95e53b8ee12
+< ACL Data TX: Handle 512 flags 0x00 dlen 21                    #233 341.796753
+      SMP: Pairing DHKey Check (0x0d) len 16
+        E: 43f00595e325502e18af54d66f88189f
+> HCI Event: Number of Completed Packets (0x13) plen 5          #234 341.899038
+        Num handles: 1
+        Handle: 512
+        Count: 1
+> HCI Event: LE Meta Event (0x3e) plen 13                       #235 341.900097
+      LE Long Term Key Request (0x05)
+        Handle: 512
+        Random number: 0x0000000000000000
+        Encrypted diversifier: 0x0000
+< HCI Command: LE Long Term Key Reques.. (0x08|0x001a) plen 18  #236 341.901175
+        Handle: 512
+        Long term key: b22965870edb49c432f74265d4438e0c
+> HCI Event: Command Complete (0x0e) plen 6                     #237 341.904395
+      LE Long Term Key Request Reply (0x08|0x001a) ncmd 1
+        Status: Success (0x00)
+        Handle: 512
+> HCI Event: Encryption Change (0x08) plen 4                    #238 342.095061
+        Status: Success (0x00)
+        Handle: 512
+        Encryption: Enabled with AES-CCM (0x01)
+< ACL Data TX: Handle 512 flags 0x00 dlen 21                    #239 342.096554
+      SMP: Identity Information (0x08) len 16
+        Identity resolving key: 9a0e07c078cb2c42190c078939b6c141
+< ACL Data TX: Handle 512 flags 0x00 dlen 12                    #240 342.098030
+      SMP: Identity Address Information (0x09) len 7
+        Address type: Public (0x00)
+        Address: CE:6B:46:CA:0D:DB
+< HCI Command: LE Rand (0x08|0x0018) plen 0                     #241 342.099206
+> HCI Event: Command Complete (0x0e) plen 12                    #242 342.101441
+      LE Rand (0x08|0x0018) ncmd 1
+        Status: Success (0x00)
+        Random number: 0xe355dbd13535e826
+< ACL Data TX: Handle 512 flags 0x00 dlen 21                    #243 342.102445
+      SMP: Signing Information (0x0a) len 16
+        Signature key: 011594b3521f623adb20476ed2c6fb71
+> HCI Event: Number of Completed Packets (0x13) plen 5          #244 342.240551
+        Num handles: 1
+        Handle: 512
+        Count: 1
+> HCI Event: Number of Completed Packets (0x13) plen 5          #245 342.289515
+        Num handles: 1
+        Handle: 512
+        Count: 1
+> HCI Event: Number of Completed Packets (0x13) plen 5          #246 342.339683
+        Num handles: 1
+        Handle: 512
+        Count: 1
+> ACL Data RX: Handle 512 flags 0x02 dlen 21                    #247 342.341517
+      SMP: Signing Information (0x0a) len 16
+        Signature key: f6c8fcd592bdb8dff5e4970877a4bcea
+< ACL Data TX: Handle 512 flags 0x00 dlen 13                    #248 342.853202
+      ATT: Find By Type Value Request (0x06) len 8
+        Handle range: 0x0001-0xffff
+        Attribute type: Primary Service (0x2800)
+          UUID: Generic Attribute Profile (0x1801)
+< HCI Command: LE Add Device To Resolv.. (0x08|0x0027) plen 39  #249 342.856573
+        Address type: Public (0x00)
+        Address: DC:A6:32:B2:F8:FF (OUI DC-A6-32)
+        Peer identity resolving key: 00000000000000000000000000000000
+        Local identity resolving key: 9a0e07c078cb2c42190c078939b6c141
+> HCI Event: Command Complete (0x0e) plen 4                     #250 342.866338
+      LE Add Device To Resolving List (0x08|0x0027) ncmd 1
+        Status: Success (0x00)
+< HCI Command: LE Set Privacy Mode (0x08|0x004e) plen 8         #251 342.867064
+        Peer Identity address type: Public (0x00)
+        Peer Identity address: DC:A6:32:B2:F8:FF (OUI DC-A6-32)
+        Privacy Mode: Use Device Privacy (0x01)
+> HCI Event: Command Complete (0x0e) plen 4                     #252 342.870825
+      LE Set Privacy Mode (0x08|0x004e) ncmd 1
+        Status: Success (0x00)
+< HCI Command: LE Set Address Resolutio.. (0x08|0x002d) plen 1  #253 342.871826
+        Address resolution: Enabled (0x01)
+> HCI Event: Command Complete (0x0e) plen 4                     #254 342.877665
+      LE Set Address Resolution Enable (0x08|0x002d) ncmd 1
+        Status: Success (0x00)
+> HCI Event: Number of Completed Packets (0x13) plen 5          #255 342.922035
+        Num handles: 1
+        Handle: 512
+        Count: 1
+> ACL Data RX: Handle 512 flags 0x02 dlen 9                     #256 342.923361
+      ATT: Find By Type Value Response (0x07) len 4
+        Handle range: 0x0006-0x0009
+< ACL Data TX: Handle 512 flags 0x00 dlen 11                    #257 342.924791
+      ATT: Read By Type Request (0x08) len 6
+        Handle range: 0x0001-0xffff
+        Attribute type: Device Name (0x2a00)
+> HCI Event: Number of Completed Packets (0x13) plen 5          #258 343.069678
+        Num handles: 1
+        Handle: 512
+        Count: 1
+> ACL Data RX: Handle 512 flags 0x02 dlen 19                    #259 343.071344
+      ATT: Read By Type Response (0x09) len 14
+        Attribute data length: 13
+        Attribute data list: 1 entry
+        Handle: 0x0003
+        Value: 7261737062657272797069
+< ACL Data TX: Handle 512 flags 0x00 dlen 13                    #260 343.073290
+      ATT: Find By Type Value Request (0x06) len 8
+        Handle range: 0x000a-0xffff
+        Attribute type: Primary Service (0x2800)
+          UUID: Generic Attribute Profile (0x1801)
+< ACL Data TX: Handle 512 flags 0x00 dlen 16                    #261 343.076316
+      LE L2CAP: Connection Parameter Update Request (0x12) ident 2 len 8
+        Min interval: 6
+        Max interval: 6
+        Slave latency: 0
+        Timeout multiplier: 500
+> HCI Event: Number of Completed Packets (0x13) plen 5          #262 343.168335
+        Num handles: 1
+        Handle: 512
+        Count: 1
+> ACL Data RX: Handle 512 flags 0x02 dlen 9                     #263 343.171056
+      ATT: Error Response (0x01) len 4
+        Find By Type Value Request (0x06)
+        Handle: 0x000a
+        Error: Attribute Not Found (0x0a)
+< ACL Data TX: Handle 512 flags 0x00 dlen 11                    #264 343.173956
+      ATT: Read By Group Type Request (0x10) len 6
+        Handle range: 0x0001-0xffff
+        Attribute group type: Primary Service (0x2800)
+> HCI Event: Number of Completed Packets (0x13) plen 5          #265 343.215254
+        Num handles: 1
+        Handle: 512
+        Count: 1
+> HCI Event: Number of Completed Packets (0x13) plen 5          #266 343.267276
+        Num handles: 1
+        Handle: 512
+        Count: 1
+> ACL Data RX: Handle 512 flags 0x02 dlen 10                    #267 343.269683
+      LE L2CAP: Connection Parameter Update Response (0x13) ident 2 len 2
+        Result: Connection Parameters accepted (0x0000)
+> ACL Data RX: Handle 512 flags 0x02 dlen 18                    #268 343.272541
+      ATT: Read By Group Type Response (0x11) len 13
+        Attribute data length: 6
+        Attribute group list: 2 entries
+        Handle range: 0x0001-0x0005
+        UUID: Generic Access Profile (0x1800)
+        Handle range: 0x0006-0x0009
+        UUID: Generic Attribute Profile (0x1801)
+< ACL Data TX: Handle 512 flags 0x00 dlen 11                    #269 343.274764
+      ATT: Read By Type Request (0x08) len 6
+        Handle range: 0x0001-0x0009
+        Attribute type: Characteristic (0x2803)
+> HCI Event: Number of Completed Packets (0x13) plen 5          #270 343.363270
+        Num handles: 1
+        Handle: 512
+        Count: 1
+> ACL Data RX: Handle 512 flags 0x02 dlen 27                    #271 343.365314
+      ATT: Read By Type Response (0x09) len 22
+        Attribute data length: 7
+        Attribute data list: 3 entries
+        Handle: 0x0002
+        Value: 020300002a
+        Handle: 0x0004
+        Value: 020500012a
+        Handle: 0x0007
+        Value: 200800052a
+< ACL Data TX: Handle 512 flags 0x00 dlen 11                    #272 343.366968
+      ATT: Read By Group Type Request (0x10) len 6
+        Handle range: 0x000a-0xffff
+        Attribute group type: Primary Service (0x2800)
+> HCI Event: Number of Completed Packets (0x13) plen 5          #273 343.461489
+        Num handles: 1
+        Handle: 512
+        Count: 1
+> ACL Data RX: Handle 512 flags 0x02 dlen 9                     #274 343.464167
+      ATT: Error Response (0x01) len 4
+        Read By Group Type Request (0x10)
+        Handle: 0x000a
+        Error: Attribute Not Found (0x0a)
+< ACL Data TX: Handle 512 flags 0x00 dlen 11                    #275 343.467590
+      ATT: Read By Type Request (0x08) len 6
+        Handle range: 0x0008-0x0009
+        Attribute type: Characteristic (0x2803)
+> HCI Event: LE Meta Event (0x3e) plen 10                       #276 343.560475
+      LE Connection Update Complete (0x03)
+        Status: Success (0x00)
+        Handle: 512
+        Connection interval: 7.50 msec (0x0006)
+        Connection latency: 0 (0x0000)
+        Supervision timeout: 5000 msec (0x01f4)
+> HCI Event: Number of Completed Packets (0x13) plen 5          #277 343.576632
+        Num handles: 1
+        Handle: 512
+        Count: 1
+> ACL Data RX: Handle 512 flags 0x02 dlen 9                     #278 343.578459
+      ATT: Error Response (0x01) len 4
+        Read By Type Request (0x08)
+        Handle: 0x0008
+        Error: Attribute Not Found (0x0a)
+< ACL Data TX: Handle 512 flags 0x00 dlen 11                    #279 343.581673
+      ATT: Read By Type Request (0x08) len 6
+        Handle range: 0x0001-0x0005
+        Attribute type: Include (0x2802)
+> HCI Event: Number of Completed Packets (0x13) plen 5          #280 343.597109
+        Num handles: 1
+        Handle: 512
+        Count: 1
+> ACL Data RX: Handle 512 flags 0x02 dlen 9                     #281 343.599091
+      ATT: Error Response (0x01) len 4
+        Read By Type Request (0x08)
+        Handle: 0x0001
+        Error: Attribute Not Found (0x0a)
+< ACL Data TX: Handle 512 flags 0x00 dlen 9                     #282 343.602092
+      ATT: Find Information Request (0x04) len 4
+        Handle range: 0x0008-0x0009
+> HCI Event: Number of Completed Packets (0x13) plen 5          #283 343.619089
+        Num handles: 1
+        Handle: 512
+        Count: 1
+> ACL Data RX: Handle 512 flags 0x02 dlen 14                    #284 343.620494
+      ATT: Find Information Response (0x05) len 9
+        Format: UUID-16 (0x01)
+        Handle: 0x0008
+        UUID: Service Changed (0x2a05)
+        Handle: 0x0009
+        UUID: Client Characteristic Configuration (0x2902)
+< ACL Data TX: Handle 512 flags 0x00 dlen 11                    #285 343.622202
+      ATT: Read By Type Request (0x08) len 6
+        Handle range: 0x0001-0x0005
+        Attribute type: Characteristic (0x2803)
+> HCI Event: Number of Completed Packets (0x13) plen 5          #286 343.643069
+        Num handles: 1
+        Handle: 512
+        Count: 1
+> ACL Data RX: Handle 512 flags 0x02 dlen 20                    #287 343.645452
+      ATT: Read By Type Response (0x09) len 15
+        Attribute data length: 7
+        Attribute data list: 2 entries
+        Handle: 0x0002
+        Value: 020300002a
+        Handle: 0x0004
+        Value: 020500012a
+< ACL Data TX: Handle 512 flags 0x00 dlen 9                     #288 343.647383
+      ATT: Write Request (0x12) len 4
+        Handle: 0x0009
+          Data: 0200
+> HCI Event: Number of Completed Packets (0x13) plen 5          #289 343.671652
+        Num handles: 1
+        Handle: 512
+        Count: 1
+> ACL Data RX: Handle 512 flags 0x02 dlen 5                     #290 343.674288
+      ATT: Write Response (0x13) len 0
+< ACL Data TX: Handle 512 flags 0x00 dlen 11                    #291 343.676301
+      ATT: Read By Type Request (0x08) len 6
+        Handle range: 0x0005-0x0005
+        Attribute type: Characteristic (0x2803)
+> HCI Event: Number of Completed Packets (0x13) plen 5          #292 343.693951
+        Num handles: 1
+        Handle: 512
+        Count: 1
+> ACL Data RX: Handle 512 flags 0x02 dlen 9                     #293 343.695603
+      ATT: Error Response (0x01) len 4
+        Read By Type Request (0x08)
+        Handle: 0x0005
+        Error: Attribute Not Found (0x0a)
+< ACL Data TX: Handle 512 flags 0x00 dlen 11                    #294 343.698283
+      ATT: Read By Type Request (0x08) len 6
+        Handle range: 0x0006-0x0009
+        Attribute type: Include (0x2802)
+> HCI Event: Number of Completed Packets (0x13) plen 5          #295 343.717594
+        Num handles: 1
+        Handle: 512
+        Count: 1
+> ACL Data RX: Handle 512 flags 0x02 dlen 9                     #296 343.719525
+      ATT: Error Response (0x01) len 4
+        Read By Type Request (0x08)
+        Handle: 0x0006
+        Error: Attribute Not Found (0x0a)
+< ACL Data TX: Handle 512 flags 0x00 dlen 11                    #297 343.721776
+      ATT: Read By Type Request (0x08) len 6
+        Handle range: 0x0006-0x0009
+        Attribute type: Characteristic (0x2803)
+> HCI Event: Number of Completed Packets (0x13) plen 5          #298 343.738956
+        Num handles: 1
+        Handle: 512
+        Count: 1
+> ACL Data RX: Handle 512 flags 0x02 dlen 13                    #299 343.740562
+      ATT: Read By Type Response (0x09) len 8
+        Attribute data length: 7
+        Attribute data list: 1 entry
+        Handle: 0x0007
+        Value: 200800052a
+< ACL Data TX: Handle 512 flags 0x00 dlen 11                    #300 343.742797
+      ATT: Read By Type Request (0x08) len 6
+        Handle range: 0x0008-0x0009
+        Attribute type: Characteristic (0x2803)
+> HCI Event: Number of Completed Packets (0x13) plen 5          #301 343.754111
+        Num handles: 1
+        Handle: 512
+        Count: 1
+> ACL Data RX: Handle 512 flags 0x02 dlen 9                     #302 343.756612
+      ATT: Error Response (0x01) len 4
+        Read By Type Request (0x08)
+        Handle: 0x0008
+        Error: Attribute Not Found (0x0a)
+< ACL Data TX: Handle 512 flags 0x00 dlen 9                     #303 343.759960
+      ATT: Find Information Request (0x04) len 4
+        Handle range: 0x0009-0x0009
+> HCI Event: Number of Completed Packets (0x13) plen 5          #304 343.779131
+        Num handles: 1
+        Handle: 512
+        Count: 1
+> ACL Data RX: Handle 512 flags 0x02 dlen 10                    #305 343.781227
+      ATT: Find Information Response (0x05) len 5
+        Format: UUID-16 (0x01)
+        Handle: 0x0009
+        UUID: Client Characteristic Configuration (0x2902)
+< ACL Data TX: Handle 512 flags 0x00 dlen 16                    #306 343.787521
+      LE L2CAP: Connection Parameter Update Request (0x12) ident 3 len 8
+        Min interval: 39
+        Max interval: 39
+        Slave latency: 0
+        Timeout multiplier: 42
+> HCI Event: Number of Completed Packets (0x13) plen 5          #307 343.806346
+        Num handles: 1
+        Handle: 512
+        Count: 1
+> ACL Data RX: Handle 512 flags 0x02 dlen 10                    #308 343.814577
+      LE L2CAP: Connection Parameter Update Response (0x13) ident 3 len 2
+        Result: Connection Parameters accepted (0x0000)
+> HCI Event: LE Meta Event (0x3e) plen 10                       #309 343.872435
+      LE Connection Update Complete (0x03)
+        Status: Success (0x00)
+        Handle: 512
+        Connection interval: 48.75 msec (0x0027)
+        Connection latency: 0 (0x0000)
+        Supervision timeout: 420 msec (0x002a)
+> HCI Event: Disconnect Complete (0x05) plen 4                  #310 353.480043
+        Status: Success (0x00)
+        Handle: 512
+        Reason: Remote User Terminated Connection (0x13)
+< HCI Command: LE Rand (0x08|0x0018) plen 0                     #311 359.903219
+> HCI Event: Command Complete (0x0e) plen 12                    #312 359.914473
+      LE Rand (0x08|0x0018) ncmd 1
+        Status: Success (0x00)
+        Random number: 0xfe09d55fbb784609
+< HCI Command: LE Set Extended Adverti.. (0x08|0x0036) plen 25  #313 359.916105
+        Handle: 0x00
+        Properties: 0x0013
+          Connectable
+          Scannable
+          Use legacy advertising PDUs: ADV_IND
+        Min advertising interval: 1000.000 msec (0x0640)
+        Max advertising interval: 1031.250 msec (0x0672)
+        Channel map: 37, 38, 39 (0x07)
+        Own address type: Random (0x01)
+        Peer address type: Public (0x00)
+        Peer address: 00:00:00:00:00:00 (OUI 00-00-00)
+        Filter policy: Allow Scan Request from Any, Allow Connect Request from Any (0x00)
+        TX power: -7 dbm (0xfffffff9)
+        Primary PHY: LE 1M (0x01)
+        Secondary max skip: 0x00
+        Secondary PHY: LE 1M (0x01)
+        SID: 0x01
+        Scan request notifications: Disabled (0x00)
+> HCI Event: Command Complete (0x0e) plen 5                     #314 359.920399
+      LE Set Extended Advertising Parameters (0x08|0x0036) ncmd 1
+        Status: Success (0x00)
+        TX power (selected): -10 dbm (0xfffffff6)
+< HCI Command: LE Set Advertising Set R.. (0x08|0x0035) plen 7  #315 359.921961
+        Advertising handle: 0x00
+        Advertising random address: 78:46:09:12:2A:EB (OUI 78-46-09)
+> HCI Event: Command Complete (0x0e) plen 4                     #316 359.926149
+      LE Set Advertising Set Random Address (0x08|0x0035) ncmd 1
+        Status: Success (0x00)
+< HCI Command: LE Set Extended Adverti.. (0x08|0x0037) plen 35  #317 359.927389
+        Handle: 0x00
+        Operation: Complete extended advertising data (0x03)
+        Fragment preference: Minimize fragmentation (0x01)
+        Data length: 0x1f
+        Flags: 0x02
+          LE General Discoverable Mode
+        Name (complete): M50_CDEF
+        128-bit Service UUIDs (complete): 1 entry
+          Vendor specific (49535343-fe7d-4ae5-8fa9-9fafd205e455)
+> HCI Event: Command Complete (0x0e) plen 4                     #318 359.931541
+      LE Set Extended Advertising Data (0x08|0x0037) ncmd 1
+        Status: Success (0x00)
+< HCI Command: LE Set Extended Scan Res.. (0x08|0x0038) plen 4  #319 359.934457
+        Handle: 0x00
+        Operation: Complete scan response data (0x03)
+        Fragment preference: Minimize fragmentation (0x01)
+        Data length: 0x00
+> HCI Event: Command Complete (0x0e) plen 4                     #320 359.938846
+      LE Set Extended Scan Response Data (0x08|0x0038) ncmd 1
+        Status: Success (0x00)
+< HCI Command: LE Set Extended Advertis.. (0x08|0x0039) plen 6  #321 359.939817
+        Extended advertising: Enabled (0x01)
+        Number of sets: 1 (0x01)
+        Entry 0
+          Handle: 0x00
+          Duration: 0 ms (0x00)
+          Max ext adv events: 0
+> HCI Event: Command Complete (0x0e) plen 4                     #322 359.943746
+      LE Set Extended Advertising Enable (0x08|0x0039) ncmd 1
+        Status: Success (0x00)
+> HCI Event: LE Meta Event (0x3e) plen 31                       #323 380.357773
+      LE Enhanced Connection Complete (0x0a)
+        Status: Success (0x00)
+        Handle: 512
+        Role: Slave (0x01)
+        Peer address type: Resolved Public (0x02)
+        Peer address: DC:A6:32:B2:F8:FF (OUI DC-A6-32)
+        Local resolvable private address: 00:00:00:00:00:00 (Non-Resolvable)
+        Peer resolvable private address: DC:A6:32:B2:F8:FF (Static)
+        Connection interval: 48.75 msec (0x0027)
+        Connection latency: 0 (0x0000)
+        Supervision timeout: 420 msec (0x002a)
+        Master clock accuracy: 0x01
+< HCI Command: LE Read Peer Resolvable... (0x08|0x002b) plen 7  #324 380.359381
+        Address type: Public (0x00)
+        Address: DC:A6:32:B2:F8:FF (OUI DC-A6-32)
+> HCI Event: LE Meta Event (0x3e) plen 6                        #325 380.360797
+      LE Advertising Set Terminated (0x12)
+        Status: Success (0x00)
+        Handle: 0
+        Connection handle: 512
+        Number of completed extended advertising events: 21
+> HCI Event: Command Complete (0x0e) plen 10                    #326 380.366536
+      LE Read Peer Resolvable Address (0x08|0x002b) ncmd 1
+        Status: Success (0x00)
+        Address: DC:A6:32:B2:F8:FF (Static)
+< HCI Command: LE Read Remote Used Feat.. (0x08|0x0016) plen 2  #327 380.369181
+        Handle: 512
+> HCI Event: Command Status (0x0f) plen 4                       #328 380.376506
+      LE Read Remote Used Features (0x08|0x0016) ncmd 1
+        Status: Success (0x00)
+< HCI Command: LE Set Extended Advertis.. (0x08|0x0039) plen 6  #329 380.378529
+        Extended advertising: Disabled (0x00)
+        Number of sets: 1 (0x01)
+        Entry 0
+          Handle: 0x00
+          Duration: 0 ms (0x00)
+          Max ext adv events: 0
+> HCI Event: Command Complete (0x0e) plen 4                     #330 380.383794
+      LE Set Extended Advertising Enable (0x08|0x0039) ncmd 1
+        Status: Success (0x00)
+< HCI Command: LE Set Address Resolutio.. (0x08|0x002d) plen 1  #331 380.386734
+        Address resolution: Disabled (0x00)
+> HCI Event: Command Complete (0x0e) plen 4                     #332 380.394108
+      LE Set Address Resolution Enable (0x08|0x002d) ncmd 1
+        Status: Command Disallowed (0x0c)
+< HCI Command: LE Set Extended Advertis.. (0x08|0x0039) plen 6  #333 380.395552
+        Extended advertising: Enabled (0x01)
+        Number of sets: 1 (0x01)
+        Entry 0
+          Handle: 0x00
+          Duration: 0 ms (0x00)
+          Max ext adv events: 0
+> HCI Event: Command Complete (0x0e) plen 4                     #334 380.400251
+      LE Set Extended Advertising Enable (0x08|0x0039) ncmd 1
+        Status: Success (0x00)
+< HCI Command: LE Set Extended Advertis.. (0x08|0x0039) plen 6  #335 380.402004
+        Extended advertising: Enabled (0x01)
+        Number of sets: 1 (0x01)
+        Entry 0
+          Handle: 0x00
+          Duration: 0 ms (0x00)
+          Max ext adv events: 0
+> HCI Event: Command Complete (0x0e) plen 4                     #336 380.407277
+      LE Set Extended Advertising Enable (0x08|0x0039) ncmd 1
+        Status: Invalid HCI Command Parameters (0x12)
+> HCI Event: LE Meta Event (0x3e) plen 12                       #337 380.454337
+      LE Read Remote Used Features (0x04)
+        Status: Success (0x00)
+        Handle: 512
+        Features: 0x3d 0x00 0x00 0x00 0x00 0x00 0x00 0x00
+          LE Encryption
+          Extended Reject Indication
+          Slave-initiated Features Exchange
+          LE Ping
+          LE Data Packet Length Extension
+< HCI Command: Read Remote Version Info.. (0x01|0x001d) plen 2  #338 380.455444
+        Handle: 512
+> HCI Event: Command Status (0x0f) plen 4                       #339 380.469582
+      Read Remote Version Information (0x01|0x001d) ncmd 1
+        Status: Success (0x00)
+> HCI Event: LE Meta Event (0x3e) plen 11                       #340 380.553178
+      LE Data Length Change (0x07)
+        Handle: 512
+        Max TX octets: 251
+        Max TX time: 2120
+        Max RX octets: 251
+        Max RX time: 2120
+> ACL Data RX: Handle 512 flags 0x02 dlen 11                    #341 380.556221
+      SMP: Pairing Request (0x01) len 6
+        IO capability: DisplayYesNo (0x01)
+        OOB data: Authentication data not present (0x00)
+        Authentication requirement: Bonding, MITM, SC, No Keypresses (0x0d)
+        Max encryption key size: 16
+        Initiator key distribution: EncKey Sign (0x05)
+        Responder key distribution: EncKey IdKey Sign (0x07)
+> ACL Data RX: Handle 512 flags 0x02 dlen 7                     #342 380.559891
+      ATT: Exchange MTU Request (0x02) len 2
+        Client RX MTU: 517
+< HCI Command: LE Remove Device From Re.. (0x08|0x0028) plen 7  #343 380.565404
+        Address type: Public (0x00)
+        Address: DC:A6:32:B2:F8:FF (OUI DC-A6-32)
+< ACL Data TX: Handle 512 flags 0x00 dlen 7                     #344 380.569447
+      ATT: Exchange MTU Response (0x03) len 2
+        Server RX MTU: 517
+> HCI Event: Command Complete (0x0e) plen 4                     #345 380.571466
+      LE Remove Device From Resolving List (0x08|0x0028) ncmd 1
+        Status: Command Disallowed (0x0c)
+> HCI Event: Read Remote Version Complete (0x0c) plen 8         #346 380.600538
+        Status: Success (0x00)
+        Handle: 512
+        LMP version: Bluetooth 5.0 (0x09) - Subversion 24857 (0x6119)
+        Manufacturer: Cypress Semiconductor Corporation (305)
+< HCI Command: LE Set Extended Advertis.. (0x08|0x0039) plen 6  #347 380.607024
+        Extended advertising: Disabled (0x00)
+        Number of sets: 1 (0x01)
+        Entry 0
+          Handle: 0x00
+          Duration: 0 ms (0x00)
+          Max ext adv events: 0
+> HCI Event: Command Complete (0x0e) plen 4                     #348 380.613071
+      LE Set Extended Advertising Enable (0x08|0x0039) ncmd 1
+        Status: Success (0x00)
+< HCI Command: LE Remove Advertising Set (0x08|0x003c) plen 1   #349 380.613914
+        Handle: 0
+> HCI Event: Command Complete (0x0e) plen 4                     #350 380.618701
+      LE Remove Advertising Set (0x08|0x003c) ncmd 1
+        Status: Success (0x00)
+> HCI Event: Number of Completed Packets (0x13) plen 5          #351 380.648122
+        Num handles: 1
+        Handle: 512
+        Count: 1
+> ACL Data RX: Handle 512 flags 0x02 dlen 11                    #352 380.649649
+      ATT: Read By Group Type Request (0x10) len 6
+        Handle range: 0x0001-0xffff
+        Attribute group type: Primary Service (0x2800)
+< ACL Data TX: Handle 512 flags 0x00 dlen 18                    #353 380.650529
+      ATT: Read By Group Type Response (0x11) len 13
+        Attribute data length: 6
+        Attribute group list: 2 entries
+        Handle range: 0x0001-0x0003
+        UUID: Generic Attribute Profile (0x1801)
+        Handle range: 0x0014-0x001a
+        UUID: Generic Access Profile (0x1800)
+> HCI Event: Number of Completed Packets (0x13) plen 5          #354 380.752045
+        Num handles: 1
+        Handle: 512
+        Count: 1
+> ACL Data RX: Handle 512 flags 0x02 dlen 11                    #355 380.791339
+      ATT: Read By Group Type Request (0x10) len 6
+        Handle range: 0x001b-0xffff
+        Attribute group type: Primary Service (0x2800)
+< ACL Data TX: Handle 512 flags 0x00 dlen 26                    #356 380.792218
+      ATT: Read By Group Type Response (0x11) len 21
+        Attribute data length: 20
+        Attribute group list: 1 entry
+        Handle range: 0x0028-0xffff
+        UUID: Vendor specific (49535343-fe7d-4ae5-8fa9-9fafd205e455)
+> HCI Event: Number of Completed Packets (0x13) plen 5          #357 380.946485
+        Num handles: 1
+        Handle: 512
+        Count: 1
+> ACL Data RX: Handle 512 flags 0x02 dlen 11                    #358 380.949627
+      ATT: Read By Group Type Request (0x10) len 6
+        Handle range: 0x0001-0xffff
+        Attribute group type: Secondary Service (0x2801)
+< ACL Data TX: Handle 512 flags 0x00 dlen 9                     #359 380.950434
+      ATT: Error Response (0x01) len 4
+        Read By Group Type Request (0x10)
+        Handle: 0x0001
+        Error: Unsupported Group Type (0x10)
+> HCI Event: Number of Completed Packets (0x13) plen 5          #360 381.039469
+        Num handles: 1
+        Handle: 512
+        Count: 1
+> ACL Data RX: Handle 512 flags 0x02 dlen 11                    #361 381.041059
+      ATT: Read By Type Request (0x08) len 6
+        Handle range: 0x0001-0xffff
+        Attribute type: Include (0x2802)
+< ACL Data TX: Handle 512 flags 0x00 dlen 9                     #362 381.041890
+      ATT: Error Response (0x01) len 4
+        Read By Type Request (0x08)
+        Handle: 0x0001
+        Error: Attribute Not Found (0x0a)
+> HCI Event: Number of Completed Packets (0x13) plen 5          #363 381.236798
+        Num handles: 1
+        Handle: 512
+        Count: 1
+> ACL Data RX: Handle 512 flags 0x02 dlen 11                    #364 381.240622
+      ATT: Read By Type Request (0x08) len 6
+        Handle range: 0x0001-0xffff
+        Attribute type: Characteristic (0x2803)
+< ACL Data TX: Handle 512 flags 0x00 dlen 34                    #365 381.244725
+      ATT: Read By Type Response (0x09) len 29
+        Attribute data length: 7
+        Attribute data list: 4 entries
+        Handle: 0x0002
+        Value: 200300052a
+        Handle: 0x0015
+        Value: 021600002a
+        Handle: 0x0017
+        Value: 021800012a
+        Handle: 0x0019
+        Value: 021a00a62a
+> HCI Event: Number of Completed Packets (0x13) plen 5          #366 381.331884
+        Num handles: 1
+        Handle: 512
+        Count: 1
+> ACL Data RX: Handle 512 flags 0x02 dlen 11                    #367 381.334542
+      ATT: Read By Type Request (0x08) len 6
+        Handle range: 0x001a-0xffff
+        Attribute type: Characteristic (0x2803)
+< ACL Data TX: Handle 512 flags 0x00 dlen 48                    #368 381.335377
+      ATT: Read By Type Response (0x09) len 43
+        Attribute data length: 21
+        Attribute data list: 2 entries
+        Handle: 0x0029
+        Value: 102a0016962447c62361bad94b4d1e43535349
+        Handle: 0x002b
+        Value: 082c00b39b7234beecd4a8f443418843535349
+> HCI Event: Number of Completed Packets (0x13) plen 5          #369 381.428351
+        Num handles: 1
+        Handle: 512
+        Count: 1
+> ACL Data RX: Handle 512 flags 0x02 dlen 11                    #370 381.429555
+      ATT: Read By Type Request (0x08) len 6
+        Handle range: 0x002c-0xffff
+        Attribute type: Characteristic (0x2803)
+< ACL Data TX: Handle 512 flags 0x00 dlen 9                     #371 381.430239
+      ATT: Error Response (0x01) len 4
+        Read By Type Request (0x08)
+        Handle: 0x002c
+        Error: Attribute Not Found (0x0a)
+> HCI Event: Number of Completed Packets (0x13) plen 5          #372 381.527993
+        Num handles: 1
+        Handle: 512
+        Count: 1
+> ACL Data RX: Handle 512 flags 0x02 dlen 9                     #373 381.529349
+      ATT: Find Information Request (0x04) len 4
+        Handle range: 0x002d-0xffff
+< ACL Data TX: Handle 512 flags 0x00 dlen 9                     #374 381.530326
+      ATT: Error Response (0x01) len 4
+        Find Information Request (0x04)
+        Handle: 0x002d
+        Error: Attribute Not Found (0x0a)
+> HCI Event: Number of Completed Packets (0x13) plen 5          #375 381.672305
+        Num handles: 1
+        Handle: 512
+        Count: 1
+> ACL Data RX: Handle 512 flags 0x02 dlen 7                     #376 381.673919
+      ATT: Read Request (0x0a) len 2
+        Handle: 0x0016
+< ACL Data TX: Handle 512 flags 0x00 dlen 13                    #377 381.674727
+      ATT: Read Response (0x0b) len 8
+        Value: 4d35305f43444546
+> HCI Event: Number of Completed Packets (0x13) plen 5          #378 381.770832
+        Num handles: 1
+        Handle: 512
+        Count: 1
+> ACL Data RX: Handle 512 flags 0x02 dlen 7                     #379 381.771904
+      ATT: Read Request (0x0a) len 2
+        Handle: 0x0018
+< ACL Data TX: Handle 512 flags 0x00 dlen 7                     #380 381.772439
+      ATT: Read Response (0x0b) len 2
+        Value: 0000
+> HCI Event: Number of Completed Packets (0x13) plen 5          #381 381.867415
+        Num handles: 1
+        Handle: 512
+        Count: 1
+< ACL Data TX: Handle 512 flags 0x00 dlen 11                    #382 385.785938
+      SMP: Pairing Response (0x02) len 6
+        IO capability: KeyboardDisplay (0x04)
+        OOB data: Authentication data not present (0x00)
+        Authentication requirement: Bonding, MITM, SC, No Keypresses, CT2 (0x2d)
+        Max encryption key size: 16
+        Initiator key distribution: EncKey Sign (0x05)
+        Responder key distribution: EncKey IdKey Sign (0x07)
+< HCI Command: LE Rand (0x08|0x0018) plen 0                     #383 385.788189
+> HCI Event: Command Complete (0x0e) plen 12                    #384 385.810114
+      LE Rand (0x08|0x0018) ncmd 1
+        Status: Success (0x00)
+        Random number: 0xf98d6d1187031b79
+< HCI Command: LE Rand (0x08|0x0018) plen 0                     #385 385.811108
+> HCI Event: Command Complete (0x0e) plen 12                    #386 385.813732
+      LE Rand (0x08|0x0018) ncmd 1
+        Status: Success (0x00)
+        Random number: 0x19c68c34c8370ac8
+< HCI Command: LE Rand (0x08|0x0018) plen 0                     #387 385.814581
+> HCI Event: Command Complete (0x0e) plen 12                    #388 385.817961
+      LE Rand (0x08|0x0018) ncmd 1
+        Status: Success (0x00)
+        Random number: 0xa05586739cf1fdd3
+< HCI Command: LE Rand (0x08|0x0018) plen 0                     #389 385.818920
+> HCI Event: Command Complete (0x0e) plen 12                    #390 385.821066
+      LE Rand (0x08|0x0018) ncmd 1
+        Status: Success (0x00)
+        Random number: 0xcb10eb2dbe9682bc
+> HCI Event: Number of Completed Packets (0x13) plen 5          #391 385.863940
+        Num handles: 1
+        Handle: 512
+        Count: 1
+> ACL Data RX: Handle 512 flags 0x02 dlen 69                    #392 385.865421
+      SMP: Pairing Public Key (0x0c) len 64
+        X: 7a14a478e1249d30f618f51972a68b938fe0b941f7ce08d14a80395ec48bd5b6
+        Y: 849ab0a92a15c866a9e330b785008b065bb63f7a7bdd4bb552cd2698f7a54d90
+< ACL Data TX: Handle 512 flags 0x00 dlen 69                    #393 385.870417
+      SMP: Pairing Public Key (0x0c) len 64
+        X: 9ea9432df6312b33512a7a2f0ceede53bfd4f12802e20bd9dae5d464b443a6c0
+        Y: ffe33d975deb9bf5d808dcfad706c62bfe4795b4a1d22e63cb8949fb49a3ed0d
+< HCI Command: LE Rand (0x08|0x0018) plen 0                     #394 385.872985
+> HCI Event: Command Complete (0x0e) plen 12                    #395 385.881990
+      LE Rand (0x08|0x0018) ncmd 1
+        Status: Success (0x00)
+        Random number: 0x13a289fdfdd1774d
+< HCI Command: LE Rand (0x08|0x0018) plen 0                     #396 385.882596
+> HCI Event: Command Complete (0x0e) plen 12                    #397 385.884319
+      LE Rand (0x08|0x0018) ncmd 1
+        Status: Success (0x00)
+        Random number: 0x603a1f4c4eea6327
+< ACL Data TX: Handle 512 flags 0x00 dlen 21                    #398 385.885281
+      SMP: Pairing Confirm (0x03) len 16
+        Confim value: d4c4b35c86f746a28a8517962466b94f
+> HCI Event: Number of Completed Packets (0x13) plen 5          #399 385.961589
+        Num handles: 1
+        Handle: 512
+        Count: 1
+> HCI Event: Number of Completed Packets (0x13) plen 5          #400 386.010594
+        Num handles: 1
+        Handle: 512
+        Count: 1
+> ACL Data RX: Handle 512 flags 0x02 dlen 21                    #401 386.011753
+      SMP: Pairing Random (0x04) len 16
+        Random value: 70c60d158f067f6002cd058bcea3d9b6
+< ACL Data TX: Handle 512 flags 0x00 dlen 21                    #402 386.015962
+      SMP: Pairing Random (0x04) len 16
+        Random value: 4d77d1fdfd89a2132763ea4e4c1f3a60
+> HCI Event: Number of Completed Packets (0x13) plen 5          #403 386.108660
+        Num handles: 1
+        Handle: 512
+        Count: 1
+> ACL Data RX: Handle 512 flags 0x02 dlen 21                    #404 390.158142
+      SMP: Pairing DHKey Check (0x0d) len 16
+        E: cfe9c92c74b3c5163cda6c2f37985b48
+< ACL Data TX: Handle 512 flags 0x00 dlen 6                     #405 393.331705
+      SMP: Pairing Failed (0x05) len 1
+        Reason: DHKey check failed (0x0b)
+< ACL Data TX: Handle 512 flags 0x00 dlen 6                     #406 393.337540
+      SMP: Security Request (0x0b) len 1
+        Authentication requirement: Bonding, MITM, SC, No Keypresses, CT2 (0x2d)
+> HCI Event: Number of Completed Packets (0x13) plen 5          #407 393.420944
+        Num handles: 1
+        Handle: 512
+        Count: 1
+> HCI Event: Disconnect Complete (0x05) plen 4                  #408 393.470124
+        Status: Success (0x00)
+        Handle: 512
+        Reason: Authentication Failure (0x05)
+< HCI Command: Delete Stored Link Key (0x03|0x0012) plen 7      #409 393.476047
+        Address: DC:A6:32:B2:F8:FF (OUI DC-A6-32)
+        Delete all: 0x00
+> HCI Event: Command Complete (0x0e) plen 6                     #410 393.478967
+      Delete Stored Link Key (0x03|0x0012) ncmd 1
+        Status: Success (0x00)
+        Num keys: 0
+< HCI Command: LE Rand (0x08|0x0018) plen 0                     #411 429.119791
+> HCI Event: Command Complete (0x0e) plen 12                    #412 429.126849
+      LE Rand (0x08|0x0018) ncmd 1
+        Status: Success (0x00)
+        Random number: 0x7cd6fbb4c30eb9a8
+< HCI Command: LE Set Extended Adverti.. (0x08|0x0036) plen 25  #413 429.128432
+        Handle: 0x00
+        Properties: 0x0013
+          Connectable
+          Scannable
+          Use legacy advertising PDUs: ADV_IND
+        Min advertising interval: 1000.000 msec (0x0640)
+        Max advertising interval: 1031.250 msec (0x0672)
+        Channel map: 37, 38, 39 (0x07)
+        Own address type: Random (0x01)
+        Peer address type: Public (0x00)
+        Peer address: 00:00:00:00:00:00 (OUI 00-00-00)
+        Filter policy: Allow Scan Request from Any, Allow Connect Request from Any (0x00)
+        TX power: -7 dbm (0xfffffff9)
+        Primary PHY: LE 1M (0x01)
+        Secondary max skip: 0x00
+        Secondary PHY: LE 1M (0x01)
+        SID: 0x01
+        Scan request notifications: Disabled (0x00)
+> HCI Event: Command Complete (0x0e) plen 5                     #414 429.131094
+      LE Set Extended Advertising Parameters (0x08|0x0036) ncmd 1
+        Status: Success (0x00)
+        TX power (selected): -10 dbm (0xfffffff6)
+< HCI Command: LE Set Advertising Set R.. (0x08|0x0035) plen 7  #415 429.132240
+        Advertising handle: 0x00
+        Advertising random address: 4E:B9:A8:0E:31:25 (OUI 4E-B9-A8)
+> HCI Event: Command Complete (0x0e) plen 4                     #416 429.134501
+      LE Set Advertising Set Random Address (0x08|0x0035) ncmd 1
+        Status: Success (0x00)
+< HCI Command: LE Set Extended Adverti.. (0x08|0x0037) plen 35  #417 429.135229
+        Handle: 0x00
+        Operation: Complete extended advertising data (0x03)
+        Fragment preference: Minimize fragmentation (0x01)
+        Data length: 0x1f
+        Flags: 0x02
+          LE General Discoverable Mode
+        Name (complete): M50_CDEF
+        128-bit Service UUIDs (complete): 1 entry
+          Vendor specific (49535343-fe7d-4ae5-8fa9-9fafd205e455)
+> HCI Event: Command Complete (0x0e) plen 4                     #418 429.137734
+      LE Set Extended Advertising Data (0x08|0x0037) ncmd 1
+        Status: Success (0x00)
+< HCI Command: LE Set Extended Scan Res.. (0x08|0x0038) plen 4  #419 429.138520
+        Handle: 0x00
+        Operation: Complete scan response data (0x03)
+        Fragment preference: Minimize fragmentation (0x01)
+        Data length: 0x00
+> HCI Event: Command Complete (0x0e) plen 4                     #420 429.140511
+      LE Set Extended Scan Response Data (0x08|0x0038) ncmd 1
+        Status: Success (0x00)
+< HCI Command: LE Set Extended Advertis.. (0x08|0x0039) plen 6  #421 429.141860
+        Extended advertising: Enabled (0x01)
+        Number of sets: 1 (0x01)
+        Entry 0
+          Handle: 0x00
+          Duration: 0 ms (0x00)
+          Max ext adv events: 0
+> HCI Event: Command Complete (0x0e) plen 4                     #422 429.144196
+      LE Set Extended Advertising Enable (0x08|0x0039) ncmd 1
+        Status: Success (0x00)
+> HCI Event: LE Meta Event (0x3e) plen 31                       #423 451.590861
+      LE Enhanced Connection Complete (0x0a)
+        Status: Success (0x00)
+        Handle: 512
+        Role: Slave (0x01)
+        Peer address type: Resolved Public (0x02)
+        Peer address: DC:A6:32:B2:F8:FF (OUI DC-A6-32)
+        Local resolvable private address: 00:00:00:00:00:00 (Non-Resolvable)
+        Peer resolvable private address: DC:A6:32:B2:F8:FF (Static)
+        Connection interval: 48.75 msec (0x0027)
+        Connection latency: 0 (0x0000)
+        Supervision timeout: 420 msec (0x002a)
+        Master clock accuracy: 0x01
+> HCI Event: LE Meta Event (0x3e) plen 6                        #424 451.594197
+      LE Advertising Set Terminated (0x12)
+        Status: Success (0x00)
+        Handle: 0
+        Connection handle: 512
+        Number of completed extended advertising events: 23
+< HCI Command: LE Read Remote Used Feat.. (0x08|0x0016) plen 2  #425 451.598293
+        Handle: 512
+> HCI Event: Command Status (0x0f) plen 4                       #426 451.606531
+      LE Read Remote Used Features (0x08|0x0016) ncmd 1
+        Status: Success (0x00)
+< HCI Command: LE Set Extended Advertis.. (0x08|0x0039) plen 6  #427 451.608516
+        Extended advertising: Enabled (0x01)
+        Number of sets: 1 (0x01)
+        Entry 0
+          Handle: 0x00
+          Duration: 0 ms (0x00)
+          Max ext adv events: 0
+> HCI Event: LE Meta Event (0x3e) plen 12                       #428 451.613590
+      LE Read Remote Used Features (0x04)
+        Status: Success (0x00)
+        Handle: 512
+        Features: 0x3d 0x00 0x00 0x00 0x00 0x00 0x00 0x00
+          LE Encryption
+          Extended Reject Indication
+          Slave-initiated Features Exchange
+          LE Ping
+          LE Data Packet Length Extension
+> HCI Event: Command Complete (0x0e) plen 4                     #429 451.617390
+      LE Set Extended Advertising Enable (0x08|0x0039) ncmd 1
+        Status: Success (0x00)
+< HCI Command: Read Remote Version Info.. (0x01|0x001d) plen 2  #430 451.619116
+        Handle: 512
+> HCI Event: Command Status (0x0f) plen 4                       #431 451.623869
+      Read Remote Version Information (0x01|0x001d) ncmd 1
+        Status: Success (0x00)
+> HCI Event: LE Meta Event (0x3e) plen 11                       #432 451.691763
+      LE Data Length Change (0x07)
+        Handle: 512
+        Max TX octets: 251
+        Max TX time: 2120
+        Max RX octets: 251
+        Max RX time: 2120
+> HCI Event: Read Remote Version Complete (0x0c) plen 8         #433 451.739064
+        Status: Success (0x00)
+        Handle: 512
+        LMP version: Bluetooth 5.0 (0x09) - Subversion 24857 (0x6119)
+        Manufacturer: Cypress Semiconductor Corporation (305)
+< HCI Command: LE Set Extended Advertis.. (0x08|0x0039) plen 6  #434 451.782414
+        Extended advertising: Disabled (0x00)
+        Number of sets: 1 (0x01)
+        Entry 0
+          Handle: 0x00
+          Duration: 0 ms (0x00)
+          Max ext adv events: 0
+> ACL Data RX: Handle 512 flags 0x02 dlen 11                    #435 451.791442
+      SMP: Pairing Request (0x01) len 6
+        IO capability: DisplayYesNo (0x01)
+        OOB data: Authentication data not present (0x00)
+        Authentication requirement: Bonding, MITM, SC, No Keypresses (0x0d)
+        Max encryption key size: 16
+        Initiator key distribution: EncKey Sign (0x05)
+        Responder key distribution: EncKey IdKey Sign (0x07)
+> ACL Data RX: Handle 512 flags 0x02 dlen 7                     #436 451.798718
+      ATT: Exchange MTU Request (0x02) len 2
+        Client RX MTU: 517
+< ACL Data TX: Handle 512 flags 0x00 dlen 7                     #437 451.800968
+      ATT: Exchange MTU Response (0x03) len 2
+        Server RX MTU: 517
+> HCI Event: Command Complete (0x0e) plen 4                     #438 451.801695
+      LE Set Extended Advertising Enable (0x08|0x0039) ncmd 1
+        Status: Success (0x00)
+< HCI Command: LE Remove Advertising Set (0x08|0x003c) plen 1   #439 451.802463
+        Handle: 0
+> HCI Event: Command Complete (0x0e) plen 4                     #440 451.806248
+      LE Remove Advertising Set (0x08|0x003c) ncmd 1
+        Status: Success (0x00)
+> HCI Event: Number of Completed Packets (0x13) plen 5          #441 451.934320
+        Num handles: 1
+        Handle: 512
+        Count: 1
+> ACL Data RX: Handle 512 flags 0x02 dlen 11                    #442 451.977203
+      ATT: Read By Group Type Request (0x10) len 6
+        Handle range: 0x0001-0xffff
+        Attribute group type: Primary Service (0x2800)
+< ACL Data TX: Handle 512 flags 0x00 dlen 18                    #443 451.978603
+      ATT: Read By Group Type Response (0x11) len 13
+        Attribute data length: 6
+        Attribute group list: 2 entries
+        Handle range: 0x0001-0x0003
+        UUID: Generic Attribute Profile (0x1801)
+        Handle range: 0x0014-0x001a
+        UUID: Generic Access Profile (0x1800)
+> HCI Event: Number of Completed Packets (0x13) plen 5          #444 452.079157
+        Num handles: 1
+        Handle: 512
+        Count: 1
+> ACL Data RX: Handle 512 flags 0x02 dlen 11                    #445 452.082099
+      ATT: Read By Group Type Request (0x10) len 6
+        Handle range: 0x001b-0xffff
+        Attribute group type: Primary Service (0x2800)
+< ACL Data TX: Handle 512 flags 0x00 dlen 26                    #446 452.083553
+      ATT: Read By Group Type Response (0x11) len 21
+        Attribute data length: 20
+        Attribute group list: 1 entry
+        Handle range: 0x0028-0xffff
+        UUID: Vendor specific (49535343-fe7d-4ae5-8fa9-9fafd205e455)
+> HCI Event: Number of Completed Packets (0x13) plen 5          #447 452.175452
+        Num handles: 1
+        Handle: 512
+        Count: 1
+> ACL Data RX: Handle 512 flags 0x02 dlen 11                    #448 452.177505
+      ATT: Read By Group Type Request (0x10) len 6
+        Handle range: 0x0001-0xffff
+        Attribute group type: Secondary Service (0x2801)
+< ACL Data TX: Handle 512 flags 0x00 dlen 9                     #449 452.178672
+      ATT: Error Response (0x01) len 4
+        Read By Group Type Request (0x10)
+        Handle: 0x0001
+        Error: Unsupported Group Type (0x10)
+> HCI Event: Number of Completed Packets (0x13) plen 5          #450 452.274581
+        Num handles: 1
+        Handle: 512
+        Count: 1
+> ACL Data RX: Handle 512 flags 0x02 dlen 11                    #451 452.276564
+      ATT: Read By Type Request (0x08) len 6
+        Handle range: 0x0001-0xffff
+        Attribute type: Include (0x2802)
+< ACL Data TX: Handle 512 flags 0x00 dlen 9                     #452 452.278464
+      ATT: Error Response (0x01) len 4
+        Read By Type Request (0x08)
+        Handle: 0x0001
+        Error: Attribute Not Found (0x0a)
+> HCI Event: Number of Completed Packets (0x13) plen 5          #453 452.419744
+        Num handles: 1
+        Handle: 512
+        Count: 1
+> ACL Data RX: Handle 512 flags 0x02 dlen 11                    #454 452.421571
+      ATT: Read By Type Request (0x08) len 6
+        Handle range: 0x0001-0xffff
+        Attribute type: Characteristic (0x2803)
+< ACL Data TX: Handle 512 flags 0x00 dlen 34                    #455 452.423134
+      ATT: Read By Type Response (0x09) len 29
+        Attribute data length: 7
+        Attribute data list: 4 entries
+        Handle: 0x0002
+        Value: 200300052a
+        Handle: 0x0015
+        Value: 021600002a
+        Handle: 0x0017
+        Value: 021800012a
+        Handle: 0x0019
+        Value: 021a00a62a
+> HCI Event: Number of Completed Packets (0x13) plen 5          #456 452.517442
+        Num handles: 1
+        Handle: 512
+        Count: 1
+> ACL Data RX: Handle 512 flags 0x02 dlen 11                    #457 452.519349
+      ATT: Read By Type Request (0x08) len 6
+        Handle range: 0x001a-0xffff
+        Attribute type: Characteristic (0x2803)
+< ACL Data TX: Handle 512 flags 0x00 dlen 48                    #458 452.520566
+      ATT: Read By Type Response (0x09) len 43
+        Attribute data length: 21
+        Attribute data list: 2 entries
+        Handle: 0x0029
+        Value: 102a0016962447c62361bad94b4d1e43535349
+        Handle: 0x002b
+        Value: 082c00b39b7234beecd4a8f443418843535349
+> HCI Event: Number of Completed Packets (0x13) plen 5          #459 452.614069
+        Num handles: 1
+        Handle: 512
+        Count: 1
+> ACL Data RX: Handle 512 flags 0x02 dlen 11                    #460 452.615787
+      ATT: Read By Type Request (0x08) len 6
+        Handle range: 0x002c-0xffff
+        Attribute type: Characteristic (0x2803)
+< ACL Data TX: Handle 512 flags 0x00 dlen 9                     #461 452.617287
+      ATT: Error Response (0x01) len 4
+        Read By Type Request (0x08)
+        Handle: 0x002c
+        Error: Attribute Not Found (0x0a)
+> HCI Event: Number of Completed Packets (0x13) plen 5          #462 452.760423
+        Num handles: 1
+        Handle: 512
+        Count: 1
+> ACL Data RX: Handle 512 flags 0x02 dlen 9                     #463 452.761656
+      ATT: Find Information Request (0x04) len 4
+        Handle range: 0x002d-0xffff
+< ACL Data TX: Handle 512 flags 0x00 dlen 9                     #464 452.762339
+      ATT: Error Response (0x01) len 4
+        Find Information Request (0x04)
+        Handle: 0x002d
+        Error: Attribute Not Found (0x0a)
+> HCI Event: Number of Completed Packets (0x13) plen 5          #465 452.857762
+        Num handles: 1
+        Handle: 512
+        Count: 1
+> ACL Data RX: Handle 512 flags 0x02 dlen 7                     #466 452.859730
+      ATT: Read Request (0x0a) len 2
+        Handle: 0x0016
+< ACL Data TX: Handle 512 flags 0x00 dlen 13                    #467 452.860542
+      ATT: Read Response (0x0b) len 8
+        Value: 4d35305f43444546
+> HCI Event: Number of Completed Packets (0x13) plen 5          #468 453.004430
+        Num handles: 1
+        Handle: 512
+        Count: 1
+> ACL Data RX: Handle 512 flags 0x02 dlen 7                     #469 453.005528
+      ATT: Read Request (0x0a) len 2
+        Handle: 0x0018
+< ACL Data TX: Handle 512 flags 0x00 dlen 7                     #470 453.006227
+      ATT: Read Response (0x0b) len 2
+        Value: 0000
+> HCI Event: Number of Completed Packets (0x13) plen 5          #471 453.150046
+        Num handles: 1
+        Handle: 512
+        Count: 1
+< ACL Data TX: Handle 512 flags 0x00 dlen 11                    #472 456.069956
+      SMP: Pairing Response (0x02) len 6
+        IO capability: KeyboardDisplay (0x04)
+        OOB data: Authentication data not present (0x00)
+        Authentication requirement: Bonding, MITM, SC, No Keypresses, CT2 (0x2d)
+        Max encryption key size: 16
+        Initiator key distribution: EncKey Sign (0x05)
+        Responder key distribution: EncKey IdKey Sign (0x07)
+< HCI Command: LE Rand (0x08|0x0018) plen 0                     #473 456.071758
+> HCI Event: Command Complete (0x0e) plen 12                    #474 456.076499
+      LE Rand (0x08|0x0018) ncmd 1
+        Status: Success (0x00)
+        Random number: 0xefc431cc2286e660
+< HCI Command: LE Rand (0x08|0x0018) plen 0                     #475 456.078276
+> HCI Event: Command Complete (0x0e) plen 12                    #476 456.082202
+      LE Rand (0x08|0x0018) ncmd 1
+        Status: Success (0x00)
+        Random number: 0x94b7f06c22958110
+< HCI Command: LE Rand (0x08|0x0018) plen 0                     #477 456.083558
+> HCI Event: Command Complete (0x0e) plen 12                    #478 456.087250
+      LE Rand (0x08|0x0018) ncmd 1
+        Status: Success (0x00)
+        Random number: 0x8be40ca1498fb2fc
+< HCI Command: LE Rand (0x08|0x0018) plen 0                     #479 456.088009
+> HCI Event: Command Complete (0x0e) plen 12                    #480 456.091582
+      LE Rand (0x08|0x0018) ncmd 1
+        Status: Success (0x00)
+        Random number: 0x3500859d4ceb1e14
+> HCI Event: Number of Completed Packets (0x13) plen 5          #481 456.172563
+        Num handles: 1
+        Handle: 512
+        Count: 1
+> ACL Data RX: Handle 512 flags 0x02 dlen 69                    #482 456.173930
+      SMP: Pairing Public Key (0x0c) len 64
+        X: 92c50ce79c2f4840ecc56d0855b8712d2946bfcf24e82df2741a7d47411bb23e
+        Y: e3b45a32df61020b7cb43b0299ac8263e7ae41b5e35deee91bc4e2474dac50e9
+< ACL Data TX: Handle 512 flags 0x00 dlen 69                    #483 456.178594
+      SMP: Pairing Public Key (0x0c) len 64
+        X: 55640222680ba11021a80586f0fa25905e40aee1f94a91e27115aeb3b86091ab
+        Y: c976eb1fd1be1a9fd21b17454f84c64ded0263796cff7065b5bde8f002bd010d
+< HCI Command: LE Rand (0x08|0x0018) plen 0                     #484 456.179568
+> HCI Event: Command Complete (0x0e) plen 12                    #485 456.181887
+      LE Rand (0x08|0x0018) ncmd 1
+        Status: Success (0x00)
+        Random number: 0x2189a0dca43afadb
+< HCI Command: LE Rand (0x08|0x0018) plen 0                     #486 456.182765
+> HCI Event: Command Complete (0x0e) plen 12                    #487 456.184418
+      LE Rand (0x08|0x0018) ncmd 1
+        Status: Success (0x00)
+        Random number: 0x570255fffc720905
+< ACL Data TX: Handle 512 flags 0x00 dlen 21                    #488 456.185643
+      SMP: Pairing Confirm (0x03) len 16
+        Confim value: c52df73799379d5ae65fc219cd258a89
+> HCI Event: Number of Completed Packets (0x13) plen 5          #489 456.270301
+        Num handles: 1
+        Handle: 512
+        Count: 1
+> HCI Event: Number of Completed Packets (0x13) plen 5          #490 456.318947
+        Num handles: 1
+        Handle: 512
+        Count: 1
+> ACL Data RX: Handle 512 flags 0x02 dlen 21                    #491 456.320200
+      SMP: Pairing Random (0x04) len 16
+        Random value: d698c7970146cd1104a850092b5245f7
+< ACL Data TX: Handle 512 flags 0x00 dlen 21                    #492 456.321221
+      SMP: Pairing Random (0x04) len 16
+        Random value: dbfa3aa4dca08921050972fcff550257
+> HCI Event: Number of Completed Packets (0x13) plen 5          #493 456.415777
+        Num handles: 1
+        Handle: 512
+        Count: 1
+> ACL Data RX: Handle 512 flags 0x02 dlen 21                    #494 463.243986
+      SMP: Pairing DHKey Check (0x0d) len 16
+        E: ce432db97a2f16812790773da4ccf438
+< ACL Data TX: Handle 512 flags 0x00 dlen 6                     #495 463.247089
+      SMP: Pairing Failed (0x05) len 1
+        Reason: DHKey check failed (0x0b)
+> HCI Event: Number of Completed Packets (0x13) plen 5          #496 463.339506
+        Num handles: 1
+        Handle: 512
+        Count: 1
+> HCI Event: Disconnect Complete (0x05) plen 4                  #497 463.387965
+        Status: Success (0x00)
+        Handle: 512
+        Reason: Authentication Failure (0x05)
+< HCI Command: Delete Stored Link Key (0x03|0x0012) plen 7      #498 463.394098
+        Address: DC:A6:32:B2:F8:FF (OUI DC-A6-32)
+        Delete all: 0x00
+> HCI Event: Command Complete (0x0e) plen 6                     #499 463.397412
+      Delete Stored Link Key (0x03|0x0012) ncmd 1
+        Status: Success (0x00)
+        Num keys: 0

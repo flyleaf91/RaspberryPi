@@ -22,6 +22,8 @@
 
 NO.|文件名称|摘要
 :--:|:--|:--
+0154| [CC2541_SimpleBLEPeripheral.md](docs/0154_CC2541_SimpleBLEPeripheral.md) | 理解单片机中的Bluetooth GATT到底是怎么工作的
+0153| [btmon_HCI_ACL.md](docs/0153_btmon_HCI_ACL.md) | 理解Bluetooth HCI及BTSnoop是什么
 0152| [Deep_Sleep.md](docs/0152_Deep_Sleep.md) | 深睡眠机制，貌似树莓派上没使用
 0151| [Ubuntu_PCIe_Driver.md](docs/0151_Ubuntu_PCIe_Driver.md) | 尝试一下以前的PCIe卡在X86机器上跑起来
 0150| [BlueZ.md](docs/0150_BlueZ.md) | 可用于测试Android蓝牙通信或者协议栈修改，譬如安全方面的修改，理解just_works
