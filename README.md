@@ -22,6 +22,9 @@
 
 NO.|文件名称|摘要
 :--:|:--|:--
+0157| [sha256_init_update_final.md](docs/0157_sha256_init_update_final.md) | sha256是可以分批处理输入的，满足数据不是一次性处理完的场合
+0156| [Bluetooth_Core_Analyse_Pair_Bond.md](docs/0156_Bluetooth_Core_Analyse_Pair_Bond.md) | 了解蓝牙配对流程到底那里来的，谁规定的，在哪里看
+0155| [Fastboot_flash_Sparse_Image.md](docs/0155_Fastboot_flash_Sparse_Image.md) | 分析fastboot命令flash文件原理，理解sparse image原理
 0154| [CC2541_SimpleBLEPeripheral.md](docs/0154_CC2541_SimpleBLEPeripheral.md) | 理解单片机中的Bluetooth GATT到底是怎么工作的
 0153| [btmon_HCI_ACL.md](docs/0153_btmon_HCI_ACL.md) | 理解Bluetooth HCI及BTSnoop是什么
 0152| [Deep_Sleep.md](docs/0152_Deep_Sleep.md) | 深睡眠机制，貌似树莓派上没使用
