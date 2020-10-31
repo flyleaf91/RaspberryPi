@@ -22,6 +22,7 @@
 
 NO.|文件名称|摘要
 :--:|:--|:--
+0158| [ESP32-DevKitC.md](docs/0158_ESP32-DevKitC.md) | 尝试用树莓派处理ESP32-DevKitC
 0157| [sha256_init_update_final.md](docs/0157_sha256_init_update_final.md) | sha256是可以分批处理输入的，满足数据不是一次性处理完的场合
 0156| [Bluetooth_Core_Analyse_Pair_Bond.md](docs/0156_Bluetooth_Core_Analyse_Pair_Bond.md) | 了解蓝牙配对流程到底那里来的，谁规定的，在哪里看
 0155| [Fastboot_flash_Sparse_Image.md](docs/0155_Fastboot_flash_Sparse_Image.md) | 分析fastboot命令flash文件原理，理解sparse image原理
