@@ -331,6 +331,8 @@ hci0 type 7 discovering on
 * 打开Android蓝牙串口APP作为Server
 * sudo bluetoothctl
   * scan on
+  * devices
+    * 查看当前扫描到的设备信息
   * pair 56:A6:46:F7:D6:FA
 * 查看服务端SPP协议对应的通道：sdptool records 56:A6:46:F7:D6:FA
   * [Linux Bluez RFCOMM: Connection Refused](https://stackoverflow.com/questions/52145779/linux-bluez-rfcomm-connection-refused)

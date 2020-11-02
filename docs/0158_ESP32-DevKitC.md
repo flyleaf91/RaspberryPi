@@ -22,6 +22,9 @@
 
 ![esp32-pinout-chip-ESP-WROOM-32-dev.png](images/esp32-pinout-chip-ESP-WROOM-32-dev.png)
 
+* ESP32芯片有34个物理GPIO pad。每个pad都可用作一个通用IO，或连接一个内部的外设信号。
+* 这34个物理GPIO pad的序列号为：0-19, 21-23, 25-27, 32-39。其中GPIO 34-39仅用作输入管脚，其他的既可以作为输入又可以作为输出管脚。
+
 
 ## 搭建开发环境
 
@@ -47,6 +50,7 @@
     CONTRIBUTING.rst  export.fish  install.fish  LICENSE      requirements.txt  tools
     ```
   * ./install.sh
+    * pip安装软件timeout修改参考：[0159_pip_source_modify.md](0159_pip_source_modify.md)
 * 尝试编译
   * cd ~/esp
   * . ~/esp/esp-idf/export.sh
@@ -242,16 +246,17 @@
     api  bta  btc  common  device  external  hci  Kconfig.in  main  stack
     ```
 * 协议栈log
-  * (Top) -> Component config -> Bluetooth -> Bluedroid Options -> BT DEBUG LOG LEVEL
-    * 默认都是2，看情况添加，对于做数据分析的人来说，全部改成6可能会比较好，log太多可能是个问题 :)
+  * idf.py menuconfig
+    * (Top) -> Component config -> Bluetooth -> Bluedroid Options -> BT DEBUG LOG LEVEL
+      * 默认都是2，看情况添加，对于做数据分析的人来说，全部改成6可能会比较好，log太多可能是个问题 :)
 * cd ~/esp && . ~/esp/esp-idf/export.sh
 * cp esp-idf/examples/bluetooth/bluedroid/ble/ble_spp_server . -r
 * cd ble_spp_server
 * idf.py build
 * idf.py -p /dev/ttyUSB0 flash
 * 测试操作
-  * 使用ble client软件可以扫描到`ESP_SPP_SERVER`设备，链接，并设定相关参数
   * idf.py -p /dev/ttyUSB0 monitor (使用快捷键 Ctrl+]，退出 IDF 监视器)
+    * 使用ble client软件可以扫描到`ESP_SPP_SERVER`设备，链接，并设定相关参数
     * 可以作为spp server端的input数据，将数据发送到ble client
     * 将ble client发送的数据显示在界面
     ```

@@ -22,6 +22,8 @@
 
 NO.|文件名称|摘要
 :--:|:--|:--
+0160| [ESP32-DevKitC_BlueDroid.md](docs/0160_ESP32-DevKitC_BlueDroid.md) | 理解BlueDroid(Fluoride)蓝牙协议栈，为了理解Android蓝牙协议栈
+0159| [pip_source_modify.md](docs/0159_pip_source_modify.md) | pip安装软件的时候经常会出现超时导致无法安装
 0158| [ESP32-DevKitC.md](docs/0158_ESP32-DevKitC.md) | 尝试用树莓派处理ESP32-DevKitC
 0157| [sha256_init_update_final.md](docs/0157_sha256_init_update_final.md) | sha256是可以分批处理输入的，满足数据不是一次性处理完的场合
 0156| [Bluetooth_Core_Analyse_Pair_Bond.md](docs/0156_Bluetooth_Core_Analyse_Pair_Bond.md) | 了解蓝牙配对流程到底那里来的，谁规定的，在哪里看
