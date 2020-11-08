@@ -22,6 +22,7 @@
 
 NO.|文件名称|摘要
 :--:|:--|:--
+0161| [ESP32-MicroPython.md](docs/0161_ESP32-MicroPython.md) | 感觉MicroPython做玩具还是挺不错的选择，不用交叉编译，直接调试逻辑
 0160| [ESP32-DevKitC_BlueDroid.md](docs/0160_ESP32-DevKitC_BlueDroid.md) | 理解BlueDroid(Fluoride)蓝牙协议栈，为了理解Android蓝牙协议栈
 0159| [pip_source_modify.md](docs/0159_pip_source_modify.md) | pip安装软件的时候经常会出现超时导致无法安装
 0158| [ESP32-DevKitC.md](docs/0158_ESP32-DevKitC.md) | 尝试用树莓派处理ESP32-DevKitC

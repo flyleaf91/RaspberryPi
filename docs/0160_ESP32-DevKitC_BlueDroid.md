@@ -31,7 +31,7 @@ Android also used BlueZ, until it switched to its own BlueDroid stack, created b
   ```bash
   #!/bin/bash
   
-  if [ -z `idf.py --version | grep 'command not found'` ]; then
+  if [ -z "`idf.py --version | grep 'command not found'`" ]; then
           echo "~/esp/esp-idf/export.sh"
           . ~/esp/esp-idf/export.sh
   fi
@@ -170,11 +170,12 @@ index ab74b89..d4ea319 100644
   * SDP: Service Discovery Protocol
   * TCP/IP: Transmission Control Protocol/Internet Protocol
   * GATT/ATT
-* BTU: Bluetooth Upper Layer(BTU 层主要负责蓝⽛牙主机底层协议栈的处理理，包括 L2CAP、SMP、GAP 以及部分规范等，并向上提供以"bta"为前缀的接⼝口)
-  * BTM: Bluetooth Manager 
+* BTE: Bluetooth Embedded
   * HCI: host controller interface
-  * SDP: service discovery protocol
-  * L2CAP: logical link control and adaptation protocol
+  * BTU: Bluetooth Upper Layer(BTU 层主要负责蓝⽛牙主机底层协议栈的处理理，包括 L2CAP、SMP、GAP 以及部分规范等，并向上提供以"bta"为前缀的接⼝口)
+    * BTM: Bluetooth Manager 
+    * SDP: service discovery protocol
+    * L2CAP: logical link control and adaptation protocol
 * conn_id: Connection id
   * 一个server可能被多个client连接，使用这个连接id来做区分
 * 处理流程：APP --> esp api --> btc --> bta -- btu --> gatts --> l2cap --> hci
@@ -549,6 +550,64 @@ Bluetooth monitor ver 5.50
 
 ![ESP32_BlueDroid_GATT_UART_Send_data.png](images/ESP32_BlueDroid_GATT_UART_Send_data.png)
 
+## 工作线程分析
+
+BLUEDROID（ESP-IDF 默认蓝⽛主机）共包含 4 个任务：分别运⾏ BTC、BTU、HCI UPWARD，及 HCI DOWNWARD。自己分析发现只有3个线程。
+
+```
+* esp_bluedroid_init()
+  * ret = btc_init();
+    * btc_thread = osi_thread_create(BTC_TASK_NAME, BTC_TASK_STACK_SIZE, BTC_TASK_PRIO, BTC_TASK_PINNED_TO_CORE, 2);
+    * btc_gap_callback_init();
+    * btc_adv_list_init();
+  * msg.sig = BTC_SIG_API_CALL;
+  * msg.pid = BTC_PID_MAIN_INIT;
+  * msg.act = BTC_MAIN_ACT_INIT;
+  * btc_transfer_context(&msg, NULL, 0, NULL) != BT_STATUS_SUCCESS
+    * btc_task_post(&lmsg, OSI_THREAD_MAX_TIMEOUT);
+      * osi_thread_post(btc_thread, btc_thread_handler, lmsg, 0, timeout)
+        * case BTC_SIG_API_CALL:
+          * profile_tab[msg->pid].btc_call(msg);
+            * static const btc_func_t profile_tab[BTC_PID_NUM]
+              * [BTC_PID_MAIN_INIT]   = {btc_main_call_handler,       NULL                    },
+                * void btc_main_call_handler(btc_msg_t *msg)
+                  * case BTC_MAIN_ACT_INIT:
+                    * btc_init_bluetooth();
+                      * bte_main_boot_entry(btc_init_callback);
+                        * hci = hci_layer_get_interface();
+                          * hal = hci_hal_h4_get_interface();
+                            * return &interface;
+                              * static const hci_hal_t interface 
+                                * hal_open
+                                * hal_close
+                                * transmit_data
+                          * packet_fragmenter = packet_fragmenter_get_interface();
+                            * return &interface;
+                              * static const packet_fragmenter_t interface
+                                * init
+                                * cleanup
+                                * fragment_get_current_packet
+                                * fragment_and_dispatch
+                                * reassemble_and_dispatch
+                        * bte_main_enable();
+                          * hci_start_up()
+                            * hci_host_thread = osi_thread_create(HCI_HOST_TASK_NAME, HCI_HOST_TASK_STACK_SIZE, HCI_HOST_TASK_PRIO, HCI_HOST_TASK_PINNED_TO_CORE, 2);
+                              * xTaskCreatePinnedToCore(osi_thread_run, name, stack_size, &start_arg, priority, &thread->thread_handle, core)
+                                * prvInitialiseNewTask( pvTaskCode, pcName, ( uint32_t ) usStackDepth, pvParameters, uxPriority, pvCreatedTask, pxNewTCB, NULL, xCoreID );
+                            * hal->open(&hal_callbacks, hci_host_thread);
+                          * BTU_StartUp();
+                            * btu_thread = osi_thread_create(BTU_TASK_NAME, BTU_TASK_STACK_SIZE, BTU_TASK_PRIO, BTU_TASK_PINNED_TO_CORE, 1);
+                            * btu_task_post(SIG_BTU_START_UP, NULL, OSI_THREAD_MAX_TIMEOUT)
+                              * case SIG_BTU_START_UP
+                                * status = osi_thread_post(btu_thread, btu_task_start_up, param, 0, timeout);
+                                  * btu_init_core();
+                                    * btm_init();
+                                    * l2c_init();
+                                    * sdp_init();
+                                    * gatt_init();
+                                    * SMP_Init();
+                                    * btm_ble_init();
+```
 
 ## ESP32接收字符
 
