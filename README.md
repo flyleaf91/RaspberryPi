@@ -22,8 +22,9 @@
 
 NO.|文件名称|摘要
 :--:|:--|:--
+0162| [ESP32_BREDR_SPP_Server.md](docs/0162_ESP32_BREDR_SPP_Server.md) | 理解BlueDroid(Fluoride)蓝牙协议栈，分析BREDR SPP Server工作原理
 0161| [ESP32-MicroPython.md](docs/0161_ESP32-MicroPython.md) | 感觉MicroPython做玩具还是挺不错的选择，不用交叉编译，直接调试逻辑
-0160| [ESP32-DevKitC_BlueDroid.md](docs/0160_ESP32-DevKitC_BlueDroid.md) | 理解BlueDroid(Fluoride)蓝牙协议栈，为了理解Android蓝牙协议栈
+0160| [ESP32_BLE_SPP_Server.md](docs/0160_ESP32_BLE_SPP_Server.md) | 理解BlueDroid(Fluoride)蓝牙协议栈，为了理解Android蓝牙协议栈，分析BLE SPP Server工作原理
 0159| [pip_source_modify.md](docs/0159_pip_source_modify.md) | pip安装软件的时候经常会出现超时导致无法安装
 0158| [ESP32-DevKitC.md](docs/0158_ESP32-DevKitC.md) | 尝试用树莓派处理ESP32-DevKitC
 0157| [sha256_init_update_final.md](docs/0157_sha256_init_update_final.md) | sha256是可以分批处理输入的，满足数据不是一次性处理完的场合

@@ -1,10 +1,24 @@
-# ESP32-DevKitC BlueDroid(Fluoride)
+# ESP32 BlueDroid(Fluoride) BLE SPP Server
 
-理解BlueDroid(Fluoride)蓝牙协议栈，为了理解Android蓝牙协议栈
+理解BlueDroid(Fluoride)蓝牙协议栈，为了理解Android蓝牙协议栈，分析BLE SPP Server工作原理
 
 Android also used BlueZ, until it switched to its own BlueDroid stack, created by Broadcom, in late 2012 BlueDroid has been since been renamed Fluoride.
 
-## 参考文档
+
+* [一、参考文档](#一参考文档)
+* [二、示例拷贝编译](#二示例拷贝编译)
+* [三、协议栈log](#三协议栈log)
+* [四、ctags](#四ctags)
+* [五、ble_spp_server_demo添加回显](#五ble_spp_server_demo添加回显)
+* [七、术语](#七术语)
+* [八、BlueZ工具](#八BlueZ工具)
+* [九、ble_spp_server](#九ble_spp_server)
+  * [9.1 GATT Service](#91-GATT-Service)
+  * [9.2 发送字符](#92-发送字符)
+  * [9.3 系统运行架构图](#93-系统运行架构图)
+  * [9.4 ESP32接收字符log信息](#94-ESP32接收字符log信息)
+
+## 一、参考文档
 
 * [esp32_bluetooth_architecture_cn.pdf](refers/esp32_bluetooth_architecture_cn.pdf)
 * [0158_ESP32-DevKitC.md](0158_ESP32-DevKitC.md)
@@ -14,7 +28,7 @@ Android also used BlueZ, until it switched to its own BlueDroid stack, created b
 * [0153_btmon_HCI_ACL.md](0153_btmon_HCI_ACL.md)
 * [0154_CC2541_SimpleBLEPeripheral.md](0154_CC2541_SimpleBLEPeripheral.md)
 
-## 示例拷贝编译
+## 二、示例拷贝编译
 
 * cd ~/esp && . ~/esp/esp-idf/export.sh
 * 编译server软件
@@ -47,14 +61,14 @@ Android also used BlueZ, until it switched to its own BlueDroid stack, created b
   fi
   ```
 
-## 协议栈log
+## 三、协议栈log
 
 * idf.py menuconfig
   * (Top) -> Component config -> Bluetooth -> Bluedroid Options -> BT DEBUG LOG LEVEL
     * 默认都是2，看情况添加，对于做数据分析的人来说，全部改成6可能会比较好，log太多可能是个问题 :)
     * 作为协议分析，那就全部改成6，也就是输出所有的log信息
 
-## ctags
+## 四、ctags
 
 * cd ~/esp/esp-idf/components
 * ctags -Rn
@@ -62,7 +76,7 @@ Android also used BlueZ, until it switched to its own BlueDroid stack, created b
   * set tags+=/home/pi/esp/esp-idf/components/tags
 * 将当前项目的tags也加入`~/.vimrc`中，便于分析代码，最好在main目录下执行，否者容易加入build目录
 
-## ble_spp_server_demo添加回显
+## 五、ble_spp_server_demo添加回显
 
 添加回显主要是为了便于协议栈分析，数据在哪里开始，那里结束，整个回环是如何处理的，视需求添加。
 
@@ -104,7 +118,7 @@ index ab74b89..d4ea319 100644
                      //TODO:
 ```
 
-# bluedroid协议栈
+# 六、bluedroid协议栈
 
 * cd ~/esp/esp-idf/components/bt
 * tree -L 2
@@ -151,7 +165,7 @@ index ab74b89..d4ea319 100644
 
 ![esp32_BlueDroid_Arch_Flow.jpg](images/esp32_BlueDroid_Arch_Flow.jpg)
 
-## 术语
+## 七、术语
 
 * BTIF: Bluetooth Interface(Android接口)
 * BTA: Blueetooth application layer(应用层profiles)
@@ -180,7 +194,7 @@ index ab74b89..d4ea319 100644
   * 一个server可能被多个client连接，使用这个连接id来做区分
 * 处理流程：APP --> esp api --> btc --> bta -- btu --> gatts --> l2cap --> hci
 
-## BlueZ工具
+## 八、BlueZ工具
 
 * sudo btmgmt
   * power off
@@ -201,7 +215,9 @@ index ab74b89..d4ea319 100644
   * characteristics
   * char-write-req 0x002a 0x30
 
-## GATT Service
+## 九、ble_spp_server
+
+### 9.1 GATT Service
 
 GATT串口服务信息如下：
 
@@ -336,7 +352,7 @@ handle: 0x0030, char properties: 0x12, char value handle: 0x0031, uuid: 0000abf4
 
 `handle`是自动分配的，主要是关注`uuid`
 
-## ESP32发送字符
+### 9.2 发送字符
 
 默认开启发送`notify`，目前是为了分析系统的数据传输架构，所以其他的先可以不用关心，关心的是数据是如何被调用传输的
 
@@ -432,7 +448,7 @@ Bluetooth monitor ver 5.50
   * 可以认为是第几个服务，即服务索引，用于确认调用哪个服务的回调函数；
 * conn_id: Connection id
   * 一个server可能被多个client连接，使用这个连接id来做区分
-* 实际代码运行流程，有些是开始注册的回调函数，但那也是按流程处理的：APP --> esp api --> btc --> bta -- btu --> gatts --> l2cap --> hci
+* 实际代码运行流程，有些是开始注册的回调函数，但那也是按流程处理的：APP --> esp api --> btc -- btu --> bta --> gatts --> l2cap --> hci
 
 ```
 * main/ble_spp_server_demo.c
@@ -548,11 +564,9 @@ Bluetooth monitor ver 5.50
                                                       * 回调前面注册的处理函数
 ```
 
-![ESP32_BlueDroid_GATT_UART_Send_data.png](images/ESP32_BlueDroid_GATT_UART_Send_data.png)
+<!-- ![ESP32_BlueDroid_GATT_UART_Send_data.png](images/ESP32_BlueDroid_GATT_UART_Send_data.png) -->
 
-## 工作线程分析
-
-BLUEDROID（ESP-IDF 默认蓝⽛主机）共包含 4 个任务：分别运⾏ BTC、BTU、HCI UPWARD，及 HCI DOWNWARD。自己分析发现只有3个线程。
+工作线程分析，BLUEDROID（ESP-IDF 默认蓝⽛主机）共包含 4 个任务：分别运⾏ BTC、BTU、HCI UPWARD，及 HCI DOWNWARD。自己分析发现只有3个线程。
 
 ```
 * esp_bluedroid_init()
@@ -609,7 +623,11 @@ BLUEDROID（ESP-IDF 默认蓝⽛主机）共包含 4 个任务：分别运⾏ BT
                                     * btm_ble_init();
 ```
 
-## ESP32接收字符
+### 9.3 系统运行架构图
+
+![ESP32_BlueDroid_GATT_Thread.png](images/ESP32_BlueDroid_GATT_Thread.png)
+
+### 9.4 ESP32接收字符log信息
 
 `sudo gatttool -b A8:03:2A:EB:EC:4A -I`发送数据：
 

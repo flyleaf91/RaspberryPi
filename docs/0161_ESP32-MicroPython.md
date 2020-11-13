@@ -10,6 +10,8 @@
 ## 固件下载
 
 * [Firmware for Generic ESP32 module](http://micropython.org/download/esp32/)
+* sudo apt-get install esptool
+* esptool.py --chip esp32 --port /dev/ttyUSB0 erase_flash
 * esptool.py --chip esp32 --port /dev/ttyUSB0 write_flash -z 0x1000 esp32-idf4-20201108-unstable-v1.13-150-gb7883ce74.bin 
 
 ## minicom python终端交互
@@ -103,3 +105,15 @@
   >>> f.close()
   >>>
   ```
+
+## arduino
+
+* 不要使用apt直接安装，版本太老了，不能设置eps url；
+* 直接下载ide: https://www.arduino.cc/en/software
+  * 网址有时候很难打开，选择arm版本的，因为树莓派系统目前版本使用的是arm，不是arm64，虽然芯片是64的
+  * arm
+    * https://downloads.arduino.cc/arduino-nightly-linuxarm.tar.xz
+    * 解包，就可以使用里面的程序了；
+* 参考配置： [Installing the ESP32 Board in Arduino IDE (Mac OS X and Linux instructions)](https://randomnerdtutorials.com/installing-the-esp32-board-in-arduino-ide-mac-and-linux-instructions/)
+  * install包的时候多次出现错误，多点几次，慢慢下载
+* 个人感觉用这个还不如直接命令行操作；
