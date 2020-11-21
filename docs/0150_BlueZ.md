@@ -389,6 +389,12 @@ hci0 type 7 discovering on
   * `localhost()`: 表示本机`Profile`级别的数据
   * `remote()`或`蓝牙地址`: 表示目标机器`Profile`级别的数据
 
+输出bluez log：[I want to enable debug messages on bluez](https://stackoverflow.com/questions/37003147/i-want-to-enable-debug-messages-on-bluez)
+
+* /etc/systemd/system/bluetooth.target.wants/bluetooth.service
+  * ExecStart=/usr/lib/bluetooth/bluetoothd -C -d
+    * -d
+* tail -f /var/log/syslog | tee bluez.log
 
 ## Android BlueDroid协议栈
 

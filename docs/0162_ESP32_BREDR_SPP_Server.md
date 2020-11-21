@@ -182,6 +182,7 @@ D (82798) BT_HCI: Receive packet event_code=0x2e
   * mcb: RFCOMM multiplexer Control Block
   * dlci：Data Link Connection Identifier
   * lcid: local channel id
+  * scn: Server Channel Number
 
 ![ESP32_BlueDroid_BREDR.png](images/ESP32_BlueDroid_BREDR.png)
 
