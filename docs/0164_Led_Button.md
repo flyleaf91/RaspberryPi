@@ -78,3 +78,17 @@ https://oshwhub.com/zengjf/USB2TTLBoard_copy_copy_copy_copy
   * sudo su
   * ./config.sh
   * python3 ws.py
+
+## IP Camera
+
+* [0163_esp-who.md](0163_esp-who.md)
+* 添加摄像头： 
+  ```html
+  <div style="margin-top: 60px;">
+    <img src="http://192.168.137.2:8008?action=stream">
+  </div>
+  ```
+* 显示界面如下：  
+  ![Low_Level_Logic_of_IoT.png](images/Low_Level_Logic_of_IoT.png)
+
+

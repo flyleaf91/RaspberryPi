@@ -136,7 +136,7 @@ NO.|文件名称|摘要
 0053| [auto_sd_resize.md](docs/0053_auto_sd_resize.md) | 分析SD卡自动resize功能
 0052| [shadowsocks.md](docs/0052_shadowsocks.md) | 搭建shadowsocks服务器
 0051| [tig.md](docs/0051_tig.md) | 如果你下载了Windows版本的git，你会发现其自带了tig命令，这也就说明这个命令有多好用。
-0050| [Cscope.md](docs/0050_Cscope.md) | 和ctags一样好用的代码跟踪工具
+0050| [cscope.md](docs/0050_cscope.md) | 和ctags一样好用的代码跟踪工具
 0049| [DTS_GPIO_Kernel_Driver_Interrupt.md](docs/0049_DTS_GPIO_Kernel_Driver_Interrupt.md) | GPIO口中断分析
 0048| [Gitweb.md](docs/0048_Gitweb.md) | 搭建Gitweb服务
 0047| [HTTP_Auth.md](docs/0047_HTTP_Auth.md) | 尝试HTTP认证
