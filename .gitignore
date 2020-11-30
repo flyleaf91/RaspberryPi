@@ -51,10 +51,10 @@ Module.symvers
 Mkfile.old
 dkms.conf
 
-Makefile
 bctest
 client
 service
 servicemanager
+service_manager
 tags
 
