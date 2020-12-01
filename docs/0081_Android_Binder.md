@@ -172,3 +172,35 @@ Server 向 ServiceManager 中注册了 Binder 以后， Client 就能通过名�
 ## Binder Android使用架构
 
 ![Binder_Android_Proxy_Stub_ARCH.png](images/Binder_Android_Proxy_Stub_ARCH.png)
+
+
+## Binder练习工具
+
+https://github.com/ZengjfOS/RaspberryPi/tree/service_manager/test
+
+```diff
+diff --git a/frameworks/native/cmds/servicemanager/Android.mk b/frameworks/native/cmds/servicemanager/Android.mk
+index b214f19..e53fe2c 100644
+--- a/frameworks/native/cmds/servicemanager/Android.mk
++++ b/frameworks/native/cmds/servicemanager/Android.mk
+@@ -24,3 +24,19 @@ LOCAL_CFLAGS += $(svc_c_flags)
+ LOCAL_MODULE := servicemanager
+ LOCAL_INIT_RC := servicemanager.rc
+ include $(BUILD_EXECUTABLE)
++
++include $(CLEAR_VARS)
++LOCAL_SHARED_LIBRARIES := liblog
++LOCAL_SRC_FILES := test/client.c binder.c
++# LOCAL_CFLAGS += $(svc_c_flags)
++LOCAL_CFLAGS += -Wno-unused-parameter
++LOCAL_MODULE := bclient
++include $(BUILD_EXECUTABLE)
++
++include $(CLEAR_VARS)
++LOCAL_SHARED_LIBRARIES := liblog
++LOCAL_SRC_FILES := test/service.c binder.c
++# LOCAL_CFLAGS += $(svc_c_flags)
++LOCAL_CFLAGS += -Wno-unused-parameter
++LOCAL_MODULE := bservice
++include $(BUILD_EXECUTABLE)
+```

@@ -22,6 +22,7 @@
 
 NO.|文件名称|摘要
 :--:|:--|:--
+0167| [eth0_dhcp_Server.md](docs/0167_eth0_dhcp_Server.md) | 搭建dhcp服务用于测试
 0166| [Windows_SMB_4_iPhone.md](docs/0166_Windows_SMB_4_iPhone.md) | 将iPhone中的视频和照片共享出来
 0165| [Flask_OpenCV_Face_Detect.md](docs/0165_Flask_OpenCV_Face_Detect.md) | Flask作为HTTP视频流，OpenCV识别摄像头采集的人脸
 0164| [Led_Button.md](docs/0164_Led_Button.md) | Led&Button板控制
