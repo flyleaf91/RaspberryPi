@@ -22,6 +22,8 @@
 
 NO.|文件名称|摘要
 :--:|:--|:--
+0169| [Android_RefBase_sp_wp.md](docs/0169_Android_RefBase_sp_wp.md) | 理解Android强指针、弱指针
+0168| [gtest.md](docs/0168_gtest.md) | 尝试使用gtest，便于以后分析Android底层test case
 0167| [eth0_dhcp_Server.md](docs/0167_eth0_dhcp_Server.md) | 搭建dhcp服务用于测试
 0166| [Windows_SMB_4_iPhone.md](docs/0166_Windows_SMB_4_iPhone.md) | 将iPhone中的视频和照片共享出来
 0165| [Flask_OpenCV_Face_Detect.md](docs/0165_Flask_OpenCV_Face_Detect.md) | Flask作为HTTP视频流，OpenCV识别摄像头采集的人脸
