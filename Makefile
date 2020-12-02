@@ -2,7 +2,7 @@ all:RefBase.o test.o
 	g++ RefBase.o test.o -o all
 
 RefBase.o:RefBase.cpp RefBase.h
-	g++ -g -c RefBase.cpp -o RefBase.o
+	g++ -g -c RefBase.cpp -o RefBase.o -fpermissive
 
 test.o:test.cpp
 	g++ -g -c -fpermissive test.cpp -o test.o
