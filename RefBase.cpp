@@ -17,13 +17,16 @@
 #define LOG_TAG "RefBase"
 // #define LOG_NDEBUG 0
 
+
+#include <log/log.h>
+
 #include <memory>
 
 #include <android-base/macros.h>
 
 #include <utils/RefBase.h>
 
-#include <utils/CallStack.h>
+// #include <utils/CallStack.h>
 
 #include <utils/Mutex.h>
 
@@ -41,7 +44,7 @@
 #define DEBUG_REFS_ENABLED_BY_DEFAULT 0
 
 // whether callstack are collected (significantly slows things down)
-#define DEBUG_REFS_CALLSTACK_ENABLED 1
+#define DEBUG_REFS_CALLSTACK_ENABLED 0
 
 // folder where stack traces are saved when DEBUG_REFS is enabled
 // this folder needs to exist and be writable
@@ -218,7 +221,9 @@ public:
         }
         if (dumpStack) {
             ALOGE("above errors at:");
+#if DEBUG_REFS_CALLSTACK_ENABLED
             CallStack::logStack(LOG_TAG);
+#endif
         }
     }
 
@@ -359,7 +364,9 @@ private:
                 ref = ref->next;
             }
 
+#if DEBUG_REFS_CALLSTACK_ENABLED
             CallStack::logStack(LOG_TAG);
+#endif
         }
     }
 
@@ -715,7 +722,7 @@ RefBase::~RefBase()
         }
     } else if (mRefs->mStrong.load(std::memory_order_relaxed) == INITIAL_STRONG_VALUE) {
         // We never acquired a strong reference on this object.
-#if DEBUG_REFBASE_DESTRUCTION
+#if DEBUG_REFS_CALLSTACK_ENABLED
         // Treating this as fatal is prone to causing boot loops. For debugging, it's
         // better to treat as non-fatal.
         ALOGD("RefBase: Explicit destruction, weak count = %d (in %p)", mRefs->mWeak.load(), this);
