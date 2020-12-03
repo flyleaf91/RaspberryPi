@@ -77,7 +77,7 @@ target_link_libraries(runTests ${GTEST_LIBRARIES} pthread)
 3. 程序名及依赖文件
 4. 链接库
 
-## gtest
+## gtest with function
 
 [使用 Google Test 测试框架](http://senlinzhan.github.io/2017/10/08/gtest/)
 
@@ -150,3 +150,41 @@ Expected equality of these values:
 
  1 FAILED TEST
 ```
+
+## gtest with class 
+
+* https://github.com/ZengjfOS/RaspberryPi/blob/gtest/classtest.cpp#L4
+* 类似如下：
+  ```cpp
+  #include <gtest/gtest.h>
+
+  class LooperTest : public testing::Test {
+  protected:
+      sp<Looper> mLooper;
+  
+      virtual void SetUp() {
+          mLooper = new Looper(true);
+      }
+  
+      virtual void TearDown() {
+          mLooper.clear();
+      }
+  };
+  
+  
+  TEST_F(LooperTest, PollOnce_WhenNonZeroTimeoutAndNotAwoken_WaitsForTimeout) {
+      StopWatch stopWatch("pollOnce");
+      int result = mLooper->pollOnce(100);
+      int32_t elapsedMillis = ns2ms(stopWatch.elapsedTime());
+  
+      EXPECT_NEAR(100, elapsedMillis, TIMING_TOLERANCE_MS)
+              << "elapsed time should approx. equal timeout";
+      EXPECT_EQ(Looper::POLL_TIMEOUT, result)
+              << "pollOnce result should be LOOPER_POLL_TIMEOUT";
+  }
+  ```
+* 继承自Test类：`class LooperTest : public testing::Test`
+  * virtual void SetUp()
+    * 所有测试的初始化方法，每个测试方法都要重新执行；
+  * virtual void TearDown()
+    * 所有测试的清理方法，每个测试方法都要重新执行；
