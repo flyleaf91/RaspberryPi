@@ -13,6 +13,6 @@ Flask作为HTTP视频流，OpenCV识别摄像头采集的人脸
 
 * sudo pip3 install flask
 * sudo pip3 install opencv-python
-* 下载OpenCV人脸识别模型haarcascade_frontalface_alt.xml，模型可在链接中下载：https://github.com/TimeIvyace/OpenCV-PCA-KNN-SVM_face_recognition.git。
+* 下载OpenCV人脸识别模型haarcascade_frontalface_alt.xml，模型可在链接中下载：https://github.com/TimeIvyace/OpenCV-PCA-KNN-SVM_face_recognition
 * 参考代码：https://github.com/ZengjfOS/RaspberryPi/tree/FaceDetect
   * face.py
