@@ -29,3 +29,4 @@ pip安装软件的时候经常会出现超时导致无法安装
     index-url = https://pypi.tuna.tsinghua.edu.cn/simple
     extra-index-url = https://pypi.tuna.tsinghua.edu.cn/simple
     ```
+  * vim /etc/pip.conf
