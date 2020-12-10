@@ -22,6 +22,7 @@
 
 NO.|文件名称|摘要
 :--:|:--|:--
+0173| [Hardware_Interrupts_Counter.md](docs/0173_Hardware_Interrupts_Counter.md) | 通过硬件中断统计，可以查看中断是否发生，驱动查看中断触发判定一些信息
 0172| [tcp_dump.md](docs/0172_tcp_dump.md) | TCP Server抓包
 0171| [Windows_ls.md](docs/0171_Windows_ls.md) | 习惯了Linux，在Windows支持ls命令
 0170| [Android_cc-test.md](docs/0170_Android_cc-test.md) | 分析如何利用Android的cc-test
