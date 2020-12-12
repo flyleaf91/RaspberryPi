@@ -1,0 +1,17 @@
+cc_test {
+    name: "zengjf-unit-cctests",
+    srcs: ["zengjf_test.cpp"],
+    cflags: [
+        "-Wall",
+        "-Werror",
+        "-g",
+        "-std=gnu++11",
+        "-Wno-missing-field-initializers",
+        "-Wno-sign-compare",
+        "-Wno-writable-strings",
+    ],
+    shared_libs: ["liblog"],
+    static_libs: ["libgtest_main"],
+    include_dirs: ["system/core/include/"],
+    local_include_dirs: [""],
+}
