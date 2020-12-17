@@ -22,6 +22,7 @@
 
 NO.|文件名称|摘要
 :--:|:--|:--
+0176| [USB_gadget_serial_configfs.md](docs/0176_USB_gadget_serial_configfs.md) | 分析Android USB gadget串口配置
 0175| [SELinux_audit2allow.md](docs/0175_SELinux_audit2allow.md) | 使用audit2allow处理avc权限
 0174| [Android_CMD_gtest.md](docs/0174_Android_CMD_gtest.md) | gtest单元测试so库
 0173| [Hardware_Interrupts_Counter.md](docs/0173_Hardware_Interrupts_Counter.md) | 通过硬件中断统计，可以查看中断是否发生，驱动查看中断触发判定一些信息
