@@ -17,11 +17,13 @@
 * [Raspberry Pi Documentation](https://github.com/raspberrypi/documentation)
 * [Raspberry Pi Pinout](https://pinout.xyz/pinout/uart)
 * [systemd](https://github.com/systemd/systemd)
+* https://github.com/ZengjfOS/Android
 
 ## 笔记文档
 
 NO.|文件名称|摘要
 :--:|:--|:--
+0177| [BT_HCI_Command.md](docs/0177_BT_HCI_Command.md) | 理解蓝牙HCI命令格式，看懂QBQ认证HCI测试命令
 0176| [USB_gadget_serial_configfs.md](docs/0176_USB_gadget_serial_configfs.md) | 分析Android USB gadget串口配置
 0175| [SELinux_audit2allow.md](docs/0175_SELinux_audit2allow.md) | 使用audit2allow处理avc权限
 0174| [Android_CMD_gtest.md](docs/0174_Android_CMD_gtest.md) | gtest单元测试so库
