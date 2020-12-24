@@ -23,6 +23,8 @@
 
 NO.|文件名称|摘要
 :--:|:--|:--
+0179| [Android_HIDL.md](docs/0179_Android_HIDL.md) | 突然想再弄一下HIDL，总感觉以前漏了啥 :)
+0178| [lsof.md](docs/0178_lsof.md) | lsof（list open files）是一个查看当前系统文件的工具。查看设备节点占用情况。
 0177| [BT_HCI_Command.md](docs/0177_BT_HCI_Command.md) | 理解蓝牙HCI命令格式，看懂QBQ认证HCI测试命令
 0176| [USB_gadget_serial_configfs.md](docs/0176_USB_gadget_serial_configfs.md) | 分析Android USB gadget串口配置
 0175| [SELinux_audit2allow.md](docs/0175_SELinux_audit2allow.md) | 使用audit2allow处理avc权限
