@@ -138,7 +138,7 @@
   * [处理发送给浏览器的数据处理核心](https://github.com/jacksonliam/mjpg-streamer/blob/master/mjpg-streamer-experimental/plugins/output_http/httpd.c#L458)
 * sudo apt-get install libjpeg-dev
 * git clone https://github.com/jacksonliam/mjpg-streamer
-  * 如果前面没有安装`libjped-dev`，编译报错没有头文件，需要先删除`_build`目录，否者会出现段错误
+  * 如果前面没有安装`libjpeg-dev`，编译报错没有头文件，需要先删除`_build`目录，否者会出现段错误
     * https://github.com/jacksonliam/mjpg-streamer/issues/218
   * make
   * help
