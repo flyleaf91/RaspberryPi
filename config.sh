@@ -5,9 +5,11 @@ cd /sys/class/gpio
 echo 10 > export
 cd gpio10
 echo out > direction
+chmod 666 value
 
 # button pre config
 cd /sys/class/gpio
 echo 9 > export
 cd gpio9
+echo in > direction
 echo both > edge
