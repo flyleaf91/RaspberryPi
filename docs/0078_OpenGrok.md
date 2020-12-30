@@ -48,11 +48,11 @@ OpenJDK Client VM (build 25.212-b01, mixed mode)
   ```
   lib  opengrok.jar  source.war
   ```
-* cp /home/pi/zengjf/opengrok-1.3.7/lib/source.war /var/lib/tomcat8
-* mkdir -p /var/opengrok/etc
-* cp /home/pi/zengjf/opengrok-1.3.7/doc/logging.properties /var/opengrok/etc/
+* sudo cp /home/pi/zengjf/opengrok-1.3.7/lib/source.war /var/lib/tomcat8/webapps
+* sudo mkdir -p /var/opengrok/etc
+* sudo cp /home/pi/zengjf/opengrok-1.3.7/doc/logging.properties /var/opengrok/etc/
 * 稍等一会，或者重启一下树莓派，在/var/lib/tomcat8目录将看到source目录；
-* cat /var/lib/tomcat8/webapps/source/WEB-INF/web.xml
+* sudo cat /var/lib/tomcat8/webapps/source/WEB-INF/web.xml
   ```
   <?xml version="1.0" encoding="UTF-8"?>
   <web-app xmlns="http://xmlns.jcp.org/xml/ns/javaee"
@@ -70,7 +70,11 @@ OpenJDK Client VM (build 25.212-b01, mixed mode)
       </context-param>
       [...省略]
   ```
-* OpenGrok配置路径：/var/opengrok/etc/configuration.xml
+  * OpenGrok配置路径：/var/opengrok/etc/configuration.xml
+* sudo mkdir /var/opengrok/data
+* chmod 777 /var/opengrok/data
+* sudo touch /var/opengrok/etc/configuration.xml
+* sudo chmod 777 /var/opengrok/etc/configuration.xml
 * 生成索引：
   ```
   opengrok-indexer \
@@ -81,6 +85,7 @@ OpenJDK Client VM (build 25.212-b01, mixed mode)
       -W /var/opengrok/etc/configuration.xml -U http://localhost:8080/source
   ```
   * -s: 要扫描的源代码root目录
+  * 生成OpenGrok需要的路径：/var/opengrok/etc/configuration.xml
 * 网页访问OpenGrok：http://192.168.20.96:8080/source/  
   ![images/OpenGrok_Index_Page.png](images/OpenGrok_Index_Page.png)
 * OpenGrok查找文件  

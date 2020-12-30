@@ -12,9 +12,10 @@
 
 * 树莓派
 * sudo apt-get install git wget flex bison gperf python python-pip python-setuptools cmake ninja-build ccache libffi-dev libssl-dev dfu-util
+* sudo apt-get install libncurses5-dev libncursesw5-dev
 * 已经有python3，不用装，没有就装一下：
   * sudo apt-get install python3 python3-pip python3-setuptools
-* sudo update-alternatives --install /usr/bin/python python /usr/bin/python3 10
+  * *这个是不要的*：sudo update-alternatives --install /usr/bin/python python /usr/bin/python3 10
 * git clone --recursive https://github.com/espressif/esp-who.git 
 * cd esp-who
 * cd esp-idf && ./install.sh && cd -
