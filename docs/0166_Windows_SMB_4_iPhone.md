@@ -16,7 +16,8 @@
 
 ## iPhone访问
 
-[Files app] -> 右上角... -> [Connect to Server] -> [Server] -> smb://192.168.3.9 -> [Guest]
+* [Files app] -> 右上角... -> [Connect to Server] -> [Server] -> smb://192.168.3.9 -> [Guest]
+* 如果Files app无法使用，那就换成ESFileExplorer app，目前发现有时候Files app有时候用不了；
 
 ## iPhone HD视频参数
 

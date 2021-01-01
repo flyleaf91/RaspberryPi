@@ -23,6 +23,7 @@
 
 NO.|文件名称|摘要
 :--:|:--|:--
+0182| [Screen_Capture.md](docs/0182_Screen_Capture.md) | 截屏，有图有真相
 0181| [Jar_Decompiler_Java.md](docs/0181_Jar_Decompiler_Java.md) | 将Jar包装成Java文件，方便检索代码
 0180| [DMA.md](docs/0180_DMA.md) | DMA工作原理及Linux下DMA实际使用
 0179| [Android_HIDL.md](docs/0179_Android_HIDL.md) | 突然想再弄一下HIDL，总感觉以前漏了啥 :)
@@ -161,7 +162,7 @@ NO.|文件名称|摘要
 0045| [SoC_Device_Tree.md](docs/0045_SoC_Device_Tree.md) | SoC设备树
 0044| [Create_Raspbian_Image.md](docs/0044_Create_Raspbian_Image.md) | 如果你想看看树莓派镜像是如何打包出来，可以看看这个
 0043| [Docker.md](docs/0043_Docker.md) | 树莓派上如何使用Docker
-0042| [ROS.md](docs/0042_ROS.md) | 尝试安装ROS，不过不知道用来干什么
+0042| [ROS.md](docs/0042_ROS.md) | ROS catkin和Linux Yocto是一个概念，组织管理ROS功能包
 0041| [Add_Swap_Partition.md](docs/0041_Add_Swap_Partition.md) | 手动添加Swap分区，内存不够的时候可以尝试用用
 0040| [Qt_4_OpenGL.md](docs/0040_Qt_4_OpenGL.md) | 学习使用OpenGL，但不知为何QT 5用不了
 0039| [RTIMULib.md](docs/0039_RTIMULib.md) | 尝试一下RTIMULib库的使用方法
