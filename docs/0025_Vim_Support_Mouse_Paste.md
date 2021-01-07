@@ -8,4 +8,5 @@ Vim鼠标粘贴
 
 ## 处理方法
 
-Instead of `set mouse=a` use `set mouse=r` in `.vimrc`
+* Instead of `set mouse=a` use `set mouse=r` in `.vimrc`
+* set mouse-=a

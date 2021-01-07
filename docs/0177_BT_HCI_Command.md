@@ -22,6 +22,7 @@
       * 4 LE Test Packets Format
 * [传统蓝牙HCI Command（蓝牙HCI命令）详细介绍](https://blog.csdn.net/XiaoXiaoPengBo/article/details/107642672)
 * [Bluetooth LE Testing Over UART](https://waynebayever.wordpress.com/2014/12/17/bluetooth-le-testing-over-uart/)
+* [BT_RF_Test.pdf](refers/BT_RF_Test.pdf)
 
 ## HCI Command Packet
 
@@ -73,3 +74,10 @@ The Controller sends an Event back to the Host to acknowledge the Command.  The 
 * \<Commands Available\> – how many commands the Controller is able to receive
 * 0x01 0x1E 0x20 – these are the HCI over UART byte and the Opcode that are being sent back to the Host
 * \<status\> – 0x00 if the command was successful, any other value indicates an error.  See Volume 2 Part D of the Core Spec for a list of error codes.
+
+## 示例
+
+* reset: `01 03 0c 00`
+  * `04 0e 04 01 03 0c 00`
+* TX: `01 1e 20 03 00 25 00`
+  * `04 0e 04 01 1e 20 00`
