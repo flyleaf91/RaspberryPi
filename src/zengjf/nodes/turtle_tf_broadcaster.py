@@ -36,6 +36,7 @@ import rospy
 
 import tf
 import turtlesim.msg
+import sys
 
 
 def handle_turtle_pose(msg, turtlename):
@@ -47,8 +48,13 @@ def handle_turtle_pose(msg, turtlename):
                      "world")
 
 if __name__ == '__main__':
-    rospy.init_node('tf_turtle')
-    turtlename = rospy.get_param('~turtle')
+    if len(sys.argv) == 2:
+        turtlename = sys.argv[1]
+        rospy.init_node('%s_tf_turtle' % turtlename)
+        print turtlename
+    else:
+        rospy.init_node('tf_turtle')
+        turtlename = rospy.get_param('~turtle')
     rospy.Subscriber('/%s/pose' % turtlename,
                      turtlesim.msg.Pose,
                      handle_turtle_pose,
